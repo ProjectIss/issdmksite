@@ -1,0 +1,1016 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{471AB7C5-19BC-44F0-9399-5753F1A4748F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>issDMKSite</RootNamespace>
+    <AssemblyName>issDMKSite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApplicationsController.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\BlocksController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PanchayatsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\signUpsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\VillagesController.cs" />
+    <Compile Include="Custom\CustomAuthorizeAttribute.cs" />
+    <Compile Include="Custom\CustomPrincipal.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109240639593_m1.cs" />
+    <Compile Include="Migrations\202109240639593_m1.designer.cs">
+      <DependentUpon>202109240639593_m1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110050726059_m2.cs" />
+    <Compile Include="Migrations\202110050726059_m2.designer.cs">
+      <DependentUpon>202110050726059_m2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110080626435_m3.cs" />
+    <Compile Include="Migrations\202110080626435_m3.designer.cs">
+      <DependentUpon>202110080626435_m3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110080640008_m4.cs" />
+    <Compile Include="Migrations\202110080640008_m4.designer.cs">
+      <DependentUpon>202110080640008_m4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111091857516_m5.cs" />
+    <Compile Include="Migrations\202111091857516_m5.designer.cs">
+      <DependentUpon>202111091857516_m5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111110926297_m6.cs" />
+    <Compile Include="Migrations\202111110926297_m6.designer.cs">
+      <DependentUpon>202111110926297_m6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111111036353_m7.cs" />
+    <Compile Include="Migrations\202111111036353_m7.designer.cs">
+      <DependentUpon>202111111036353_m7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Application .cs" />
+    <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\issModel.cs" />
+    <Compile Include="Models\LoginView.cs" />
+    <Compile Include="Models\Panchayat.cs" />
+    <Compile Include="Models\signUp.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Village.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\dmk.in\css\ajax-loader.gif" />
+    <Content Include="assets\dmk.in\css\block.css" />
+    <Content Include="assets\dmk.in\css\bootstrap.min.css" />
+    <Content Include="assets\dmk.in\css\customstylec3db.css" />
+    <Content Include="assets\dmk.in\css\font-awesome.css" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\OFL.txt" />
+    <Content Include="assets\dmk.in\css\fonts\slick.svg" />
+    <Content Include="assets\dmk.in\css\images\arrow-up.html" />
+    <Content Include="assets\dmk.in\css\images\bg-01.jpg" />
+    <Content Include="assets\dmk.in\css\images\carousel-marker-prev.html" />
+    <Content Include="assets\dmk.in\css\images\favicon.ico" />
+    <Content Include="assets\dmk.in\css\jquery-gallery.css" />
+    <Content Include="assets\dmk.in\css\magnific-popup.css" />
+    <Content Include="assets\dmk.in\css\main.css" />
+    <Content Include="assets\dmk.in\css\owl.carousel.css" />
+    <Content Include="assets\dmk.in\css\owl.transitions.css" />
+    <Content Include="assets\dmk.in\css\slick-theme.css" />
+    <Content Include="assets\dmk.in\css\util.css" />
+    <Content Include="assets\dmk.in\img\arrow.png" />
+    <Content Include="assets\dmk.in\img\bg-parelx.jpg" />
+    <Content Include="assets\dmk.in\img\bg-parelx2.jpg" />
+    <Content Include="assets\dmk.in\img\bg-parelx3.jpg" />
+    <Content Include="assets\dmk.in\img\bg-stalin.png" />
+    <Content Include="assets\dmk.in\img\bg\13bg.png" />
+    <Content Include="assets\dmk.in\img\bg\Sunrise.jpg" />
+    <Content Include="assets\dmk.in\img\bg_karunadhi.jpg" />
+    <Content Include="assets\dmk.in\img\carousel-marker-next-S-M.png" />
+    <Content Include="assets\dmk.in\img\carousel-marker-next.png" />
+    <Content Include="assets\dmk.in\img\carousel-marker-prev-S-M.png" />
+    <Content Include="assets\dmk.in\img\carousel-marker-prev.png" />
+    <Content Include="assets\dmk.in\img\cookie-right-gradient-md.png" />
+    <Content Include="assets\dmk.in\img\cookie-right-gradient-sm.png" />
+    <Content Include="assets\dmk.in\img\cookie-right-gradient.png" />
+    <Content Include="assets\dmk.in\img\header_right2.png" />
+    <Content Include="assets\dmk.in\img\historybg.jpg" />
+    <Content Include="assets\dmk.in\img\Image1.jpeg" />
+    <Content Include="assets\dmk.in\img\Image2.jpeg" />
+    <Content Include="assets\dmk.in\img\Image3.jpeg" />
+    <Content Include="assets\dmk.in\img\newline.png" />
+    <Content Include="assets\dmk.in\img\stalinbg.jpg" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\bootstrap-select.min.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\bootstrap.min.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\color.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\custom.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\media_screen.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\plugins.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\reset.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\css\style.css" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\arrow.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\banner.jpg" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\clouds.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\favicon.png" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\icon-1.png" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\icon-2.png" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\icon-3.png" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\loading.gif" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\m-banner.jpg" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\map-bg.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\images\mks-video.png" />
+    <Content Include="assets\dmk.in\joindmk\assets\img\video-play.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\img\vimeo-play.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\img\youtube-play.html" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\bootstrap-select.min.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\bootstrap.min.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\jquery.min.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\jquery.repeater.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\jquery.validate.min.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\lang\tamil_lang.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\main7839.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\plugins.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\popper.min.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\scripts.js" />
+    <Content Include="assets\dmk.in\joindmk\assets\js\sweetalert.min.js" />
+    <Content Include="assets\dmk.in\js\bootstrap.min.js" />
+    <Content Include="assets\dmk.in\js\commonc619.js" />
+    <Content Include="assets\dmk.in\js\demo-main.js" />
+    <Content Include="assets\dmk.in\js\easy-responsive-tabs.js" />
+    <Content Include="assets\dmk.in\js\fonts.googleapis.com\earlyaccess\lohittamil.css" />
+    <Content Include="assets\dmk.in\js\fonts.googleapis.com\earlyaccess\notosanstamil.css" />
+    <Content Include="assets\dmk.in\js\fonts.googleapis.com\earlyaccess\notosanstamilui.css" />
+    <Content Include="assets\dmk.in\js\hammer.min.js" />
+    <Content Include="assets\dmk.in\js\jquery-2.2.4.js" />
+    <Content Include="assets\dmk.in\js\jquery-gallery.js" />
+    <Content Include="assets\dmk.in\js\jquery.magnific-popup.js" />
+    <Content Include="assets\dmk.in\js\jquery.min.js" />
+    <Content Include="assets\dmk.in\js\jquery.scrollbar.js" />
+    <Content Include="assets\dmk.in\js\main.js" />
+    <Content Include="assets\dmk.in\js\owl.carousel.min.js" />
+    <Content Include="assets\dmk.in\js\popper.min.js" />
+    <Content Include="assets\dmk.in\js\slick.min.js" />
+    <Content Include="assets\dmk.in\js\wow.js" />
+    <Content Include="assets\dmk.in\vendor\animate\animate.css" />
+    <Content Include="assets\dmk.in\vendor\animsition\css\animsition.css" />
+    <Content Include="assets\dmk.in\vendor\animsition\css\animsition.min.css" />
+    <Content Include="assets\dmk.in\vendor\animsition\js\animsition.js" />
+    <Content Include="assets\dmk.in\vendor\animsition\js\animsition.min.js" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\js\popper.js" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="assets\dmk.in\vendor\countdowntime\countdowntime.js" />
+    <Content Include="assets\dmk.in\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="assets\dmk.in\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="assets\dmk.in\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="assets\dmk.in\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="assets\dmk.in\vendor\daterangepicker\moment.js" />
+    <Content Include="assets\dmk.in\vendor\daterangepicker\moment.min.js" />
+    <Content Include="assets\dmk.in\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="assets\dmk.in\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="assets\dmk.in\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="assets\dmk.in\vendor\select2\select2.css" />
+    <Content Include="assets\dmk.in\vendor\select2\select2.js" />
+    <Content Include="assets\dmk.in\vendor\select2\select2.min.css" />
+    <Content Include="assets\dmk.in\vendor\select2\select2.min.js" />
+    <Content Include="assets\hts-cache\new.lst" />
+    <Content Include="assets\hts-cache\new.txt" />
+    <Content Include="assets\hts-cache\readme.txt" />
+    <Content Include="assets\img\31THLEADERS_GUA+31THLEADERS.jpg" />
+    <Content Include="assets\img\71Karunanidhi.jpg" />
+    <Content Include="assets\img\anna.jpg" />
+    <Content Include="assets\img\anna\aanna-with-karunanidhi-1533652354.jpg" />
+    <Content Include="assets\img\anna\Anna Budget.jpg" />
+    <Content Include="assets\img\anna\Anna dismiss1.jpg" />
+    <Content Include="assets\img\anna\Anna dismiss2.jpg" />
+    <Content Include="assets\img\anna\Anna dismiss3.jpg" />
+    <Content Include="assets\img\anna\Anna election1.jpg" />
+    <Content Include="assets\img\anna\Anna _ Kalaignar 2.jpg" />
+    <Content Include="assets\img\anna\Anna _ periyar.jpg" />
+    <Content Include="assets\img\anna\Anna- Navalar.jpg" />
+    <Content Include="assets\img\anna\Anna-cm2.jpg" />
+    <Content Include="assets\img\anna\anna-write1.jpg" />
+    <Content Include="assets\img\anna\annapg.jpg" />
+    <Content Include="assets\img\anna\Misc 1.jpg" />
+    <Content Include="assets\img\anna\travida-nilayam.jpg" />
+    <Content Include="assets\img\close-red.png" />
+    <Content Include="assets\img\fav.png" />
+    <Content Include="assets\img\header_thalai.png" />
+    <Content Include="assets\img\leader1.jpg" />
+    <Content Include="assets\img\Logo-GIFsdaf.gif" />
+    <Content Include="assets\img\no_events.jpg" />
+    <Content Include="assets\img\periyar.jpg" />
+    <Content Include="assets\img\periyar\aramam.jpg" />
+    <Content Include="assets\img\periyar\periyar_maniammai-1.jpg" />
+    <Content Include="assets\img\periyar\rest.jpg" />
+    <Content Include="assets\img\periyar\sumariyathai.jpg" />
+    <Content Include="assets\img\periyar\thiravidakalagam.jpg" />
+    <Content Include="assets\img\quote_img.jpg" />
+    <Content Include="assets\img\stalin-logo.jpg" />
+    <Content Include="assets\img\stalin1\image1.jpg" />
+    <Content Include="assets\img\stalin1\Mayor2.jpg" />
+    <Content Include="assets\img\stalin1\meyar.jpg" />
+    <Content Include="assets\img\stalin1\meyar2.jpg" />
+    <Content Include="assets\img\stalin1\misa1.jpg" />
+    <Content Include="assets\img\stalin1\misa2.jpg" />
+    <Content Include="assets\img\stalin1\misa3.jpg" />
+    <Content Include="assets\img\stalin1\MK Stalin Mayor2.jpg" />
+    <Content Include="assets\img\stalin1\MK Stalin youth wing - gopalapuram.jpg" />
+    <Content Include="assets\img\stalin1\Opposition leader.jpg" />
+    <Content Include="assets\img\stalin1\school.jpg" />
+    <Content Include="assets\img\stalin1\stalinDeputyCM.jpg" />
+    <Content Include="assets\img\stalin1\stalintry.jpg" />
+    <Content Include="assets\img\stalin1\Ullatchi Thurai Amaichar album .jpg" />
+    <Content Include="assets\img\stalin1\youth1.jpg" />
+    <Content Include="assets\img\stalin1\youth2.jpg" />
+    <Content Include="assets\img\stalin1\youth3.jpg" />
+    <Content Include="assets\img\stalinhand.jpg" />
+    <Content Include="assets\img\stalin\pic.jpg" />
+    <Content Include="assets\img\sunsmall.png" />
+    <Content Include="assets\img\TFiles\0001.jpg" />
+    <Content Include="assets\img\TFiles\0002.jpg" />
+    <Content Include="assets\img\TFiles\0003.jpg" />
+    <Content Include="assets\img\TFiles\0004.jpg" />
+    <Content Include="assets\img\TFiles\0005.jpg" />
+    <Content Include="assets\img\TFiles\0006.jpg" />
+    <Content Include="assets\img\TFiles\0007.jpg" />
+    <Content Include="assets\img\TFiles\0008.jpg" />
+    <Content Include="assets\img\TFiles\0009.jpg" />
+    <Content Include="assets\img\TFiles\0010.jpg" />
+    <Content Include="assets\img\TFiles\0011.jpg" />
+    <Content Include="assets\img\TFiles\0012.jpg" />
+    <Content Include="assets\img\TFiles\0013.jpg" />
+    <Content Include="assets\img\TFiles\0014.jpg" />
+    <Content Include="assets\img\TFiles\0015.jpg" />
+    <Content Include="assets\img\TFiles\0016.jpg" />
+    <Content Include="assets\img\TFiles\0017.jpg" />
+    <Content Include="assets\img\TFiles\0018.jpg" />
+    <Content Include="assets\img\TFiles\0019.jpg" />
+    <Content Include="assets\img\TFiles\0020.jpg" />
+    <Content Include="assets\img\TFiles\0021.jpg" />
+    <Content Include="assets\img\TFiles\0022.jpg" />
+    <Content Include="assets\img\TFiles\0023.jpg" />
+    <Content Include="assets\img\TFiles\0024.jpg" />
+    <Content Include="assets\img\TFiles\0025.jpg" />
+    <Content Include="assets\img\TFiles\0026.jpg" />
+    <Content Include="assets\img\TFiles\0027.jpg" />
+    <Content Include="assets\img\TFiles\0028.jpg" />
+    <Content Include="assets\img\TFiles\0029.jpg" />
+    <Content Include="assets\img\TFiles\0030.jpg" />
+    <Content Include="assets\img\TFiles\0031.jpg" />
+    <Content Include="assets\img\TFiles\0032.jpg" />
+    <Content Include="assets\img\TFiles\0033.jpg" />
+    <Content Include="assets\img\TFiles\0034.jpg" />
+    <Content Include="assets\img\TFiles\0035.jpg" />
+    <Content Include="assets\img\TFiles\0036.jpg" />
+    <Content Include="assets\img\TFiles\0037.jpg" />
+    <Content Include="assets\img\TFiles\0038.jpg" />
+    <Content Include="assets\img\TFiles\0039.jpg" />
+    <Content Include="assets\img\TFiles\0040.jpg" />
+    <Content Include="assets\img\TFiles\0041.jpg" />
+    <Content Include="assets\img\TFiles\0042.jpg" />
+    <Content Include="assets\img\TFiles\0043.jpg" />
+    <Content Include="assets\img\TFiles\0044.jpg" />
+    <Content Include="assets\img\TFiles\0045.jpg" />
+    <Content Include="assets\img\TFiles\0046.jpg" />
+    <Content Include="assets\img\TFiles\0047.jpg" />
+    <Content Include="assets\img\TFiles\0048.jpg" />
+    <Content Include="assets\img\TFiles\0049.jpg" />
+    <Content Include="assets\img\TFiles\0050.jpg" />
+    <Content Include="assets\img\TFiles\0051.jpg" />
+    <Content Include="assets\img\TFiles\0052.jpg" />
+    <Content Include="assets\img\TFiles\0053.jpg" />
+    <Content Include="assets\img\Together-Banner.png" />
+    <Content Include="assets\img\usericon.png" />
+    <Content Include="assets\source\blank.gif" />
+    <Content Include="assets\source\fancybox_loading%402x.gif" />
+    <Content Include="assets\source\fancybox_loading.gif" />
+    <Content Include="assets\source\fancybox_overlay.png" />
+    <Content Include="assets\source\fancybox_sprite%402x.png" />
+    <Content Include="assets\source\fancybox_sprite.png" />
+    <Content Include="assets\source\helpers\fancybox_buttons.png" />
+    <Content Include="assets\source\helpers\jquery.fancybox-buttons3447.css" />
+    <Content Include="assets\source\helpers\jquery.fancybox-buttons3447.js" />
+    <Content Include="assets\source\helpers\jquery.fancybox-mediaf2ad.js" />
+    <Content Include="assets\source\helpers\jquery.fancybox-thumbsf2ad.css" />
+    <Content Include="assets\source\helpers\jquery.fancybox-thumbsf2ad.js" />
+    <Content Include="assets\source\jquery.fancybox.pack8cbb.js" />
+    <Content Include="assets\source\jquery.fancybox8cbb.css" />
+    <Content Include="assets\static.dmk.in\Events\20210226105638.jpg" />
+    <Content Include="assets\static.dmk.in\Events\20210228164851.jpg" />
+    <Content Include="assets\static.dmk.in\Events\20210304203831.jpg" />
+    <Content Include="assets\static.dmk.in\News\110620191122155852.jpg" />
+    <Content Include="assets\static.dmk.in\News\1432320200318095817.jpg" />
+    <Content Include="assets\static.dmk.in\News\1566820201211124418.jpg" />
+    <Content Include="assets\static.dmk.in\News\1626720191204152544.jpg" />
+    <Content Include="assets\static.dmk.in\News\1680820210303111259.jpg" />
+    <Content Include="assets\static.dmk.in\News\1972020201229151350.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181024120434.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181024123610.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181024123858.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181116074149.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181116074702.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181119204304.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181120002145.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181120104735.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181120111303.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181120202432.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181128193249.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181128195224.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181129212704.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181205155625.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181206145028.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181206150110.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181212135130.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181214184624.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181215163748.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181228015906.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181228022623.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181231201137.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181231201433.jpg" />
+    <Content Include="assets\static.dmk.in\News\20181231221345.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190103132908.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190103133517.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190104180611.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190106122055.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108134301.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108145612.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108152251.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108155134.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108160223.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190108164707.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190111131056.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190111183932.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112135402.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112145841.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112154342.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112155347.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112164941.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112171058.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190112172039.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190117202756.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190202160413.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190202161753.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190202162312.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190202162908.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190202163625.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190206115246.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190206162847.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190206173819.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190208121909.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190212143840.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190212144103.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190215140547.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190215140948.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190215141621.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190219100911.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190219103827.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190220101645.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190226170119.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190226172201.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190226174401.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190319154947.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190322003707.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190322022328.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190405184517.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190405185011.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190405185449.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190422044527.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190429141620.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190513130728.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190513130939.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190514165547.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190704181357.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190711150721.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190801140227.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190801140808.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190801141144.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190826124517.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190928145210.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190930133037.jpg" />
+    <Content Include="assets\static.dmk.in\News\20190930134357.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191015144454.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191015144939.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191031123500.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191105171858.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191105182811.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191126153606.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191204160219.jpg" />
+    <Content Include="assets\static.dmk.in\News\20191204160713.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201211120352.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201211121437.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201211125322.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201212175123.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201212175616.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201214122213.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201214130649.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201214131610.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222155104.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222155455.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222160336.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222160940.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222161409.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222162423.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222163102.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201222170703.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226111028.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226114049.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226114110.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226120139.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226120548.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226120915.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201226122149.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201228103340.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201228111611.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201229175345.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201229175709.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201230122043.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201230122808.jpg" />
+    <Content Include="assets\static.dmk.in\News\20201231105530.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210102112431.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210107152556.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210119164250.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210119173429.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210204101657.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210204102018.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210302131208.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210302144148.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210304142021.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210305122148.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210306101434.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210307102934.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210307103633.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210308104653.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210308111757.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210309101810.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210309101916.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210309102038.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210309141057.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210310100753.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210310134909.jpg" />
+    <Content Include="assets\static.dmk.in\News\20210311105048.jpg" />
+    <Content Include="assets\static.dmk.in\News\2123320210119113423.jpg" />
+    <Content Include="assets\static.dmk.in\News\2137720200604143042.jpg" />
+    <Content Include="assets\static.dmk.in\News\284920191204171725.jpg" />
+    <Content Include="assets\static.dmk.in\News\2945720210204101345.jpg" />
+    <Content Include="assets\static.dmk.in\News\3167120201229152148.jpg" />
+    <Content Include="assets\static.dmk.in\News\3543420210109153244.jpg" />
+    <Content Include="assets\static.dmk.in\News\3630520210223172806.jpg" />
+    <Content Include="assets\static.dmk.in\News\4101620201229173007.jpg" />
+    <Content Include="assets\static.dmk.in\News\4230520201229162459.jpg" />
+    <Content Include="assets\static.dmk.in\News\4258920210109153526.jpg" />
+    <Content Include="assets\static.dmk.in\News\4507920201231104925.jpg" />
+    <Content Include="assets\static.dmk.in\News\4747220191204172047.jpg" />
+    <Content Include="assets\static.dmk.in\News\4938520210109153415.jpg" />
+    <Content Include="assets\static.dmk.in\News\5029620201229174212.jpg" />
+    <Content Include="assets\static.dmk.in\News\5182420210204100518.jpg" />
+    <Content Include="assets\static.dmk.in\News\563720200313152334.jpg" />
+    <Content Include="assets\static.dmk.in\News\5812420210123200108.jpg" />
+    <Content Include="assets\static.dmk.in\News\6854020210307103258.jpg" />
+    <Content Include="assets\static.dmk.in\News\7310320210305100055.jpg" />
+    <Content Include="assets\static.dmk.in\News\7334020210123200655.jpg" />
+    <Content Include="assets\static.dmk.in\News\751120210107152215.jpg" />
+    <Content Include="assets\static.dmk.in\News\775220201229152832.jpg" />
+    <Content Include="assets\static.dmk.in\News\813420201229173248.jpg" />
+    <Content Include="assets\static.dmk.in\News\8171320201229151705.jpg" />
+    <Content Include="assets\static.dmk.in\News\8392220210204101116.jpg" />
+    <Content Include="assets\static.dmk.in\News\8441820210123194857.jpg" />
+    <Content Include="assets\static.dmk.in\News\8486420210305173047.jpg" />
+    <Content Include="assets\static.dmk.in\News\8997720191109120211.jpg" />
+    <Content Include="assets\static.dmk.in\News\9317720210303113157.jpg" />
+    <Content Include="assets\static.dmk.in\News\9540620201229161353.jpg" />
+    <Content Include="assets\static.dmk.in\News\9854120201222154244.jpg" />
+    <Content Include="assets\static.dmk.in\News\9947620201230141026.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\1.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\143737979_3584592444970119_8092342777746817704_n.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\145852116_4080605965292304_845060017892721579_n %281%29.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\145852116_4080605965292304_845060017892721579_n.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\150775034_1123699748072291_4688928142791139389_o.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\156262454_3652623941441192_4901201508947169095_n.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\158389940_959189861152719_1856764070658691665_o.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\159374300_783639258918356_560970647739102114_n.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\2.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\20181017183649.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\20181119131507.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\20181119132931.png" />
+    <Content Include="assets\static.dmk.in\WebBanner\20181119182830.png" />
+    <Content Include="assets\static.dmk.in\WebBanner\20181119182941.png" />
+    <Content Include="assets\static.dmk.in\WebBanner\20190107160941.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\20201222174020.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\3.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\4.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\5.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\6.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\7.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\name.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\Screenshot_2021-09-02-19-48-01-30_99c04817c0de5652397fc8b56c3b3817.jpg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.39 AM %281%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.39 AM %282%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.39 AM.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.41 AM %282%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.42 AM %281%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.42 AM %282%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.43 AM %282%29.jpeg" />
+    <Content Include="assets\static.dmk.in\WebBanner\WhatsApp Image 2021-01-26 at 9.46.44 AM.jpeg" />
+    <Content Include="assets\static.dmk.in\WebImage\20181113163644.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20181113163645.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20181113164312.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20181113164314.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20181113164453.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20190801155938thgauJzZkw.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20190801155940KJwhF7vjtT.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20190801155940u3s6709Kxg.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\201908011559412efgwa4lPn.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202006041431503UvjK4QaIW.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202006041431515oANvs94g1.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20200604143152ANdHaOLB29.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20200604143152F08ALMx531.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222174552JjDnLP2NF1.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222175200mDaW2t0MjQ.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222175322uTVUj3SDFt.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222175323pnxK8AEmqi.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202012221753245m0IMqhBtg.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222175324FQ3RyaHBSc.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20201222175325R8S0E3JFVx.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130843NUWXFc0oPf.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130844aIW5UfC6dN.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021308459grRwnQkxH.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130845g4dsaMKqVy.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130845PlsEuGLh7y.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130846WanMhPZQsw.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021308472iUbZPdC64.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021308473ElUa6jIXy.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021308487z9iSvmnlH.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130848w2tcQbOHyI.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130848ZDk5YLbJ6l.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130849iqEpB2JDzG.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302130849PGjC0V3ZyA.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021308509zE5PRq7rm.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145515b024YhDHSI.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145517SMBjHTuwn8.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103021455184Z8QeKY9AH.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145518LCBUIrknXu.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145518TSBwIsqgRJ.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145519FoVC3qcAhk.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145519q8JlYoapx0.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145520e3NAPJlyWS.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210302145520YVk1ZbfM6X.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307104513ZYF0irvIN2.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307104514iyIXAZNmnu.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307181910lVrwNdEQUG.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307181912fk0a7RcNd8.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307181912NjCs2hdFPw.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\202103071819136ODxayk0E3.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307181913jyLAfBMpW5.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210307181913VFRMT0vzcJ.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104601ZXjyo4s2Mt.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104602yFro7WMUgX.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104603G2tjU4dyqp.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104603gMhzNOsG8L.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104604meBtcTaE0p.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104604R7VoSUeqPH.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104605aDOS3BpVvP.jpg" />
+    <Content Include="assets\static.dmk.in\WebImage\20210308104605LgmDPqyNIx.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20181205150815.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20181205151640.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20181205153203.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801165959.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170307.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170401.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170456.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170616.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170701.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170729.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170819.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170855.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20190801170949.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20200604173248.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211111547.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211111838.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211111955.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112134.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112305.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112448.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112600.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112718.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211112842.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211113123.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211113414.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211113600.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211113715.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211113939.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211114100.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201211114221.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201222175824.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201222180106.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20201222180326.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\20210302143822.jpg" />
+    <Content Include="assets\static.dmk.in\WebVideo\VID-20191112-WA0006.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\VID-20210623-WA0003.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\VID-20210629-WA0114.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\VIDEO_8acbc750-bd58-4f0e-9779-4393abb167c3.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\WhatsApp Video 2021-09-01 at 7.51.41 PM.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\WhatsApp Video 2021-09-01 at 7.52.14 PM.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\WhatsApp Video 2021-09-01 at 7.53.51 PM.mp4" />
+    <Content Include="assets\static.dmk.in\WebVideo\WhatsApp Video 2021-09-01 at 7.55.43 PM.mp4" />
+    <Content Include="assets\uploads\images\3-4.jpg" />
+    <Content Include="assets\uploads\images\39 karunanidhi_04.jpg" />
+    <Content Include="assets\uploads\images\56 Karunanidhi - Uzhavar Sandhai%28Farmer Markets%29.jpg" />
+    <Content Include="assets\uploads\images\67 Karunanidhi with Mayor MK Stalin.jpg" />
+    <Content Include="assets\uploads\images\77Untitled-3.jpg" />
+    <Content Include="assets\uploads\images\cc93caecc2fa85fff235a29b515f4c3e.jpg" />
+    <Content Include="assets\uploads\images\Chennai Kathipara bridge.jpg" />
+    <Content Include="assets\uploads\images\e630a42e26723a40a093b009ce62472c.jpg" />
+    <Content Include="assets\uploads\images\getdoc.jpg" />
+    <Content Include="assets\uploads\images\karunasop_313.jpg" />
+    <Content Include="assets\uploads\images\WR_10614.jpg" />
+    <Content Include="attachments\bote class.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\dmk.in\css\fonts\slick.eot" />
+    <Content Include="assets\dmk.in\css\fonts\slick.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\slick.woff" />
+    <Content Include="assets\dmk.in\css\fonts\slickd41d.eot" />
+    <Content Include="assets\hts-cache\doit.log" />
+    <Content Include="assets\hts-cache\new.zip" />
+    <Content Include="assets\hts-cache\winprofile.ini" />
+    <Content Include="assets\img\TFiles\NEP-ENG.pdf" />
+    <Content Include="assets\img\TFiles\NEP-TAMIL.pdf" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="assets\dmk.in\css\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="assets\dmk.in\css\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="assets\dmk.in\css\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\dmk.in\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Custom\data.json" />
+    <Content Include="attachments\ea1ce39f-d232-47a0-bac0-39504ac75356" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Applications\Create.cshtml" />
+    <Content Include="Views\Applications\Delete.cshtml" />
+    <Content Include="Views\Applications\Details.cshtml" />
+    <Content Include="Views\Applications\Edit.cshtml" />
+    <Content Include="Views\Applications\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Reports\ComplainStatus.cshtml" />
+    <Content Include="Views\Reports\Area.cshtml" />
+    <Content Include="Views\Reports\ApplicationStatus.cshtml" />
+    <Content Include="Views\Reports\Dashboard.cshtml" />
+    <Content Include="Views\Reports\UserLogin.cshtml" />
+    <Content Include="Views\Blocks\Create.cshtml" />
+    <Content Include="Views\Blocks\Delete.cshtml" />
+    <Content Include="Views\Blocks\Details.cshtml" />
+    <Content Include="Views\Blocks\Edit.cshtml" />
+    <Content Include="Views\Blocks\Index.cshtml" />
+    <Content Include="Views\Panchayats\Create.cshtml" />
+    <Content Include="Views\Panchayats\Delete.cshtml" />
+    <Content Include="Views\Panchayats\Details.cshtml" />
+    <Content Include="Views\Panchayats\Edit.cshtml" />
+    <Content Include="Views\Panchayats\Index.cshtml" />
+    <Content Include="Views\Villages\Create.cshtml" />
+    <Content Include="Views\Villages\Delete.cshtml" />
+    <Content Include="Views\Villages\Details.cshtml" />
+    <Content Include="Views\Villages\Edit.cshtml" />
+    <Content Include="Views\Villages\Index.cshtml" />
+    <Content Include="Views\signUps\Create.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
+    <Content Include="Views\Reports\Department.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="SQLHelper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109240639593_m1.resx">
+      <DependentUpon>202109240639593_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110050726059_m2.resx">
+      <DependentUpon>202110050726059_m2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110080626435_m3.resx">
+      <DependentUpon>202110080626435_m3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110080640008_m4.resx">
+      <DependentUpon>202110080640008_m4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111091857516_m5.resx">
+      <DependentUpon>202111091857516_m5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111110926297_m6.resx">
+      <DependentUpon>202111110926297_m6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111111036353_m7.resx">
+      <DependentUpon>202111111036353_m7.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63346</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

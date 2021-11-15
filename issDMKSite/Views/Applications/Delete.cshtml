@@ -1,0 +1,96 @@
+﻿@model issDMKSite.Models.Application
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplainNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplainNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dateofapplied)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dateofapplied)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detailofcomplain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detailofcomplain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetailProof)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetailProof)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Feedback)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Feedback)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewComments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdminName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateandTimeofReact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateandTimeofReact)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

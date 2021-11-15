@@ -1,0 +1,168 @@
+﻿@model issDMKSite.Models.signUp
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+
+
+
+            <div class="login100-more">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+
+                    <span class="login100-form-title p-b-43" style="font-size: 27px;">
+                        தொடர உள்நுழைக
+                    </span>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="card-body">
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>பெயர்</label>
+
+
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>அலைபேசி எண்</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>தந்தையின் பெயர்</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.EditorFor(model => model.FatherName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FatherName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>முகவரி</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label>ஒன்ரியம்</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.DropDownList("blockId", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.blockId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label>பஞ்சாயத்து</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.DropDownList("panchayatId", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.panchayatId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label>கிராமம்</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.DropDownList("villageId", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.villageId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="சமர்ப்பிக்க" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<script>
+   $(document).ready(function () {
+        $("#blockId").change(function () {
+            var name = $(this).find('option:selected').val();
+            panchayatId(name);
+        })
+        $("#panchayatId").change(function () {
+            var location = $(this).find('option:selected').val();
+            villageId(location);
+        })
+    });
+    function panchayatId(name) {
+              $.ajax({
+            type: 'POST',
+            url: '@Url.Content("~/signUps/panchayatId")',
+            dataType: 'json',
+            data: { NAME: name },
+            success: function (result) {
+    
+                var data = result;
+               
+                $("#panchayatId").empty();
+                for (var i = 0; i < data.length; i++) {
+                    $("#panchayatId").append("<option value='" + data[i].Id + "'>" + data[i].panchayatName
+                        + "</option>");
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    };
+
+   function villageId(location) {
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Content("~/signUps/villageId")',
+            dataType: 'json',
+            data: { LOCATION: location },
+            success: function (result) {
+                var data = result;
+     
+                $("#villageId").empty();
+                for (var i = 0; i < data.length; i++) {
+                    $("#villageId").append("<option value='" + data[i].Id + "'>" + data[i].villageName
+                        + "</option>");
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    };
+</script>

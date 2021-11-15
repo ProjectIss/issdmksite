@@ -1,0 +1,451 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+    </style>
+</head>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-596XHGQ" height=0 width=0 style=display:none;visibility:hidden></iframe>
+</noscript>
+
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-596XHGQ" height=0 width=0 style=display:none;visibility:hidden></iframe>
+</noscript>
+<section class="news-sec">
+
+    <div class="row">
+        <div class="col-sm-6" style="margin-left:10px;">
+
+            <img class="name" src="~/assets/static.dmk.in/WebBanner/IMG_20210831_154812.jpg" />
+        </div>
+
+        <div class="col-sm-5" >
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/6.jpg" style="width:100%">
+            </div>
+
+
+
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image1.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image11.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image12.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image2.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image3.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image4.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image5.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image6.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Image7.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/Imge8.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.17 AM.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.18 AM.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.19 AM (1).jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.46.57 PM.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM (1).jpeg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.43 PM.jpeg" style="width:100%">
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="news-sec">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-4">
+                <div class="block-mews-outer">
+                    <div class="news-title">
+                        <h3>
+                            படித்த இளைஞர்களுக்கு
+                            வேலைவாய்ப்பு கிடைப்பதற்கு
+                            தொகுதி முழுவதும் பல்வேறு வேலைவாய்ப்பு
+                            முகாம்கள் நடத்தி அவர்களின் குடும்பத்திற்கு ஒளிவிளக்காக திகழ்பவர் இவர் என்று
+                            பலர் கூறுவதை தொகுதி முழுவதும் கேட்க முடிகிறது கொரானா கால கட்டத்தில் ஊரடங்கின் காரணமாக தவித்த மக்களுக்கு சுமார் 5 கோடி மதிப்பில் தனது சொந்த பணத்தை செய்து பல்வேறு நிவாரண உதவிகளை வழங்கியதால் இவரை இத்தொகுதி மக்கள் தங்கள் வேதனை தீர்த்த      இதயவேந்தராக வணங்குகின்றனர்.
+                            வாடிய பயிரைக் கண்டபோதெல்லாம் வாடினார் வள்ளலார் என்கிற
+                            வைரவரிகளுக்கு ஏற்ப
+                            தொகுதி மக்களுக்கு
+                            ஏதேனும் ஒன்று என்றால் காலநேரம்
+                            பார்க்காமல் தேடிச் சென்று உதவும் வாழும் கொடை வள்ளல் இவர் என்று தொகுதி எங்கும் பலர் பெருமையுடன் கூறுவதையும் நம்மால் கேட்க முடிகிறது.
+                            ரிஷிவந்தியம் தொகுதி மக்களின் மருத்துவ தேவைகளுக்காக பல்வேறு மருத்துவ முகாம்களை தொகுதி முழுவதும் நடத்தி
+                            அவர்களுக்கு இலவசமாக மருத்துவ வசதிகளை செய்து கொடுத்தவர் இவர்.
+                            இது மட்டுமின்றி இளைஞர்களின் நம்பிக்கை நட்சத்திரமாக
+                            இவர் இருப்பதற்கு இன்னொரு காரணமும் உண்டு .விளையாட்டுத் துறையில் ஆர்வம் உள்ள இளைஞர்களை மேலும் உற்சாகப்படுத்தி
+                            ஊக்கப்படுத்திட ஒவ்வொரு கிராமத்திலும் உள்ள விளையாட்டு வீரர்களுக்கு தனது சொந்த செலவில் கிரிக்கெட் பேட் உள்ளிட்ட விளையாட்டு உபகரணங்கள் வழங்கியுள்ளதால் இத்தொகுதி விளையாட்டு வீரர்கள்
+                            இவரை மனதாரப் பாராட்டுகின்றனர். மேலும் இத்தொகுதியில் இருந்து விரைவில் கிரிக்கெட் வீரர்கள் தமிழக அணியிலும், இந்திய அணியிலும் இடம்பிடித்திட வழி செய்துள்ளார் என்று இவரை கொண்டாடுகின்றனர். எந்தகிராமத்தில்  பிரச்சினை என்றாலும் அரசை எதிர்பார்க்காமல் அதனை தீர்ப்பதற்கு
+                            தனது சொந்தப் பணத்தை செலவு செய்வதுதான் இவரின் ஹைலைட் என்று தொகுதி முழுக்க ஹாட் டாபிக்காக பேசப்படுகிறது...
+                            தொகுதி முழுவதும் உள்ள எல்லா திசைகளிலும்
+                            இவரது ஆதரவு
+                            அலையானது கட்சி வித்தியாசம் இல்லாமல் ஜாதி மதபேதமின்றி
+                            சிறியவர் முதல் பெரியவர் வரை அனைத்து தரப்பு மக்களாலும் பேசுவதை பொதுவாக காணமுடிகிறது
+                            இவரது பெயர் தெரியாத கிராம மக்களே கிடையாது என்கிற அளவிற்கு கிராமத்து மக்கள் எல்லோருடைய மனதிலும் பசுமரத்து ஆணியாகப் பதிந்து
+                            தங்கள் இல்லங்களில் ஒருவராக வசந்தம் கார்த்திகேயன் எம்எல்ஏ அவர்கள்
+                            கடந்த 5 ஆண்டுகளில்
+                            நிலைத்து நின்று இருப்பது ஒரு வரலாற்றுச் சாதனையாக பார்க்கப்படுகிறது.
+                            மேலும் கள்ளக்குறிச்சி தெற்கு மாவட்ட கழக செயலாளராக பொறுப்பேற்ற நாள் முதல் அரசியல் எந்திரனாக ஓய்வு உறக்கமின்றி
+                            உழைத்து வரும் இவர் வரும் ஏப்ரல் 6ஆம் தேதி நடைபெற இருக்கின்ற சட்டமன்ற தேர்தலில் இத்தொகுதியில்
+                            லட்சக்கணக்கான வாக்குகள் வித்தியாசத்தில்
+                            வெற்றி பெறுவது நிச்சயம் என்பதும்
+                            தமிழகத்தில்
+                            மாண்புமிகு தளபதியார் அவர்களின் தலைமையில் ஒரு நல்லாட்சி அமையும் என்பதும் உறுதியாக இத்தொகுதி மக்கள் மத்தியில் பரவலாக
+                            பேசப்படுகிறது இப்படிப்பட்ட ஒரு சட்டமன்ற உறுப்பினரை
+                            இதுநாள் வரை தங்கள் வாழ்நாளில் தாங்கள் கண்டது இல்லை என்று
+                            80 வயதுக்கு மேற்பட்ட
+                            பலர்
+                            கூறுவதை
+                            நம்மால் கேட்க முடிகிறது. மாற்றுத்திறனாளிகளுக்கு தனது சொந்த நிதியிலிருந்து இருசக்கர வாகனமும் வழங்கி அவர்களது தேவைகளை பூர்த்தி செய்யக்கூடிய அளவிற்கு அளவுக்குப் உதவிகளையும்
+                            இவர் செய்திருப்பது மைல்கல் சாதனை என்று பலர் கூறுகின்றனர் .
+                            இவர்
+                            இத்தொகுதியின் பொதுவேட்பாளர் எங்கள் வேட்பாளர் எந்நாளும் எங்கள் சட்டமன்ற உறுப்பினர்
+                            மாற்றுக் கட்சியினரை எதிரியாக பார்க்காமல் எல்லோரிடமும் அன்பு பாராட்டி
+                            புன்னகை மன்னராக
+                            வலம் வந்து அனைவரையும் மனதில் நிலைநிறுத்தி மக்கள் பணிகளை
+                            ஒவ்வொரு நாளும் சூறாவளியாய் சுழன்று
+                            சிறப்பாக  செய்துவருவதாக
+                            மக்கள் மத்தியில் பேசப்படுகிறது. இதனால்
+                            தொகுதி முழுவதும் வசந்தம் கார்த்திக்கேயன் அவர்களின் ஆதரவு அலை பலமாக
+                            வீசி வருகிறது என்பது உண்மை.
+                            கடந்த 2016ல் நடைபெற்ற சட்டமன்ற தேர்தலைக் காட்டிலும் அதிகப்படியான
+                            வாக்குகள் வித்தியாசத்தில் இவர் இத்தொகுதியில் வெற்றி பெறுவார்
+                            தமிழகத்தில்
+                            தளபதியார் தலைமையில் நல்லாட்சி அமைந்ததும் தமிழ்நாட்டின் முன்னணி தொகுதியாகவும், உள் கட்டமைப்பு மற்றும் பொருளாதார வளர்ச்சியில் மேலும் முன்னேறிய தொகுதியாகயும் ரிஷிவந்தியம்  சட்டமன்ற தொகுதி   நிச்சயம் முன்னேற்றம் அடையும் என்பது ஆயிரம் மடங்கு உண்மை என்பதே நிதர்சனமானதாகும். ஒவ்வொரு நாளும் ஓய்வறியாமல் உழைத்துக் கொண்டிருக்கும் இவரது செயல்பாடுகள்
+                            அருகாமை தொகுதியினரையும் ஆச்சரியப்பட வைக்கிறது
+                            24 மணி நேரமும்
+                            மக்களைப் பற்றியும் தனது சொந்த தொகுதியை பற்றியும் சதாசர்வகாலமும் சிந்தித்து செயலாற்றும் தொலைநோக்கு சிந்தனையாளர் வசந்தம் கார்த்திகேயன் அவர்கள் நிச்சயம் லட்சம் வாக்குகள் வித்தியாசத்தில் வெற்றி பெறுவார் .
+                            வரலாற்று சாதனை படைப்பார் .
+                            மக்களுக்காக வாழ்பவர்களை மக்கள் என்றைக்கும்
+                            வாழவைப்பார்கள்
+                            என்பதுதான் உண்மை
+                        </h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="block-mews-outer">
+                    <div class="news-title">
+
+                        <h3>
+                            இவர் சட்டமன்ற உறுப்பினராக வெற்றி பெற்ற நாள் முதல்
+                            இன்றுவரை தொகுதி மக்களுக்கான
+                            அனைத்து
+                            நலத்திட்டங்களையும்
+                            மக்கள் பணிகளையும்
+                            சிறப்பாக செய்து
+                            தொகுதி மக்களின்
+                            நம்பிக்கை நட்சத்திரமாக ஜொலித்து வருகிறார்.
+                            மேலும்
+                            தொகுதி மக்களின்
+                            சுக துக்கங்களில் ஓடோடிச் சென்று
+                            முதல் ஆளாக
+                            அந்நிகழ்வில் கலந்து கொள்வதில்
+                            இவரை மிஞ்ச
+                            யாரும்  கிடையாது
+                            சொந்தக் கட்சியினரின் நிகழ்வுகளில் பங்கேற்பது மட்டுமன்றி மாற்று கட்சியினரின் இல்ல நிகழ்வுகளில் கூட
+                            எந்தவித
+                            கட்சி வித்தியாசம் பார்க்காமல் மனமாச்சரியம் இல்லாமல் பங்கேற்பது இவருக்கு கூடுதல் பலம்.
+
+                            இதனால் தொகுதி மக்களின் இல்லத்தில் ஒருவராக
+                            இடம் பிடித்திருக்கிறார். தொகுதியிலுள்ள அனைத்து ஊராட்சிகளுக்கும்
+                            தன்னுடைய தொகுதி மேம்பாட்டு நிதியை வாரி வழங்கி
+                            பல்வேறு
+                            நலத்திட்டங்களை செயல்படுத்தி இருப்பது
+                            இவர் மீதான நம்பிக்கையை மக்கள் மத்தியில் அதிகப்படுத்தியிருக்கிறது .
+                            கடந்த இரண்டு வருடங்களுக்கு முன்பு கடுமையான வறட்சி தமிழகம் முழுவதும் ஏற்பட்ட சமயத்தில்
+                            தொகுதி மக்கள் தண்ணீர் இன்றி தாகத்தால் தவிப்பதை அறிந்து
+                            துடியாய்
+                            துடித்த இவர் உடனடியாக தனது சொந்த செலவில்
+                            25க்கும் மேற்பட்ட
+                            டேங்கர் லாரிகளில்
+                            தினந்தோறும் அனைத்து கிராமங்களுக்கும் தண்ணீர் கொண்டு சேர்த்த
+                            மகராசன் இவர் என்று கிராம மக்கள் மகிழ்ச்சி பொங்க கூறுகின்றனர்
+                            மேலும்
+                            அனைத்து மதத்தைச்
+                            சேர்ந்தவர்களின்
+                            பொதுவான நிகழ்வுகளில் தவறாமல்
+                            கலந்துகொண்டு
+                            அவர்களுக்கான
+                            தேவைகளை
+                            சிறப்பாக செய்து வருகிறார்
+                            மிகவும்
+                            பின்தங்கிய தொகுதியாக ஒரு காலத்தில்
+                            கூறப்பட்ட ரிஷிவந்தியம் தொகுதியை
+                            கடந்த  ஐந்து ஆண்டு காலத்தில் முன்னணியில் கொண்டுவருவதற்காக கிராமப்புற சாலைகள் இணைப்பு சாலைகள்
+                            நெடுஞ்சாலைகள் என அனைத்து சாலைகளையும் சீரமைத்தும்
+                            கிராம மக்களின் தண்ணீர் தேவைகள், சுகாதார தேவைகள் உள்ளிட்ட
+                            தொகுதியின் உள்கட்டமைப்பு வசதிகள் அனைத்தையும்
+                            மேம்படுத்தி
+                            சாதனை படைத்து இருப்பதாக தொகுதி மக்கள் கூறுகின்றனர்
+                            மேலும்
+                            யாருக்கு எந்த உதவி என்றாலும் எந்த நேரத்தில் சென்று கேட்டாலும் அவர்களுக்கான தேவைகளை தீர்த்து வைப்பதில்
+                            இவரை மிஞ்ச
+                            யாரும் இல்லை என்று பொதுமக்கள் பெருமையுடன்  கூறுகின்றனர் .
+                        </h3>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="block-mews-outer">
+                    <div class="news-title">
+
+                        <h3>
+                            ரிஷிவந்தியம் தொகுதியில் கடந்த
+                            2016 ம் ஆண்டு நடைபெற்ற சட்டமன்ற தேர்தலில்
+                            திமுக சார்பில்
+                            சட்டமன்ற
+                            வேட்பாளராக
+                            களம் இறங்கி
+                            வெற்றி பெற்றவர்
+                            வசந்தம் கார்த்திகேயன் எம்எல்ஏ அவர்கள்
+                        </h3>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="quotes home_quotes clearfix">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>&ldquo;ஒளியில்தான் நமது நிழலின் வடிவம் நமக்குத் தெரிகிறது.</h2>
+                    <h2>சோதனையில்தான் நமது நெஞ்சின் வலிமை நமக்குப் புரிகிறது.&rdquo;</h2>
+                    <div>&nbsp;</div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="quotes-writer">
+                        <img src="~/assets/img/quote_img.jpg" alt="writer">
+                        <h4>கலைஞர் மு.கருணாநிதி</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>

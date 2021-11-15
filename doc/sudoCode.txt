@@ -1,0 +1,88 @@
+USER SIDE
+===========
+
+1.Dynamic Image loader
+2.Login ->
+	1.Admin -->
+		1.1 Name
+		1.2 Username
+		1.3 Password
+		1.4 Role
+		1.5 Status
+		1.6 Date Of Creation
+	2.signUp --> 
+		Name,
+		Mobile, 
+		Father name,
+		Address,
+		Block --> DDL   ---> (Use Select2 for all DDL)
+		Panychayat -->DDL
+		Village --> DDL
+	3.Login Client -->
+		1.View Complain list sync with mobile no
+			1.1 Complain No
+			1.2 Status
+			1.3 Date of Complained
+			1.4 Feedback --> 
+			1.5 Review Comments --> once it fill Need notifiation to Admin via What's app (optional)
+			
+	4.Admin Login -->
+		1.All complain order list (tab design with status)
+		2.Cards by Count of Status
+		3.Chart by Count of Status
+		4.
+3.New Application --> with OTP Process 
+	1.Complain No --> Auto Gen (Disabled)
+	2.Date of applied --> Auto Gen (Disabled)
+	3.Detail of complain --> Text Area (Client)
+	4.Detail Proof --> Attachement (Client)
+	5.Status --> New,Pending,InProcess,Completed (once status changed need to notify to Client stage by stage) (Admin )(Disabled For Client and Status set as New)
+	6.Feedback --> (Disabled) (Enable on edit only)
+	7.Review Comments (Disabled For Admin) 
+	8. Admin Name --> Login user (backend)
+	9. Date and Time of React --> CurrentDate (system Date)
+
+-------------------------------------------------------
+
+ADMIN SIDE
+===========
+
+1. Dashboard
+		1.Cards by Count of Status
+		2.Chart by Count of Status
+2. Complains 
+		1.All complain order list (tab design with status) --> ((Filter based on Area,Date,Block,panchayat,Village) -> Make JQueryDataTable for the filters
+3.Video Upload
+4.Images Upload
+5.User Creation
+--------------------------------------------------------
+
+REPORTS
+========
+1.Complain status based
+2.Area based
+3.Admin based
+
+
+
+	
+
+------------------------------------------------------
+RND's For this Taks
+=====================
+	1. What's app API
+	2. Live Video
+	3. Dynamic Images
+	4. OTP integaration Process
+	
+
+------------------------------------------------------
+
+New Application ---> Application
+===================
+Application Status 
+===================
+Black page 
+	1. Mobile
+	2. OTP
+After conformation navigate to Applications

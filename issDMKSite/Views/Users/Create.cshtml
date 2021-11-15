@@ -1,0 +1,106 @@
+﻿@model issDMKSite.Models.User
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="card">
+                    <div class="card-header header-elements-inline">
+
+
+                        <div class="list-icons" style="float: right;">
+                            @Html.ActionLink("மீண்டும் பட்டியலில்", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+
+
+                                <div class="form-group col-md-6">
+                                    <label>Name</label>
+
+                                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>User Name</label>
+
+                                    @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+
+
+                                <div class="form-group col-md-6">
+                                    <label>Password</label>
+
+                                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Role</label>
+
+                                    @Html.DropDownList("role",new List<SelectListItem> {
+                                                        new SelectListItem{ Text="Admin", Value="Admin"},
+                                                 new SelectListItem{ Text="User", Value="User"},
+                                           //new SelectListItem{ Text="Employee", Value="Employee"},
+                                                   })
+                                    @* @Html.EditorFor(model => model.role, new { htmlAttributes = new { @class = "form-control" } })*@
+                                    @Html.ValidationMessageFor(model => model.role, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+
+
+                                <div class="form-group col-md-6">
+                                    <label>Status</label>
+
+                                    @Html.DropDownList("status", new List<SelectListItem> {
+                                                        new SelectListItem{ Text="Active", Value="Active"},
+                                                 new SelectListItem{ Text="InActive", Value="InActive"},
+                                           })
+                                    @*@Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control" } })*@
+                                    @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label>ஒன்ரியம்</label>
+                                    <div class="wrap-input100 validate-input">
+                                        @Html.DropDownList("blockId", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.blockId, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+
+                            <button type="submit" value="Create" class="btn btn-success">உருவாக்கு</button>
+                            @Html.ActionLink("ரத்து", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

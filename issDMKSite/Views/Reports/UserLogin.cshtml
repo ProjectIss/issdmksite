@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "UserLogin";
+}
+<head>
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/dmk.in/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5">
+
+                <span class="login100-form-title p-b-43">
+                    தொடர மொபைல் எண்ணைச் சரிபார்க்கவும்
+                </span>
+                <br />
+                <hr />
+
+                <div class="wrap-input100 validate-input" data-validate="Valid Phone number is required: 7985165456">
+                    <input class="input100" type="number" id="txtMobileNo" max="9999999999" min="1111111111" name="mobileNo">
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">மொபைல் எண்</span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Password is required" id="otp">
+                    <input class="input100" type="number" id="txtOTP" max="9999" name="OTP" min="1111">
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">OTP</span>
+                </div>
+
+
+                <div class="row" style="margin-bottom:10px">
+                    <div style="margin-right: 3%;width: 100%;margin-left: 15px;">
+                        <input type="button" class="login100-form-btn" id="btnSubmit" value="Get OTP" />
+
+                    </div>
+
+                </div>
+
+                <label style="color:red;font-stretch: expanded;text-align: center;padding: 5%;" id="otpError">Wrong Mobile OTP Please check ...!</label>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/assets/dmk.in/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/assets/dmk.in/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/dmk.in/js/main.js"></script>
+
+
+
+    <script>
+        $(function () {
+                       
+            $('#otp').hide();
+            $('#otpError').hide();
+            $('#btnSubmit').click(function () {
+                let value = $('#btnSubmit').val();
+                if (value == "Get OTP") {
+                    OTP();
+                    $('#btnSubmit').val("Submit OTP");
+                    $('#otp').show();
+                } else {
+                    let ottValue = $('#txtOTP').val();
+                    let sessionOTP = sessionStorage.getItem("OTP");
+                    if (ottValue == sessionOTP) {
+                        let phone = $('#txtMobileNo').val();
+                       // 
+                        $.ajax({
+                            type: 'POST',
+                            url: '@Url.Content("~/Reports/UserLogin")',
+                            dataType: 'json',
+                            data: { mobileNo: phone },
+                            success: function (data) {
+
+                                if (data == "signUps") {
+                                    window.location.href = "@Url.Content("~/signUps/Index")";
+                                } else if (data == "ApplicationHome") {
+                                      window.location.href = "@Url.Content("~/applications/Index")";
+                                }
+                            }
+                        });
+                    }
+                    else {
+                        $('#otpError').show();
+                    }
+                }
+            });
+        });
+        function OTP() {
+
+            let otp = generateOTP();
+            sessionStorage.setItem("OTP", otp);
+            let phone = $('#txtMobileNo').val();
+            sessionStorage.setItem("MobileNo", phone);
+            let URL = `http://103.16.101.52/bulksms/bulksms?username=vdh-vasantham&password=123456&type=0&dlr=1&destination=91${phone}&source=VASRES&message= Your login OTP is ${otp}. THANK YOU-Vasantham&entityid= 1201160706237438663&tempid=  1207163160920483299`;
+            $.ajax({
+                type: 'GET',
+                url: URL,
+                // dataType: 'json',
+                success: function (data) {
+
+                }
+            });
+
+        }
+        function generateOTP() {
+
+            // Declare a digits variable
+            // which stores all digits
+            var digits = '0123456789';
+            let OTP = '';
+            for (let i = 0; i < 4; i++) {
+                OTP += digits[Math.floor(Math.random() * 10)];
+            }
+            return OTP;
+        }
+    </script>
+</body>

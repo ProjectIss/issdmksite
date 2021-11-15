@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<style type=text/css>
+
+
+
+    .card animate fadeLeft {
+        background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    }
+</style>
+
+<div class="row" style="height:222px">
+    <div class="col-12">
+        <div class="container">
+            <div class="row vertical-morden-dashboard">
+                <div class="col s12 m4 l4">
+
+                    <div class="card animate fadeLeft" style="height: 200px; background:  linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%); border: 3px solid #74cffb;border-radius: 5%;">
+                        <div class="card-content" style="margin-left: 29%;color: white;">
+
+                            <h5 class="mb-0 mt-0 display-flex justify-content-between">
+
+                                புதிய மனு
+                            </h5>
+
+                        </div>
+                        <div style="height: 142px; width:60%;background-color:  #fbf4f4;  border: 4px solid #586ce8;border-radius: 50%;margin : auto">
+                            <div class="card-content" style="margin-left: 42%;margin-top:40px">
+                                <span class="display" id="tblNew" style="font-size: xx-large;"></span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+
+                    <div class="card animate fadeLeft" style="height: 200px;background:  linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);  border: 3px solid #74cffb;border-radius: 5%;">
+                        <div class="card-content" style="margin-left: 27%;color: white;">
+                            <h6 class="mb-0 mt-0 display-flex justify-content-between" style="font-size: large;">
+                                நிலுவை மனு
+                            </h6>
+                        </div>
+                        <div style="height: 142px; width:60%;background-color:  #fbf4f4;  border:4px solid #f70000;border-radius: 50%;margin : auto">
+                            <div class="card-content" style="margin-left: 42%;margin-top:40px">
+                                <span class="display" id="tblPending" style="font-size: xx-large;"></span>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+
+                    <div class="card animate fadeLeft" style="height: 200px;background:  linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);  border: 3px solid #74cffb;border-radius: 5%;">
+                        <div class="card-content" style="margin-left: 12%;color: white;">
+                            <h5 class="mb-0 mt-0 display-flex justify-content-between" style="font-size: 126%;">
+                                செயல்பாட்டில் மனு
+                            </h5>
+
+                        </div>
+                        <div style="height: 142px; width:60%;background-color:  #fbf4f4;  border: 4px solid #000df7;border-radius: 50%;margin : auto">
+                            <div class="card-content" style="margin-left: 42%;margin-top:40px">
+                                <span class="display" id="tblInProcess" style="font-size: xx-large;"></span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+
+                    <div class="card animate fadeLeft" style="height: 200px;background:  linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);  border: 3px solid #74cffb;border-radius: 5%;">
+                        <div class="card-content" style="margin-left: 24%;color: white;">
+                            <h5 class="mb-0 mt-0 display-flex justify-content-between">
+                                நிறைவு மனு
+                            </h5>
+                        </div>
+                        <div style="height: 142px; width:60%;background-color:  #fbf4f4;  border: 4px solid #6cf957;border-radius: 50%;margin : auto">
+
+                            <div class="card-content" style="margin-left: 42%;margin-top:40px">
+                                <span class="display" id="tblCompleted" style="font-size: xx-large;"></span>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ @if (issDMKSite.Custom.Display.Role != "Admin")
+        {<h1>
+                @ViewBag.blockName
+            </h1>
+        }
+<div class="col-md-10">
+    <div class="card" style="width:120%">
+       
+        <div class="card-header header-elements-inline">
+            <h5 class="card-title">தகவல்</h5>
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-striped" style="text-align:center">
+                <thead>
+
+                    <tr>
+                        @if (issDMKSite.Custom.Display.Role == "Admin")
+                        {
+                            <th>Block</th>
+                        }
+                        else
+                        {
+                            <th>Panchayat Name</th>
+                        }
+                        <th> Total</th>
+                        <th>New</th>
+                        <th>Pending</th>
+                        <th>Completed</th>
+
+                    </tr>
+                </thead>
+                <tbody id="tblhome"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: 'Get',
+            url: '@Url.Content("~/Reports/Dashboards")',
+            dataType: 'json',
+
+            success: function (data) {
+                console.log(data);
+                if (data.response != "Invalid") {
+
+                    $('#tblNew').append(data.response.New);
+                    $('#tblPending').append(data.response.Pending);
+                    $('#tblInProcess').append(data.response.InProcess);
+                    $('#tblCompleted').append(data.response.Completed);
+
+                }
+
+                if (data.leftOuterJoin != "Invalid" && data.leftOuterJoin.length > 0) {
+                    var actData = [];
+                    for (var i = 0; i < data.leftOuterJoin.length; i++) {
+
+                        if (data.leftOuterJoin[i].length > 0) {
+                            let tempData = {};
+                            tempData.blockName = data.leftOuterJoin[i][0].blockName;
+                            tempData.New = 0, tempData.Pending = 0, tempData.Completed = 0, tempData.total = 0;
+                            for (var m = 0; m < data.leftOuterJoin[i].length; m++) {
+                                if (data.leftOuterJoin[i][m].status == "New") {
+                                    tempData.New++;
+                                }
+                                else if (data.leftOuterJoin[i][m].status == "Pending") {
+                                    tempData.Pending++;
+                                }
+                                else if (data.leftOuterJoin[i][m].status == "Completed") {
+                                    tempData.Completed++;
+                                }
+                                tempData.total++;
+                            }
+
+                            actData.push(tempData);
+                        }
+
+                    }
+                    var row = "";
+                    for (var i = 0; i < actData.length; i++) {
+                        row += "<tr>" +
+                            "<td>" + actData[i].blockName + "</td>" +
+                            "<td>" + actData[i].total + "</td>" +
+                            "<td>" + actData[i].New + "</td>" +
+                            "<td>" + actData[i].Pending + "</td>" +
+                            "<td>" + actData[i].Completed + "</td>" +
+                            "</tr>";
+
+                    }
+                    $('#tblhome').append(row);
+                }
+            }
+
+
+        });
+             });
+
+
+
+</script>
+

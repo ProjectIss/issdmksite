@@ -1,0 +1,70 @@
+﻿@model IEnumerable<issDMKSite.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="header-elements">
+        <div class="list-icons" style=" float: right;">
+
+            @Html.ActionLink("புதிதாக உருவாக்கு", "Create", null, new { @class = "btn btn-primary" })
+
+        </div>
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>
+                Department Name
+            </th>
+            <th>
+                Person Name
+            </th>
+            <th>
+                Person Address
+            </th>
+            <th>
+                Contact No
+            </th>
+            <th>
+                Email
+            </th>
+           
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.departmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.personName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.persoAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contactNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

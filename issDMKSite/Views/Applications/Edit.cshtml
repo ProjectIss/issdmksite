@@ -1,0 +1,137 @@
+﻿@model issDMKSite.Models.Application
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "Edit";
+}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="card">
+                    <div class="card-header header-elements-inline">
+                        <h4>புகார்</h4>
+
+                        <div class="list-icons" style="float: right;">
+                            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+
+                    </div>
+                    <div class="card-body" style="border: 1px solid #0c5ade;">
+
+                        <div class="row">
+                            <div class="form-group col-md-4" style="display:none;">
+                                <label>பின்னூட்டம்</label>
+                                @Html.EditorFor(model => model.MobilenNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MobilenNo, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group col-md-4" style="display:none;" >
+                                <label>பின்னூட்டம்</label>
+                                @Html.EditorFor(model => model.blockId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.blockId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group col-md-4" style="display:none;">
+                                <label>பின்னூட்டம்</label>
+                                @Html.EditorFor(model => model.ComplainNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ComplainNo, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-12">
+
+                                <div class="row">
+
+                                    <div class="form-group col-md-4" style="display:none;">
+                                        <label> புகாரின் விவரங்கள்</label>
+                                        @*<textarea name="Detailofcomplain" rows="5"></textarea>*@
+                                        @Html.EditorFor(model => model.Detailofcomplain, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Detailofcomplain, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-md-4" style="display:none;">
+                                        <label> புகாரின் விவரங்கள்</label>
+                                        @*<textarea name="Detailofcomplain" rows="5"></textarea>*@
+                                        @Html.EditorFor(model => model.Dateofapplied, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Dateofapplied, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-md-4" style="display:none;">
+                                        <label>விவரம் ஆதாரம்</label>
+                                        <a class="uk-file-upload"><input id="itemImage" type="file" name="photo" onchange="show(this)"></a>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label>பின்னூட்டம்</label>
+                                        @Html.EditorFor(model => model.Feedback, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Feedback, "", new { @class = "text-danger" })
+                                    </div>
+
+
+                                    <div class="form-group col-md-4">
+                                        <label>நிலை</label>
+                                        @Html.DropDownList("Status", new List<SelectListItem> {
+                                                                                      new SelectListItem{ Text="New", Value="New"},
+
+                                                                               new SelectListItem{ Text="InProcess", Value="InProcess"},
+                                                                               new SelectListItem{ Text="Completed", Value="Completed"},
+                                                                               //new SelectListItem{ Text="InActive", Value="InActive"},
+                                                                         })
+
+                                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                                    </div>
+
+
+
+                                    <div class="form-group col-md-4">
+                                        <label>User Name</label>
+                                        @Html.EditorFor(model => model.AdminName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.AdminName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>Department</label>
+                                        @Html.DropDownList("departmentId", null, htmlAttributes: new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.departmentId, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label>கருத்துகளை மதிப்பாய்வு செய்யவும்</label>
+                                        @Html.EditorFor(model => model.ReviewComments, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ReviewComments, "", new { @class = "text-danger" })
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                               
+
+
+                          
+
+                        <div class="text-right">
+                            <button type="submit" value="Create" class="btn btn-success">Submit</button>
+                            @Html.ActionLink("Cancel", "Index", null, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+<script language="JavaScript">
+
+
+    function Item_snapshot() {
+        Webcam.snap(function (data_uri) {
+            $('#itemImage').attr("src", data_uri);
+        });
+    }
+</script>

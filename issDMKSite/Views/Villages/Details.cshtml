@@ -1,0 +1,82 @@
+﻿@model issDMKSite.Models.Village
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Village</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.blockName.blockName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.blockName.blockName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.panchayatName.panchayatName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.panchayatName.panchayatName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.villageName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.villageName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.villageSecretaryName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.villageSecretaryName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.villageSecretaryAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.villageSecretaryAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.mobileNo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.mobileNo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

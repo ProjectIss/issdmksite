@@ -1,0 +1,6686 @@
+@import url(../../fonts.googleapis.com/earlyaccess/notosanstamil.css);
+    @import url(../../fonts.googleapis.com/earlyaccess/lohittamil.css);
+    @import url(../../fonts.googleapis.com/earlyaccess/notosanstamilui.css);
+    @font-face {
+    font-family: tamil;
+    src: url(https://dmk.in/fonts/New_Kannan_Text.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    font-family: tamil;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, :after, :before {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+.main-timeline7 {
+    overflow: hidden;
+    position: relative;
+}
+.main-timeline7 .timeline {
+    width: 50%;
+    float: left;
+    z-index: 1;
+    position: relative;
+}
+.main-timeline7 .year {
+    display: block;
+    position: relative;
+}
+.main-timeline7 .year:before {
+    position: absolute;
+    top: 20px;
+    left: 26%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-timeline7 .year:after {
+    position: absolute;
+    top: 20px;
+    left: 65%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-timeline7 .timeline-content {
+    padding: 18px 60px 18px 40px;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+}
+.main-timeline7 .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ec3237;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.main-timeline7 .description {
+    font-size: 15px;
+    color: #7f8386;
+    line-height: 25px;
+}
+@media only screen and (max-width:990px) {
+    .main-timeline7 .timeline {
+    width: 100%}
+.main-timeline7 .timeline-content .description {
+    color: #666;
+}
+.main-timeline7 .year:before {
+    position: absolute;
+    top: 20px;
+    left: 31%}
+.main-timeline7 .year:after {
+    position: absolute;
+    top: 20px;
+    left: 70%}
+}@media only screen and (max-width:767px) {
+    .main-timeline7 .title {
+    font-size: 15px;
+}
+.main-timeline7 .timeline-content, .main-timeline7 .timeline:nth-child(2n) .timeline-content {
+    text-align: center;
+    padding: 18px 10px 18px 10px;
+}
+.main-timeline7 .third .Single_right {
+    height: 60px;
+}
+.main-timeline7 .year:before {
+    position: absolute;
+    top: 20px;
+    left: 22%}
+.main-timeline7 .third .Single_left:before {
+    position: absolute;
+    top: 50px;
+}
+.main-timeline7 .third .Single_right:before {
+    position: absolute;
+    top: 50px;
+}
+}.main-timeline7 .third {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+}
+.main-timeline7 .third .flow {
+    display: none;
+}
+.main-timeline7 .third .Single_left {
+    float: left;
+    width: 50%;
+    margin-bottom: 50px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+.main-timeline7 .third .Single_right {
+    float: right;
+    width: 50%;
+    margin-bottom: 50px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+.time_mavatta {
+    margin: 50px 0;
+    display: block;
+    text-align: center;
+}
+.time_mavatta a {
+    font-size: 18px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #ec3237;
+    font-weight: 600;
+}
+.timeline-icon .logo {
+    width: 40px!important;
+    position: relative;
+    top: 26px;
+}
+.main-timeline7 .third .Single_left:before {
+    position: absolute;
+    top: 34px;
+    left: 45%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-timeline7 .third .Single_right:before {
+    position: absolute;
+    top: 34px;
+    left: 45%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-timeline7 .third .Single_left_last:before {
+    display: none;
+}
+.main-timeline7 .third .Single_left_right:before {
+    display: none;
+}
+.main-timeline7 .timeline.timeline_right:nth-child(2n) .year:before {
+    right: auto;
+    left: 27%}
+.main-timeline7 .timeline.timeline_right .year:after {
+    left: 67%}
+.scroll-wrapper {
+    overflow: hidden!important;
+    padding: 0!important;
+    position: relative;
+}
+.scroll-wrapper>.scroll-content {
+    border: none!important;
+    box-sizing: content-box!important;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none!important;
+    padding: 0;
+    position: relative!important;
+    top: 0;
+    width: auto!important;
+}
+.scroll-wrapper>.scroll-content::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+.scroll-element {
+    display: none;
+}
+.scroll-element, .scroll-element div {
+    box-sizing: content-box;
+}
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+.scroll-element .scroll-arrow, .scroll-element .scroll-bar {
+    cursor: default;
+}
+.scroll-textarea {
+    border: 1px solid #ccc;
+    border-top-color: #999;
+}
+.scroll-textarea>.scroll-content {
+    overflow: hidden!important;
+}
+.scroll-textarea>.scroll-content>textarea {
+    border: none!important;
+    box-sizing: border-box;
+    height: 100%!important;
+    margin: 0;
+    max-height: none!important;
+    max-width: none!important;
+    overflow: scroll!important;
+    outline: 0;
+    padding: 2px;
+    position: relative!important;
+    top: 0;
+    width: 100%!important;
+}
+.scroll-textarea>.scroll-content>textarea::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+.mCustomScrollbar>.scroll-element, .mCustomScrollbar>.scroll-element div {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10;
+}
+.mCustomScrollbar>.scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%}
+.mCustomScrollbar>.scroll-element.scroll-x {
+    bottom: 2px;
+    height: 8px;
+    left: 0;
+    width: 100%}
+.mCustomScrollbar>.scroll-element.scroll-y {
+    height: 100%;
+    right: 2px;
+    top: 0;
+    width: 8px;
+}
+.mCustomScrollbar>.scroll-element .scroll-element_outer {
+    overflow: hidden;
+}
+.mCustomScrollbar>.scroll-element .scroll-bar, .mCustomScrollbar>.scroll-element .scroll-element_outer, .mCustomScrollbar>.scroll-element .scroll-element_track {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.mCustomScrollbar>.scroll-element .scroll-bar, .mCustomScrollbar>.scroll-element .scroll-element_track {
+    opacity: .8;
+}
+.mCustomScrollbar>.scroll-element .scroll-element_track {
+    background-color: #000;
+    opacity: .3;
+}
+.mCustomScrollbar>.scroll-element .scroll-bar {
+    background-color: #e8de1d;
+}
+.mCustomScrollbar>.scroll-element:hover .scroll-bar {
+    background-color: #e8de1d;
+}
+.mCustomScrollbar>.scroll-element.scroll-draggable .scroll-bar {
+    background-color: #e8de1d;
+}
+.mCustomScrollbar>.scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+    left: -12px;
+}
+.mCustomScrollbar>.scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+    top: -12px;
+}
+.mCustomScrollbar>.scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -12px;
+}
+.mCustomScrollbar>.scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -12px;
+}
+.resp-tabs-list li {
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+}
+.resp-tabs-container {
+    padding: 0;
+    background-color: #fff;
+    clear: left;
+}
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+.resp-tab-content {
+    display: none;
+    padding: 15px;
+}
+.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-bottom: none;
+    margin-bottom: -1px!important;
+    padding: 12px 14px 14px 14px!important;
+}
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+.resp-accordion-active, .resp-content-active {
+    display: block;
+}
+.resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+h2.resp-accordion {
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-top: 0 solid #c1c1c1;
+    margin: 0;
+    padding: 10px 15px;
+}
+h2.resp-tab-active {
+    border-bottom: 0 solid #c1c1c1!important;
+    margin-bottom: 0!important;
+    padding: 10px 15px!important;
+}
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1!important;
+    background: #00f;
+}
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 30%}
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 15px 15px!important;
+    margin: 0;
+    cursor: pointer;
+    float: none;
+}
+.resp-vtabs .resp-tabs-container {
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #c1c1c1;
+    float: left;
+    width: 67%;
+    min-height: 250px;
+    border-radius: 4px;
+    clear: none;
+}
+.resp-vtabs .resp-tab-content {
+    border: none;
+}
+.resp-vtabs li.resp-tab-active {
+    border: 1px solid #c1c1c1;
+    border-right: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    margin-right: -1px!important;
+    padding: 14px 15px 15px 14px!important;
+}
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 3px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #c1c1c1;
+}
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #9b9797;
+}
+h2.resp-tab-active {
+    background: #dbdbdb!important;
+}
+.resp-easy-accordion h2.resp-accordion {
+    display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1!important;
+}
+.resp-jfit {
+    width: 100%;
+    margin: 0;
+}
+.resp-tab-content-active {
+    display: block;
+}
+h2.resp-accordion:first-child {
+    border-top: 1px solid #c1c1c1!important;
+}
+@media only screen and (max-width:768px) {
+    ul.resp-tabs-list {
+    display: none;
+}
+h2.resp-accordion {
+    display: block;
+}
+.resp-vtabs .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+.resp-vtabs .resp-tabs-container {
+    border: none;
+    float: none;
+    width: 100%;
+    min-height: initial;
+    clear: none;
+}
+.resp-accordion-closed {
+    display: none!important;
+}
+.resp-vtabs .resp-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1!important;
+}
+#verticalTab .resp_tabs_list {
+    display: block!important;
+}
+#verticalTab ul.resp-tabs-list {
+    display: block!important;
+}
+#verticalTab h2.resp-accordion {
+    display: none!important;
+}
+#verticalTab.resp-vtabs .resp-tab-content {
+    border: 0!important;
+}
+}.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: 0;
+}
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+.slick-slider .slick-list, .slick-slider .slick-track {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:after, .slick-track:before {
+    display: table;
+    content: ''}
+.slick-track:after {
+    clear: both;
+}
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir=rtl] .slick-slide {
+    float: right;
+}
+.slick-slide img {
+    display: block;
+}
+.slick-slide.slick-loading img {
+    display: none;
+}
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.cd-nugget-info {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    top: 0;
+    left: 0;
+}
+.cd-nugget-info a {
+    position: relative;
+    font-size: 14px;
+    color: #718ca1;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}
+.cd-nugget-info a:hover {
+    opacity: .8;
+}
+.cd-nugget-info span {
+    vertical-align: middle;
+    display: inline-block;
+}
+.cd-nugget-info span svg {
+    display: block;
+}
+.cd-nugget-info .cd-nugget-info-arrow {
+    fill: #718ca1;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: 0;
+}
+.navbar-fixed-top {
+    top: 100px;
+}
+.navbar-inverse {
+    background-color: transparent!important;
+    border: none;
+    margin-bottom: 0;
+    min-height: 60px;
+    height: 70px;
+    border-radius: 0;
+    transition: all .6s;
+    position: relative;
+    z-index: 999;
+}
+.top-header h3 {
+    color: #e8de1d;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 30px 0 0 150px;
+}
+.top-header {
+    background-color: transparent!important;
+    min-height: 60px;
+    position: relative;
+}
+.sitetitle {
+    position: absolute;
+    width: 460px;
+    left: 160px;
+    top: 40px;
+    color: #e8de1d;
+    font-weight: 600;
+    font-size: 36px;
+}
+.header_right {
+    position: absolute;
+    right: -95px;
+    top: 5px;
+    z-index: 1024;
+    width: 90px;
+    border: 3px solid #000;
+    border-radius: 50%}
+.pos-rel {
+    position: relative;
+}
+.navbar-brand {
+    position: relative;
+    height: auto;
+    padding: 0;
+    width: 200px;
+}
+.navbar-inverse .navbar-nav {
+    margin-top: 5px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #e8de1d!important;
+    font-size: 18px;
+    transition: all .6s;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #e8de1d!important;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #e8de1d!important;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.navbar.navbar-inverse.navbar-fixed-top.sticker.stick {
+    top: 0;
+    min-height: 80px;
+    height: 80px;
+}
+.stick .navbar-brand {
+    top: 0;
+}
+.stick .logo {
+    width: 75px;
+}
+.stick .navbar-nav {
+    margin-top: 12px;
+}
+#banner {
+    height: 480px;
+}
+.banner-sec {
+    margin-top: 00px;
+}
+.banner {
+    height: 500px;
+    width: 100%;
+    object-position: top;
+}
+.banner-div {
+    position: relative;
+}
+.banner-div h1, .carousel-caption h1 {
+    position: absolute;
+    color: #000;
+    top: 35%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    text-shadow: 2px 2px 2px #fff;
+}
+.banner-div h1 span, .carousel-caption h1 span {
+    color: #ff1c1b;
+    text-shadow: 2px 2px 2px #000;
+}
+#banner .owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+#banner .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+#banner .owl-next i, #banner .owl-prev i {
+    line-height: 40px;
+}
+.news-sec {
+    background-image: url(../img/bg-parelx.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    background-attachment: fixed;
+}
+.news-title h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+.news-title {
+    background-color: #e8de1d;
+    padding: 13px 5px;
+    width: 100%;
+    text-align: center;
+}
+.news-img .news-thumb {
+    width: 100%;
+    height: 185px;
+}
+.news-info {
+    background-color: #fff;
+    color: #000;
+    padding: 15px 15px;
+    min-height: 170px;
+}
+.news-info p {
+    color: #000;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.news-info {
+    background-color: #fff;
+    padding: 15px 15px;
+}
+.list-news {
+    background-color: #fff;
+    padding: 0 5px;
+    height: 355px;
+    overflow-y: auto;
+}
+.list-news li {
+    padding: 20px 15px;
+    border-bottom: 1px solid #ccc;
+}
+.list-news li .news-thumb {
+    width: 110px;
+    height: 75px;
+}
+.list-news li .media-body a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 5px;
+    display: inline-block;
+    transition: all .6s;
+}
+.list-news li .media-body a:hover {
+    text-decoration: none;
+    color: #ff1c1b;
+}
+.list-news::-webkit-scrollbar {
+    width: 10px;
+}
+.list-news::-webkit-scrollbar-track {
+    background: #ff1c1b;
+}
+.list-news::-webkit-scrollbar-thumb {
+    background: #000;
+}
+.list-news::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+.quotes {
+    padding: 20px 0 0 0;
+}
+.quotes h2 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.3;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    padding-top: 20px;
+}
+.quotes-writer {
+    text-align: center;
+    color: #fff;
+}
+.quotes-writer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    object-position: top;
+}
+.quotes-writer h4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.event-sec {
+    background-image: url(../img/bg-parelx3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+}
+.event-title {
+    color: #fe0000;
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    font-size: 36px;
+}
+.eventtab {
+    border-bottom: 2px solid #ddd;
+    margin: 0 15px;
+}
+.eventtab>li:first-child>a {
+    padding-left: 0;
+}
+a:focus {
+    outline: 0;
+}
+.eventtab .nav-link:focus, .eventtab .nav-link:hover {
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fe0000;
+}
+.eventtab .nav-link {
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: 1px solid transparent;
+}
+.eventtab .nav-item.show .nav-link, .eventtab .nav-link.active {
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fe0000;
+}
+.eventtab>li>a {
+    border: none;
+    border-radius: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+.eventtab>li {
+    margin-right: 2px;
+}
+.list-event {
+    margin: 30px 0 0 0;
+}
+.eventimg-sec img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+.single-event-block {
+    background-color: #fff;
+}
+.title-block {
+    padding: 20px 20px;
+    position: relative;
+}
+.title-block a, .title-block a:hover {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all .6s;
+}
+.title-block a:hover {
+    color: #fe0000;
+}
+.eventdate-sec {
+    font-family: 'Open Sans', sans-serif;
+    width: 70px;
+    height: 70px;
+    background-color: #000;
+    position: absolute;
+    top: -60px;
+    right: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 0 0 0;
+}
+.eventdate-sec span {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.rightlink {
+    float: right;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    top: 8px;
+    transition: all .6s;
+    right: 15px;
+}
+.rightlink:hover {
+    color: #fe0000;
+    text-decoration: none;
+}
+.twitter-sec {
+    background-image: url(../img/bg-parelx2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    background-attachment: fixed;
+}
+#twitterslider .owl-prev {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    bottom: -15px;
+    right: 80px;
+}
+#twitterslider .owl-next {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    bottom: -15px;
+    right: 30px;
+}
+#twitterslider .owl-next i, #twitterslider .owl-prev i {
+    line-height: 40px;
+}
+.twitter-img img {
+    width: 100%;
+    height: 485px;
+}
+.twitter-feed .media-body a, .twitter-feed .media-body a:hover {
+    display: inline-block;
+    text-decoration: none;
+}
+.twitter-feed h3 {
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+.twitter-feed h3 span {
+    color: #3b94d9;
+    font-size: 16px;
+}
+.twitter-feed {
+    background-color: #fff;
+    padding: 20px 10px;
+}
+.twitter-feedlist {
+    margin: 15px 0 0 0;
+}
+.tw-des h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    font-weight: 600;
+}
+.tw-des p {
+    font-family: 'Open Sans', sans-serif;
+    color: #9a9a9a;
+    margin: 0 0 2px 0;
+}
+.tw-des h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.2;
+    padding-right: 15px;
+    margin: 0 0 3px 0;
+}
+.tw-des span {
+    font-family: 'Open Sans', sans-serif;
+    color: #fe0000;
+    display: inline-block;
+    margin-right: 1px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.comment-sec {
+    margin: 10px 0 0 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.comment-sec span {
+    color: #9a9a9a;
+    display: inline-block;
+    margin-right: 1px;
+    width: 60px;
+}
+.twitter-feedlist li {
+    margin-bottom: 20px;
+}
+.twitter-feedlist::-webkit-scrollbar {
+    width: 10px;
+}
+.twitter-feedlist::-webkit-scrollbar-track {
+    background: #ff1c1b;
+}
+.twitter-feedlist::-webkit-scrollbar-thumb {
+    background: #000;
+}
+.twitter-feedlist::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+.twitter-feedlist::-moz-scrollbar {
+    width: 10px;
+}
+.twitter-feedlist::-moz-scrollbar-track {
+    -moz-box-shadow: inset 0 0 6px #fff);
+    background: #ff1c1b;
+}
+.twitter-feedlist::-moz-scrollbar-thumb {
+    background: #000;
+}
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+}
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: red;
+}
+.twitter-feedlist {
+    height: 395px;
+    overflow-y: auto;
+}
+.tw-des p i {
+    color: #fff;
+    background: #1da1f2;
+    padding: 2px;
+    border-radius: 50%;
+    font-size: 10px;
+}
+footer {
+    background-color: #d4d4d4;
+    padding: 40px 0 60px 0;
+}
+.footer-menutitle {
+    font-weight: 600;
+    color: #000;
+    font-size: 20px;
+    margin: 0;
+}
+.list-footer {
+    margin: 20px 0 0 0;
+}
+.list-footer li {
+    margin-bottom: 8px;
+}
+.list-footer li a {
+    color: #484848;
+    transition: all .6s;
+    font-weight: 600;
+    font-size: 12px;
+}
+.address {
+    font-family: 'Open Sans', sans-serif;
+    color: #484848;
+    margin: 20px 0 10px 0;
+}
+.social-list {
+    font-family: 'Open Sans', sans-serif;
+}
+.social-list a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    color: red;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    transition: all .6s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+}
+.social-list a:hover {
+    color: #e8de1d;
+}
+.copyright {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: 600;
+    margin: 50px 0 0 0;
+}
+.gp-text {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+.listmenu-bottm {
+    margin-top: 50px;
+    display: inline-block;
+}
+.listmenu-bottm li a {
+    color: #000;
+    font-weight: 600;
+    transition: all .6s;
+}
+.listmenu-bottm li a:hover {
+    color: #fe0000;
+    text-decoration: none;
+}
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.lang {
+    display: inline-block;
+    margin-left: 50px;
+    position: absolute;
+    right: 32%;
+    top: 35px;
+}
+.lang .btn-secondary {
+    color: #e8de1d;
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
+.twitter_feedimg {
+    width: 100%}
+.newslider {
+    overflow-x: hidden;
+}
+.carousel-header {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+}
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+}
+.sec1 {
+    background-image: url(../img/bg_karunadhi.jpg);
+    padding: 30px 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main-bg {
+    background-color: #fff;
+    padding: 10px 0;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #000;
+    content: ">";
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.breadcrumb {
+    background-color: transparent;
+    margin: 0 30px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.breadcrumb-item a {
+    color: #ff1c1b;
+    font-weight: 600;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+}
+.breadcrumb .breadcrumb-item {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.breadcrumb-item.active {
+    color: #ff1c1b;
+    font-weight: 600;
+}
+.breadcrumb-item.active a {
+    color: #ff1c1b;
+}
+.main-authorimg {
+    border-radius: 50%}
+.main-authorimg {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.maniauthor-div {
+    margin: 30px 0;
+    padding: 0 30px;
+}
+.maniauthor-div .media-body {
+    vertical-align: middle;
+}
+.maniauthor-div h2 {
+    color: #000;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+.fulltab-outer {
+    background-color: #000;
+}
+.fulltab .nav-item.show .nav-link, .fulltab .nav-link.active {
+    color: #495057;
+    background-color: transparent;
+    border: none;
+}
+.fulltab .nav-link {
+    color: #e8de1d!important;
+    font-size: 16px;
+    position: relative;
+    padding: 00 0 10px 0;
+}
+.nav-item {
+    padding: 10px 15px 0 15px;
+}
+.fulltab .nav-link:focus, .fulltab .nav-link:hover {
+    border: none;
+}
+.nav-tabs {
+    border-bottom: 0 solid #dee2e6;
+}
+.fulltab .nav-link {
+    border: 0;
+}
+.fulltab .nav-link:after {
+    position: absolute;
+    content: "";
+    border: 0;
+    border-bottom: 2px solid transparent;
+    width: 100%;
+    height: 3px;
+    bottom: 2px;
+}
+.fulltab .nav-link.active:after, .fulltab .nav-link:hover:after {
+    position: absolute;
+    content: "";
+    border-bottom: 3px solid #ff1c1b;
+    width: 100%;
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+}
+.tab-content.eventtab-content {
+    padding: 50px;
+}
+.eventtab-content img {
+    width: 100%;
+    margin: 0 auto 15px;
+}
+.eventtab-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.eventtab-content p {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    text-align: justify;
+}
+.sec2 {
+    background-image: url(../img/bg_karunadhi.jpg);
+    padding: 30px 0;
+    background-size: cover;
+    background-attachment: fixed;
+    display: inline-block;
+    width: 100%}
+.sublittle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.socialmain {
+    padding: 0 30px;
+}
+.authorfb {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+.authorfb h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    color: #0056b3;
+}
+.authorfb h5 {
+    font-size: 12px;
+    margin: 0;
+    color: #ada8a8;
+}
+.smallcircle {
+    margin-right: 5px!important;
+}
+.linkinner {
+    font-family: 'Open Sans', sans-serif;
+}
+.fav-walllist p {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+.viewcount {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    color: #ada8a8;
+}
+.action-sec {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    padding: 10px 0 10px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+.action-sec i {
+    margin-right: 5px;
+}
+.fullimg {
+    width: 100%}
+.fb-wall {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+.fav-walllist {
+    height: 620px;
+    overflow-y: auto;
+}
+.fav-walllist li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.sublittle span {
+    color: #0056b3;
+    font-size: 14px;
+}
+.media.authortw {
+    margin: 15px 0 15px 0;
+}
+.tw-des h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    font-weight: 600;
+}
+.tw-walllist h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #888;
+}
+.tw-wall {
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+}
+.tw-walllist li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.comment-sec-set {
+    margin-bottom: 15px;
+}
+.tw-walllist p {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+.tw-walllist {
+    height: 620px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.teamtabcontent {
+    padding: 30px;
+}
+.list-team>li {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 30px;
+}
+.list-team>li:last-child {
+    border-bottom: 0 solid #888;
+}
+.list-team h2 {
+    font-weight: 600;
+    font-size: 24px;
+}
+.list-team h3 {
+    color: #535353;
+    font-weight: 600;
+    font-size: 15px;
+}
+.list-team h4 {
+    font-weight: 600;
+    font-size: 14px;
+}
+.list-team p {
+    font-weight: 600;
+    margin: 15px 0;
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 24px;
+}
+.teamimg {
+    width: 380px;
+    height: 250px;
+}
+.list-team-social a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%}
+.list-team-social a i {
+    line-height: 30px;
+}
+.fb-team {
+    background-color: #384e95;
+}
+.tw-team {
+    background-color: #31b0f1;
+}
+.wiki-team {
+    background-color: #000;
+}
+.sec3 {
+    background-image: url(../img/historybg.jpg);
+    padding: 30px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.breadcrumbset {
+    margin-left: 0;
+    border: 0;
+}
+.historylink {
+    background-color: #191919;
+    padding: 20px;
+}
+.title-top-history {
+    color: #e8de1d;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}
+.list-history {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 30px;
+}
+.list-history-outer {
+    height: 500px;
+    overflow-y: auto;
+}
+.titletop {
+    margin-bottom: 30px;
+    position: relative;
+}
+.titletop h1 {
+    font-weight: 600;
+}
+.titletop:after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    border-bottom: 1px solid #ccc;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%}
+.list-history li .nav-link {
+    color: #a0a0a0;
+    border: 0;
+    font-size: 15px;
+    padding: 12px 15px;
+}
+.list-history .nav-link.active {
+    color: #e8de1d;
+    background-color: transparent;
+    border: none;
+}
+.list-history .nav-link:focus, .list-history .nav-link:hover {
+    color: #e8de1d;
+    background-color: transparent;
+    border: none;
+}
+.history-content h3.redtitle {
+    color: #ff1c1b;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.history-content {
+    padding: 30px 15px;
+}
+.history-content p {
+    font-weight: 600;
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 24px;
+}
+.content-historyimg {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+@media only screen and (max-width:1024px) {
+    .header_right {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    z-index: 999;
+    width: 240px;
+}
+.sitetitle {
+    width: 350px;
+    font-size: 24px;
+}
+.news-title h3 {
+    font-size: 20px;
+}
+.news-info p {
+    font-size: 13px;
+}
+.news-info {
+    background-color: #fff;
+    padding: 5px 15px;
+}
+.quotes h2 {
+    color: #fff;
+    font-size: 18px;
+}
+.title-block {
+    padding: 20px 10px;
+    position: relative;
+}
+.title-block a, .title-block a:hover {
+    font-size: 15px;
+}
+.list-history .nav-item {
+    padding: 0!important;
+}
+.list-history {
+    padding-left: 0;
+}
+}@media only screen and (max-width:768px) {
+    .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 6px;
+}
+.header_right {
+    width: 150px;
+    top: 0;
+}
+.sitetitle {
+    position: absolute;
+    width: 300px;
+    left: 100px;
+    top: 40px;
+    color: #e8de1d;
+    font-weight: 600;
+    font-size: 22px;
+}
+.logo {
+    width: 150px;
+}
+.list-news li .news-thumb {
+    width: 60px;
+    height: 50px;
+}
+.list-news li .media-body a {
+    font-size: 14px;
+}
+.news-info {
+    min-height: 220px;
+}
+.news-title h3 {
+    font-size: 20px;
+    min-height: 44px;
+}
+.news-info p {
+    font-size: 12px;
+    margin: 0;
+}
+.list-news {
+    height: 400px;
+}
+.title-block {
+    padding: 20px 10px;
+    position: relative;
+    min-height: 100px;
+}
+.list-history .nav-item {
+    padding: 0!important;
+}
+.list-history li .nav-link {
+    padding: 12px 2px;
+    font-size: 13px;
+}
+.titletop h1 {
+    font-size: 24px;
+}
+.historylink {
+    background-color: #191919;
+    padding: 10px;
+}
+.title-top-history {
+    font-size: 16px;
+}
+.titletop:after {
+    content: none;
+}
+.footer-menutitle {
+    font-size: 20px;
+}
+}@media only screen and (max-width:767px) {
+    .news-info {
+    min-height: auto;
+}
+.navbar-brand {
+    margin-top: 0;
+    width: 200px;
+}
+.lang .dropdown-menu {
+    text-align: center;
+    width: 100%}
+.title-block {
+    padding: 20px 10px;
+    position: relative;
+    min-height: auto;
+}
+.news-info p {
+    font-size: 14px;
+    margin: 0;
+}
+.news-title h3 {
+    min-height: auto;
+}
+.header_right {
+    display: none;
+}
+.top-header h3 {
+    display: block;
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+.sitetitle {
+    position: absolute;
+    width: 150px;
+    left: 80px;
+    top: 10px;
+    color: #e8de1d;
+    font-weight: 600;
+    font-size: 16px;
+    white-space: normal;
+}
+.navbar-brand {
+    position: static;
+    width: auto;
+}
+.navbar-inverse {
+    min-height: 80px;
+    height: 80px;
+}
+.logo {
+    width: 80px;
+}
+.lang {
+    display: block;
+    position: static;
+    right: 32%;
+    top: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.top-header {
+    background-color: #000;
+    min-height: auto;
+    position: relative;
+}
+.navbar-toggle {
+    margin-top: 20px;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}
+.banner-div h1 {
+    position: absolute;
+    color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 155px;
+    font-size: 24px;
+    font-weight: 600;
+    float: right;
+}
+#banner {
+    height: auto;
+}
+.banner {
+    height: 200px;
+}
+#banner .owl-next i, #banner .owl-prev i {
+    line-height: 20px;
+    font-size: 20px;
+}
+#banner .owl-next, #banner .owl-prev {
+    width: 20px;
+    height: 20px;
+}
+.block-mews-outer {
+    margin-bottom: 20px;
+}
+.news-title h3 {
+    font-size: 20px;
+}
+.list-news .media-left {
+    display: block;
+}
+.list-news li .news-thumb {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
+.list-news li .media-body a {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.3;
+    margin: 10px 0 0 0;
+}
+.quotes h2 {
+    font-size: 18px;
+}
+.navbar-inverse .navbar-collapse.in {
+    border-color: #101010;
+    z-index: 999999999999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+.navbar-collapse {
+    z-index: 99;
+}
+.navbar-inverse .navbar-nav {
+    margin: 0 auto;
+    background-color: #f4f4f4;
+}
+.title-block {
+    text-align: center;
+}
+.single-event-block {
+    margin-bottom: 20px;
+}
+.twitter-img img {
+    height: auto;
+}
+#twitterslider {
+    margin-bottom: 20px;
+}
+#twitterslider .owl-next i, #twitterslider .owl-prev i {
+    line-height: 30px;
+}
+#twitterslider .owl-next, #twitterslider .owl-prev {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.twitter-feedlist .media-left {
+    display: none;
+}
+.carousel-header .carousel-inner {
+    position: relative;
+    overflow: visible;
+    height: 320px;
+}
+.carousel-header {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+}
+.eventtab-content h2 {
+    font-size: 20px;
+}
+.eventtab-content p {
+    font-size: 14px;
+}
+.fb-wall {
+    padding: 5px;
+    margin-bottom: 15px;
+}
+.list-team .media {
+    display: block;
+    text-align: center;
+}
+.teamimg {
+    width: 100%;
+    margin-bottom: 10px;
+}
+}.tha_right img {
+    max-width: 100%}
+.section_common {
+    padding: 50px 0;
+}
+.flag_img img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+#horizontalTab .resp-tab-item.resp-tab-active {
+    background: #111;
+    font-size: 16px;
+    font-family: tamil;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid red;
+}
+#horizontalTab .resp-tabs-list li {
+    font-size: 16px;
+}
+.title_h2 {
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tha_left .title_h2 {
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 700;
+}
+.common_center {
+    text-align: center;
+}
+.common_padding {
+    padding: 0!important;
+}
+.owl_carousel1 {
+    position: relative;
+}
+.owl_carousel1 .owl-prev {
+    outline: 0!important;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #000!important;
+    color: red!important;
+}
+.owl_carousel1 .owl-prev span {
+    font-size: 30px;
+    font-family: arial!important;
+    font-weight: 700;
+    position: relative;
+    bottom: 10px;
+}
+.owl_carousel1 .owl-next {
+    outline: 0!important;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #000!important;
+    color: red!important;
+}
+.owl_carousel1 .owl-next span {
+    font-size: 30px;
+    font-family: arial!important;
+    font-weight: 700;
+    position: relative;
+    bottom: 10px;
+}
+.popup_gallery .test {
+    width: 33%;
+    float: left;
+    padding: 5px;
+}
+.popup_gallery .test img {
+    max-width: 100%}
+.navbar_nav .dropbtn {
+    background-color: transparent;
+    color: #e8de1d!important;
+    font-size: 12px;
+    padding: 16px;
+    border: none;
+}
+.navbar_nav .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    padding-bottom: 0;
+}
+.navbar_nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+.navbar_nav .dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+}
+.navbar_nav .dropdown-content a:hover {
+    background-color: #111;
+    color: #e8de1d;
+}
+.navbar_nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar_nav .dropdown:hover .dropbtn {
+    background-color: #111;
+}
+.navbar_nav .nav-item .nav-link {
+    font-size: 15px;
+    padding: 16px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-family: 'Noto Sans Tamil UI', sans-serif;
+}
+.navbar_nav .nav-item.dropdown .dropdown_toggle:hover {
+    text-decoration: none;
+    background-color: #111;
+    color: #e8de1d;
+}
+.navbar_nav .nav-item.dropdown .dropdown-toggle::after {
+    color: red;
+}
+.navbar_nav .nav-item a:hover {
+    text-decoration: none;
+    background-color: #111!important;
+    color: #e8de1d!important;
+    text-decoration: none!important;
+}
+.navbar_nav .nav-item.dropdown.show .dropdown_toggle {
+    background-color: #111;
+    color: #e8de1d!important;
+    padding: 16px;
+    font-size: 15px;
+    font-family: 'Noto Sans Tamil UI', sans-serif;
+    border: none;
+    text-decoration: none;
+}
+.navbar_nav .nav-item.dropdown.show .dropdown-menu.show {
+    background-color: #f4f4f4;
+    min-width: 160px;
+    z-index: 1;
+    padding: 0;
+    border-radius: 0;
+    z-index: 999;
+}
+.navbar_nav .nav-item.dropdown.show .dropdown-menu.show a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    text-decoration: none;
+}
+.navbar_nav .nav-item.dropdown.show .dropdown-menu.show a:hover {
+    background-color: #111;
+    color: #e8de1d;
+}
+.dmk_btn {
+    float: left;
+    color: #fff;
+    background: linear-gradient(to bottom, #000 0, #000 90%, #ff1c1b 42%, #ff1c1b 100%);
+    border-radius: 0;
+    padding: 8px 10px;
+    font-size: 10px;
+}
+.dmk_btn:hover {
+    color: #fff;
+}
+.sec3_veli .veli_left {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.sec3_veli .veli_left h4 {
+    font-size: 14px;
+    line-height: normal;
+}
+.veli_right .media {
+    display: block;
+}
+.veli_right .media .teamimg {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.veli_right {
+    border-left: 1px solid #ddd;
+}
+.veli_right .teamimg {
+    width: 100%;
+    height: 100%}
+.veli_left span {
+    font-size: 20px;
+    font-family: arial;
+}
+.thala_timeline .title_h2 {
+    padding: 25px 0;
+}
+.sec3_veli .maniauthor-div {
+    padding: 0;
+}
+.navbar-inverse .navbar-brand img {
+    max-width: 165px;
+    position: relative;
+    top: -39px;
+}
+.sitetitle.sitetitle1 {
+    position: relative;
+    width: 635px;
+    left: 0;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    bottom: 24px;
+    top: auto;
+    color: #e8de1d;
+    font-weight: 600;
+    font-size: 36px;
+    font-family: 'Noto Sans Tamil UI', sans-serif;
+    display: block;
+}
+.drop_lang.dropdown-toggle {
+    background: 0 0;
+    border: 0;
+    box-shadow: none;
+    color: #e8de1d;
+    outline: 0!important;
+}
+.top_right {
+    float: right;
+    position: relative;
+    padding: 15px 10px 0 13px;
+}
+.social-list .fb {
+    background: #1a5599;
+    color: #fff;
+}
+.social-list .tw {
+    background: #36c7f6;
+    color: #fff;
+}
+.social-list .in {
+    display: inline-block;
+    font-size: 18px;
+    padding-top: 6px;
+    text-align: center;
+    border-radius: 40px;
+    color: #fff;
+    line-height: normal;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+}
+.navbar-inverse .collapse.show {
+    display: block;
+    z-index: 99;
+    background: #000;
+    position: relative;
+}
+.complete {
+    display: none;
+}
+.more {
+    background: #add8e6;
+    color: navy;
+    font-size: 13px;
+    padding: 3px;
+    cursor: pointer;
+}
+.sec3_thalaimai_all .media .teamimg {
+    max-width: 380px;
+}
+.more-content {
+    display: none;
+}
+.cg-visible {
+    display: block;
+}
+.thali_head_left img {
+    max-width: 100%}
+.thali_head_right h4 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.thali_head_right p {
+    font-size: 14px;
+    color: #444;
+    line-height: 24px;
+}
+.thali_head_right .cd-timeline__read-more {
+    font-size: 10px!important;
+    color: #fff;
+    line-height: 24px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom, #000 0, #000 90%, #ff1c1b 42%, #ff1c1b 100%);
+    border-radius: 0;
+    padding: 8px 10px;
+    font-size: 10px;
+}
+.thali_head {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+header {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+header:before {
+    content: '';
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: 26% 58%!important;
+    background-image: url(../img/bg/Sunrise.jpg);
+    height: 100%;
+    background: #f4f4f4!important;
+}
+header:after {
+    opacity: 0;
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000!important;
+    height: 100%}
+.sec3_thalaimai_all_top {
+    padding-top: 0;
+}
+.thali_head_right p {
+    text-align: justify;
+}
+.thali_head_right .collapse.show {
+    display: block;
+    text-align: justify;
+    line-height: 24px;
+}
+.history_page .maniauthor-div h4 {
+    font-weight: 700;
+}
+.history_page .slick_slider1 {
+    -webkit-box-shadow: 0 4px 5px -3px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 4px 5px -3px rgba(0, 0, 0, .25);
+    box-shadow: 0 4px 5px -3px rgba(0, 0, 0, .25);
+}
+.history_page .slick_slider1 .btn {
+    font-family: arial;
+    background: #fff!important;
+    border: 1px solid #fff;
+    color: #ff1c1b!important;
+    border-radius: 0;
+}
+.history_page .slick_slider1 .slick-slide {
+    text-align: center;
+    overflow: visible!important;
+}
+.history_page .slick_slider1 .cirlce {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 0;
+    text-align: center;
+    float: left;
+    bottom: 44px;
+    position: relative;
+    z-index: 9999;
+    left: 50%;
+    right: 0;
+    margin: 0 auto;
+}
+.history_page .slick_slider1 .cirlce span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #777;
+    position: relative;
+    display: inline-block;
+    top: 1px;
+}
+.history_page .slick_slider1 .slick-slide.slick-current.slick-active .cirlce span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff1c1b;
+    position: relative;
+    display: inline-block;
+    top: 1px!important;
+}
+.history_page .slick_slider1 .slick-list {
+    overflow: hidden!important;
+}
+.history_page .slick_slider1 .slick-track {
+    overflow: visible!important;
+    border-top: 1px solid #ddd;
+    padding-top: 30px!important;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+.history_page .slick-prev:before {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #777;
+    color: #777;
+    padding: 9px;
+    border-radius: 50%}
+.history_page .slick-prev {
+    left: 0;
+    padding-left: 20px;
+    z-index: 999;
+    top: 45%}
+.history_page .slick-next {
+    right: 0;
+    padding-right: 35px;
+    z-index: 999;
+    top: 45%}
+.parentTabs .nav_tabs li .btn {
+    font-family: arial;
+    background: #fff!important;
+    border: 1px solid #fff;
+    color: #ff1c1b!important;
+    border-radius: 0;
+}
+.periyar_life .nav-tabs li a {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.periyar_life .eventtab-content h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.periyar_life .eventtab-content p {
+    font-size: 12px;
+    line-height: 24px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.periyar_life .breadcrumb li a {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.periyar_life .breadcrumb li {
+    font-size: 12px;
+}
+.periyar_life .maniauthor-div h2 {
+    font-size: 21px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.kalagakolgai_all .maniauthor-div {
+    padding: 0;
+}
+.kalagtitle {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.anigal_all .maniauthor-div {
+    padding: 0;
+}
+.anigal_all .card-deck .card-body .card-title {
+    color: #ff1c1b!important;
+    font-size: 15px;
+    font-weight: 600;
+}
+.anigal_all .card-deck .card-body .card-text {
+    font-size: 12px;
+    color: #444;
+}
+.yarivar_yar .yarivar_yarcont {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #444;
+    margin: 20px 0;
+}
+.yarivar_yar .yarivar_yarcont img {
+    max-width: 300px;
+    margin: 0 auto!important;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+    margin-bottom: 20px!important;
+}
+.yarivar_yar .maniauthor-div {
+    padding: 0;
+}
+.slick_slider1.nav_tabs {
+    position: relative;
+    z-index: 9999;
+}
+.history_page .nav-tabs.list-history {
+    padding-left: 0;
+}
+.history_page .nav-tabs.list-history li {
+    text-align: center;
+    border-bottom: 1px solid #777;
+    padding: 0;
+}
+.history_page .historylink {
+    padding: 0;
+}
+.history_page .list-history .nav-link {
+    padding: 30px 0;
+    position: relative;
+    border-right: 4px solid #191919;
+    font-size: 16px;
+    font-weight: 700;
+}
+.history_page .list-history .nav-link.active {
+    border-right: 4px solid #e8de1d;
+    border-radius: 0;
+}
+.history_page .list-history .nav-link.active:before {
+    position: absolute;
+    top: 37%;
+    right: -1px;
+    font-family: fontawesome;
+    content: '\f0d9';
+    font-size: 18px;
+}
+.navbar-inverse .collapse.show {
+    z-index: 999999;
+}
+.news-sec .news-title h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    line-height: normal;
+}
+.news-sec .news-info p {
+    font-size: 12px;
+}
+.news-sec .list-news li .media-body a {
+    font-size: 12px;
+    padding-left: 20px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.history_page .list-history-outer {
+    height: auto;
+}
+.history_page .mCSB_container {
+    margin-right: 0;
+}
+.history_page .show.active .btn {
+    background: #ff1c1b!important;
+    color: #fff!important;
+    border-radius: 0;
+    outline: 0!important;
+    box-shadow: none;
+}
+.history_page .show.active .cirlce {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    text-align: center;
+    float: left;
+    bottom: 54px;
+    position: relative;
+    z-index: 9999;
+    left: 50%;
+    right: 0;
+    margin: 0 auto;
+}
+.history_page .show.active .cirlce span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff1c1b;
+    position: relative;
+    display: inline-block;
+    top: 1px!important;
+}
+.btn-outline-danger:after {
+    font-family: FontAwesome;
+    content: "\f067";
+    float: right;
+}
+.btn-outline-danger.collapsed:after {
+    content: "\f068"}
+.news-sec .news-info {
+    min-height: auto;
+    word-break: break-word;
+}
+.history_page .slick_slider1 .slick-slide {
+    height: auto!important;
+}
+.history_page .list-history-outer .mCustomScrollBox {
+    height: auto!important;
+}
+.history_page .slick-prev:before {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    color: #777;
+    content: '\f177';
+    padding: 5px;
+    font-family: fontawesome!important;
+    font-size: 15px;
+}
+.history_page .slick-next:before {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    color: #777;
+    content: '\f178';
+    padding: 5px;
+    font-family: fontawesome!important;
+    border: 1px solid #777;
+    color: #777;
+    border-radius: 50%;
+    font-size: 15px;
+}
+.events_all .eventdate-sec.eventdate_sec {
+    width: 50px;
+    height: 64px;
+    top: 0;
+    left: 14px;
+    right: auto;
+}
+.events_all .eventdate-sec.eventdate_sec span {
+    width: 50px;
+}
+.events_all .eventimg-sec img {
+    height: 100%}
+.events_all .title-block {
+    padding: 20px 15px;
+}
+.events_all .title-block h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.events_all .list-event .single_event_block_img {
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.events_all .maniauthor-div {
+    padding: 0;
+    margin-bottom: 0;
+}
+.events_all .title_subtitle {
+    padding-top: 40px;
+}
+.sathanai_all #verticalTab .resp-tabs-list {
+    padding-left: 0;
+    border-left: 1px solid #777;
+}
+.resp_tabs_list {
+    padding-left: 20px;
+    background: #191919;
+    float: left;
+    height: 500px;
+    position: relative;
+    min-width: 30%;
+    width: 30%}
+.sathanai_all #verticalTab .resp-tabs-list li {
+    padding-left: 25px!important;
+    background: #191919;
+    display: block;
+    position: relative;
+    color: #999;
+    padding: 15px 10px;
+    border-right: 4px solid #191919;
+    display: block;
+    border-radius: 0;
+    border-bottom: 1px solid #777;
+    text-decoration: none;
+    font-size: 12px;
+    word-break: break-word;
+    text-align: left;
+    letter-spacing: .5px;
+    line-height: 24px;
+    border: 0;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.sathanai_all #verticalTab {
+    display: block!important;
+    min-height: auto;
+}
+.sathanai_all #verticalTab li.resp-tab-item.resp-tab-active {
+    border-left: 0;
+    color: #e8de1d;
+}
+.sathanai_all #verticalTab li.resp-tab-item.resp-tab-active:before {
+    position: absolute;
+    top: 33%;
+    left: -2px;
+    width: 3px;
+    height: 18px;
+    background: #e8de1d;
+    font-family: fontawesome;
+    content: '';
+    font-size: 18px;
+    border-radius: 10px;
+}
+.sathanai_all #verticalTab ul {
+    width: 100%;
+    float: none;
+}
+.sathanai_all #verticalTab .resp-tabs-container p {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+    text-align: justify;
+}
+.sathanai_all #verticalTab .resp-tabs-container .satha_img {
+    max-width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 7px;
+    float: left;
+    margin-right: 15px;
+}
+.sathanai_all .maniauthor-div {
+    padding: 0;
+}
+.sathanai_all .resp-vtabs .resp-tabs-container {
+    border: 0;
+}
+.sathanai_all .resp-vtabs .resp-tab-content {
+    padding-right: 0;
+    padding-left: 30px!important;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+    text-align: justify;
+}
+.sathanai_all .resp-vtabs .resp-tab-content h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.sathanai_all .resp-vtabs .resp-tab-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ec3237;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.sathanai_all .resp_tabs_list.mCustomScrollbar #mCSB_1_scrollbar_vertical {
+    visibility: hidden;
+}
+.events-content {
+    width: 100%;
+    height: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+}
+.events-content li {
+    display: none;
+    list-style: none;
+}
+.events-content li.selected {
+    display: initial;
+}
+.events-content li h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    color: #919191;
+    font-size: 2.5em;
+}
+.contact-div #sus__msg {
+    color: #e8de1d!important;
+    background-color: #111!important;
+    border-color: #111!important;
+}
+.history_page .slick-prev {
+    z-index: 999999;
+}
+.news-sec {
+    position: relative;
+}
+.twitter-sec {
+    position: relative;
+}
+.news-sec:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    content: ''}
+.twitter-sec:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .7;
+    content: ''}
+.section_white {
+    position: relative;
+    padding: 30px;
+    z-index: 99;
+}
+.section_white:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 1;
+    content: '';
+    z-index: -9;
+}
+.main-bg:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 1;
+    content: '';
+    z-index: -9;
+}
+.main-bg {
+    background: #fff!important;
+    position: relative;
+    z-index: 99;
+}
+.top_right_nn .dropdown-menu.show {
+    display: block;
+    background: #111;
+    padding: 0;
+    width: auto;
+    border: 1px solid #777;
+    min-width: auto;
+    margin-left: 47px!important;
+    border-radius: 0!important;
+}
+.top_right_nn .dropdown-menu .dropdown-item {
+    color: #fff;
+    border-bottom: 1px solid #777;
+    background: 0 0;
+    border: 0;
+    font-size: 12px;
+    padding: 6px 14px;
+    line-height: normal;
+    border-bottom: 1px solid #777;
+}
+.top_right_nn .dropdown-menu .dropdown-item.english {
+    font-family: arial;
+    font-size: 10px;
+    cursor: not-allowed;
+}
+.top_right_nn .dropdown-menu .dropdown-item:hover {
+    color: #e8de1d;
+}
+.nav_pills li {
+    padding: 0;
+}
+.nav_pills li a {
+    background: #000;
+    color: #fff;
+    height: 43px;
+    padding: 14px 10px;
+}
+.nav_pills li .nav-link.active {
+    background: #ff1c1b;
+    border-radius: 0;
+    color: #fff;
+}
+.news-sec .tab_pane1 {
+    padding: 20px;
+}
+.news-sec .news-title {
+    background: #000;
+}
+.news-sec .news-title h3 {
+    color: #fff;
+}
+footer {
+    position: relative;
+    background-color: #d4d4d4;
+    padding: 40px 0 60px 0;
+    background-image: url(../img/stalinbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0;
+    background-position: top;
+}
+footer:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .9;
+    content: ''}
+footer:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, #000 0, #000 60%, #ff1c1b 50%, #ff1c1b 100%);
+    opacity: 1;
+    content: ''}
+.footer-menutitle {
+    font-weight: 400;
+    color: #fff;
+    font-size: 14px;
+}
+.list-footer li a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none!important;
+}
+.list-footer li a:hover {
+    color: #ff1c1b;
+}
+.address {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+footer .listmenu-bottm li a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none!important;
+}
+footer .listmenu-bottm li a:hover {
+    text-decoration: none!important;
+}
+footer .copyright {
+    color: #ff1c1b;
+    font-weight: 400;
+}
+footer .gp-text {
+    color: #fff;
+    font-weight: 400;
+}
+.owl-carouselnn {
+    height: 355px;
+}
+.owl-carouselnn .item {
+    width: 100%;
+    float: left;
+    padding: 5px 5px;
+}
+.block_outer_img {
+    height: 400px;
+}
+.news_listImg .new_spanimg img {
+    max-width: 100%;
+    height: 108px;
+    width: 180px;
+}
+.news_listImg {
+    height: 354px;
+    padding: 10px;
+    overflow-y: auto;
+}
+.news-sec .list-news {
+    height: 350px;
+}
+.new_spanimg {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.sathanai_all .history_page ul {
+    background: #000;
+    text-align: center;
+    display: block;
+    padding-bottom: 10px;
+}
+.sathanai_all .history_page ul li {
+    padding: 10px 15px 0 15px;
+}
+.sathanai_all .history_page ul .item {
+    display: inline-block;
+}
+.sathanai_all .history_page ul li a {
+    color: #e8de1d!important;
+    font-size: 12px;
+    position: relative;
+    padding: 00 0 10px 0;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.fulltab-outer .fulltab .nav-link {
+    color: #e8de1d!important;
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.login-content .logo {
+    margin-bottom: 0;
+    float: left;
+}
+.login-content label {
+    color: #000;
+}
+.login-content label {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: roboto;
+    margin-top: 0px;
+    /*margin-top: 5px;*/
+    margin-bottom: 5px;
+    display: inline-block;
+    position: relative;
+    left: 2px;
+    top: 5px;
+}
+.login-content input, select, textarea {
+    width: 100%;
+    height: 60px;
+    line-height: 40px;
+    padding: 10px 20px;
+    font-family: nunito;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+    border: 1px #ddd solid;
+    border-radius: 3px;
+    -webkit-transition: all .3s cubic-bezier(.77, 0, .175, 1);
+    transition: all .3s cubic-bezier(.77, 0, .175, 1);
+}
+.login-content button {
+    float: left;
+    padding: 18px 27px;
+    background-color: #3583dc;
+    border-radius: 3px;
+    border: 0;
+    margin: 20px 0;
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .3s cubic-bezier(.77, 0, .175, 1);
+    transition: all .3s cubic-bezier(.77, 0, .175, 1);
+}
+.login-content input[type=checkbox] {
+    width: auto!important;
+    height: auto!important;
+    font-family: nunito;
+}
+.login-content button {
+    padding: 10px 20px;
+    background-color: #3583dc;
+    border-radius: 3px;
+    border: 0;
+    margin: 20px 0;
+    font-family: roboto;
+    font-weight: 600;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    outline: 0!important;
+    box-shadow: none;
+    -webkit-transition: all .3s cubic-bezier(.77, 0, .175, 1);
+    transition: all .3s cubic-bezier(.77, 0, .175, 1);
+}
+.login-content h1.title {
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    font-size: 30px;
+    line-height: normal;
+    font-weight: 700;
+    margin-top: 40px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.login-content h2 {
+    font-size: 24px;
+    color: #000;
+    margin-top: 30px;
+}
+.login-content form {
+    float: left;
+    width: 100%}
+.login-content form button {
+    background: #000;
+    border-bottom: 8px solid #ff1c1b;
+}
+.login-content a.btn {
+    background: #000;
+    outline: 0!important;
+    box-shadow: none;
+    float: right;
+    font-size: 12px;
+    margin: 20px 0;
+    padding: 7px 12px 3px 12px;
+    line-height: 24px;
+    border: 0;
+}
+.login-content .form-group {
+    margin-bottom: 0;
+}
+.login-content .logo a {
+    text-decoration: none!important;
+}
+.login-content1 {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background-size: 100% 100%!important;
+    background-repeat: no-repeat;
+    background-position: right!important;
+    background-image: url(../img/bg/13bg.png);
+    height: 100%}
+.login-content1 .login-fields {
+    width: 50%;
+    max-width: 350px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    border: 1px solid #777;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 10px;
+}
+.login-content1:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .7;
+    background: #000;
+    z-index: 1;
+}
+.login-content1 .logo {
+    width: 100%;
+    text-decoration: none!important;
+}
+.login-content1 h1.title {
+    font-size: 24px;
+    margin-top: 80px;
+}
+.login-content1 h2 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.login-content1 button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background: #ff1c1b!important;
+    border-bottom: 0!important;
+}
+.login-content1 input, select, textarea {
+    height: 40px;
+    opacity: .5;
+    border: 1px solid #999;
+}
+.login-content1 input:focus, select:focus, textarea:focus {
+    opacity: .8;
+}
+.login-content1 .login-fields {
+    padding: 0 20px;
+}
+.login-content1 h1.title {
+    -webkit-text-fill-color: #ff1c1b;
+    color: #ff1c1b!important;
+}
+.login-content1 label {
+    color: #fff;
+}
+.login-content1 h1.title {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+}
+.main_bg_team:before {
+    opacity: 1;
+}
+.main_bg_team .list-team li {
+    width: 47%;
+    margin: 10px;
+    float: left;
+}
+.main_bg_team .media {
+    display: block;
+}
+.main_bg_team .teamtabcontent {
+    width: 100%;
+    float: left;
+    background: #fff;
+}
+.main_bg_team .teamtabcontent .list-team h2 {
+    padding-top: 10px;
+}
+.main_bg_team .list-team li .list-team-social li {
+    width: auto;
+}
+.main_bg_team .list-team li .teamimg {
+    max-width: 100%;
+    width: 100%}
+.login-content button {
+    padding: 8px 15px;
+    font-size: 10px;
+}
+.login-content a.btn {
+    font-size: 10px;
+    padding: 5px 15px 3px 15px;
+}
+.login-content button:hover {
+    color: #000!important;
+}
+.login-content a.btn:hover {
+    background: #ff1c1b;
+}
+.owl_carousel_home1 .owl-nav {
+    display: block!important;
+}
+.event-sec .title-block {
+    min-height: 85px;
+}
+.event-sec .title-block a {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.veliyedugal_two .list-team h2 {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+.veliyedugal_two .list-team h3 {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.veliyedugal_two .list-team p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 24px;
+    font-size: 13px;
+}
+.section_white2 {
+    background: #fff!important;
+}
+.english_cont {
+    font-family: 'Open Sans', sans-serif;
+}
+.veliyedugal_two .media1 {
+    float: left;
+    width: 100%}
+.veliyedugal_two .media1 img {
+    float: left;
+    width: 30%!important;
+}
+.veliyedugal_two .media1 .teamimg {
+    width: auto;
+    height: auto;
+    max-width: 350px;
+}
+.veliyedugal_two .media1 .media-body {
+    width: 68%!important;
+    float: left;
+    padding-left: 15px;
+}
+.veliyedugal_two .teamtabcontent {
+    display: inline-block;
+}
+.veliyedugal_two .teamtabcontent .list-team>li {
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    width: 100%}
+.veliyedugal_two .pagination {
+    display: block;
+    text-align: center;
+}
+.veliyedugal_two .pagination li {
+    display: inline-block;
+    text-align: left;
+}
+.veliyedugal_two .breadcrumb {
+    border: 0;
+}
+.owl-carouselnn {
+    padding: 15px;
+}
+.owl-carouselnn .item {
+    width: 50%}
+.owl-carouselnn .item iframe {
+    height: 110px!important;
+}
+.login2 .login-fields {
+    background: #fff;
+}
+.login2 .logo_left {
+    padding-top: 10px;
+}
+.login2 .logo_left img {
+    max-width: 100%}
+.login2.login-content1 label {
+    color: #000;
+}
+.grid_isop .element-item {
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+.grid_isop .element-item img {
+    max-width: 100%;
+    height: 150px;
+    width: 100%}
+.grid_isop .element-item .com_paddn {
+    padding: 10px;
+}
+.yellow.intro {
+    visibility: visible!important;
+}
+.green.intro {
+    visibility: visible!important;
+}
+.blue.intro {
+    visibility: visible!important;
+}
+.grid_isop .element-item iframe {
+    display: block!important;
+}
+.pugapadam_all .filter-button-group .nav-item {
+    padding: 0;
+    margin-bottom: 20px;
+}
+.pugapadam_all .filter-button-group .nav-item a {
+    padding: 0;
+    background: #000;
+    border-radius: 0!important;
+    box-shadow: none;
+    border: 0;
+    margin-right: 10px;
+}
+.pugapadam_all .filter-button-group .nav-item a .btn {
+    padding: 10px 30px;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: 0 0;
+    color: #fff;
+    border-radius: 0!important;
+}
+.grid.grid_isop {
+    margin: 0 15px;
+}
+.pugapadam_all .filter-button-group .nav-item a.active .btn {
+    background: #ff1c1b;
+    color: #fff;
+}
+.pugapadam_all .grid_isop .element-item .test {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+.pugapadam_all .grid_isop .element-item .test:hover:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: '';
+    background: rgba(235, 27, 43, .7);
+    z-index: 1;
+}
+.pugapadam_all .grid_isop .element-item .test img {
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+}
+.pugapadam_all .grid_isop .element-item .test:hover img {
+    transform: scale(1.2);
+}
+.navbar_nav .nav-item {
+    background: 0 0;
+    padding: 0;
+}
+.navbar_nav .nav-item.dropdown .dropdown_toggle {
+    background: 0 0;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    color: red;
+}
+.navbar-inverse.navbar_inverses2 .navbar-nav>li>a {
+    color: #fff!important;
+}
+.drop_lang.dropdown-toggle {
+    color: #000!important;
+    z-index: 9999;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    width: 60px;
+    text-align: left;
+    font-family: 'Noto Sans Tamil UI', sans-serif;
+}
+.top_right_nn .dropdown-menu .dropdown-item {
+    width: 50px;
+    color: #fff;
+    border-bottom: 1px solid #777;
+    background: 0 0;
+    border: 0;
+    font-size: 16px;
+    padding: 4px 7px;
+    line-height: 25px;
+    border-bottom: 1px solid #777;
+    display: block;
+    text-align: center;
+}
+.top_right_nn .dropdown-menu .dropdown-item.english {
+    font-size: 16px;
+    display: none;
+}
+.top_right_nn .dropdown-menu.show {
+    margin-left: 20px!important;
+    margin-top: 5px;
+    z-index: 99999;
+}
+.owl_carousel1 iframe {
+    display: block!important;
+}
+.amaipuu_img {
+    position: relative;
+}
+.amaipuu_img img {
+    max-width: 100%;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 20px;
+}
+.amaipuu_sect {
+    padding: 30px 0;
+}
+.amaiput_cont h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+.amaiput_cont h6 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.murosoli_page .media1 .media-body {
+    width: 51%!important;
+}
+.murosoli_page .media1 img {
+    width: 45%!important;
+}
+.murosoli_page .teamtabcontent {
+    padding: 10px;
+}
+.murosoli_page .murosoli_right .media1 img {
+    width: 30%!important;
+}
+.murosoli_page .murosoli_right .media1 .media-body {
+    padding-left: 0;
+    width: 64%!important;
+}
+.murosoli_page .murosoli_right .list-team p {
+    margin-top: 0;
+    font-size: 12px;
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 20px;
+}
+.murosoli_page .murosoli_right .list-team>li {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.murosoli_page .list-team h2 {
+    font-size: 16px;
+}
+.murosoli_page .list-team p {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.murosoli_page .list-team .murosoli_more {
+    color: #ec3237;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.murosoli_page .list-team .murosoli_more:hover {
+    color: #ec3237;
+}
+.murosoli_page .breadcrumb-item a {
+    font-size: 14px;
+}
+.pugapadam_all1 .breadcrumb-item a {
+    font-size: 14px;
+}
+.pugapadam_all1 .breadcrumb {
+    border: 0;
+    margin: 0;
+}
+.pugapadam_all1 .filter-button-group .nav-item a.active .btn {
+    background: 0 0!important;
+    color: #000!important;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.pugapadam_all1 .filter-button-group .nav-item a .btn {
+    background: 0 0!important;
+    color: #999!important;
+    padding: 10px 10px!important;
+    font-size: 15px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.pugapadam_all1 .filter-button-group .nav-item a {
+    background: 0 0!important;
+}
+.murosoli_page .pagination .page-link.active {
+    background: #c1bebe;
+    color: #fff;
+}
+.murosoli_page .pagination .page-link {
+    color: #777;
+    border: 0;
+}
+.murosoli_page .pagination .page-link.english_cont {
+    position: relative;
+    top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 15px;
+}
+.veliyedugal_two .pagination .page-link.active {
+    background: #ec3237;
+    color: #fff;
+    border-radius: 0;
+}
+.veliyedugal_two .pagination .page-link {
+    color: #777;
+    border: 0;
+}
+.veliyedugal_two .pagination .page-link.english_cont {
+    position: relative;
+    top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 20px;
+    line-height: normal;
+    padding: 5px 15px;
+}
+.events_all .single-event-block.single_event_block_cont {
+    background: 0 0!important;
+}
+.events_all .single-event-block .title-block a {
+    font-size: 16px;
+}
+.events_all .single-event-block.single_event_block_img {
+    position: relative;
+}
+.events_all .eventdate-sec.eventdate_sec {
+    width: 50px;
+    height: 64px;
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+}
+.events_all .single-event-block.single_event_block_cont p {
+    text-align: justify;
+    letter-spacing: .5px;
+    line-height: 24px;
+    font-size: 13px;
+}
+.eventtab-content p {
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+}
+.kalagakolgai_all1 .maniauthor-div h2 {
+    font-size: 21px;
+}
+.kalagakolgai_all1 p {
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+    line-height: 24px;
+}
+.social-list .yt {
+    color: red;
+    font-size: 16px;
+    background: #fff;
+}
+.social-list .yt:hover {
+    color: red;
+}
+.popup_gallery1 .photo_sec {
+    position: relative;
+}
+.popup_gallery1 .photo_sec:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transform: rotate(7deg);
+    background: #ffe2e2;
+}
+.popup_gallery1 .photo_sec_all {
+    width: 20%;
+    float: left;
+    position: relative;
+}
+.popup_gallery1 .photo_sec_all {
+    text-align: center;
+}
+.popup_gallery1 .photo_sec_all h5 {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+}
+.popup_gallery1 .photo_sec_all h6 {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 400;
+    color: #ec3237;
+}
+.popup_gallery1 .photo_sec_all .photo_cont {
+    padding: 10px 0;
+}
+.video_sec_all .photo_sec_all {
+    width: 25%}
+.video_sec_all .photo_sec:before {
+    transform: rotate(0);
+    background: #000;
+    z-index: 9;
+    opacity: .5;
+}
+.video_sec_all.grid_isop .element-item .test {
+    border: 0;
+}
+.video_sec_all .popup_gallery1 .photo_sec_all h5 {
+    font-size: 12px;
+    text-align: left;
+    line-height: 20px;
+}
+.video_sec_all .popup_gallery1 .photo_sec_all h6 {
+    font-size: 12px;
+    text-align: left;
+}
+.video_sec_all.grid_isop .element-item .test .fa-play {
+    position: absolute;
+    top: 48%;
+    color: #ec3237;
+    border: 2px solid #ec3237;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 99;
+}
+.video_sec_all.grid_isop .element-item .test .fa-arrows-alt {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    color: #fff;
+    font-size: 20px;
+    z-index: 9;
+}
+.video_sec_all .popup_gallery1 .photo_sec_all h6 .fa_nub {
+    float: right;
+    background: #000;
+    color: #fff;
+    padding: 3px 3px 0 3px;
+    line-height: 13px;
+}
+.drop_lang.dropdown-toggle {
+    position: relative;
+}
+.drop_lang.dropdown-toggle img {
+    position: absolute;
+    margin-right: 0;
+    left: -3px;
+    z-index: 0;
+    max-width: 26px!important;
+    top: 5px;
+}
+.drop_lang.dropdown-toggle span {
+    position: relative;
+    left: -3px;
+}
+.sathanai_allbg {
+    background-image: url(../img/bg-stalin.png);
+}
+.sathanai_allbg .breadcrumb .breadcrumb-item {
+    padding: 0 20px;
+}
+.sathanai_all #verticalTab .resp-tabs-list {
+    position: relative;
+}
+.comm_padd {
+    padding: 0;
+}
+.anigal_page .card-body .card-title {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+}
+.anigal_page .card-body .card-text {
+    font-size: 12px;
+    text-align: justify;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #000;
+}
+.anigal_page .anigal_cont {
+    margin-bottom: 30px;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child a.link {
+    display: inline-block;
+    padding: 4px 5px;
+    border: 1px solid #000;
+    color: #e8de1d;
+    line-height: normal;
+    font-size: 10px;
+    font-weight: 700;
+    background: #000;
+}
+.anigal_page .anigal_cont {
+    width: 30%;
+    position: relative;
+    float: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    background: #f4f4f4;
+    z-index: 9;
+}
+.anigal_page .anigal_cont .card-img-top {
+    max-width: 100%}
+.anigal_page .anigal_cont .card-body .card-title1 {
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    font-size: 21px;
+    line-height: normal;
+    font-weight: 700;
+    margin-top: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ff1c1b;
+}
+.anigal_page .anigal_cont .card-body .card-title {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 16px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 400;
+    color: #000!important;
+    margin-top: 10px;
+    text-align: center;
+    line-height: normal;
+}
+.anigal_page .anigal_cont .card-img-top {
+    width: 50px;
+    float: left;
+    margin-right: 15px;
+}
+.anigal_page .anigal_cont .card-body {
+    padding: 10px;
+}
+.anigal_page .anigal_cont .card-body .btn.anigal_btn {
+    background: #eb3338;
+    color: #fff;
+    font-size: 10px;
+    margin: 0 auto;
+    width: 70px;
+    display: block;
+    padding: 4px 0;
+}
+.anigal_page .anigal_cont:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/header_right2.png);
+    content: '';
+    background-size: 100% 100%;
+    opacity: .2;
+    z-index: -9;
+}
+.anigal_page_new .anigal_cont .card-body .card-title {
+    text-align: left;
+}
+.anigal_page_new .card-title1 {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.anigal_page_new .anigal_cont {
+    width: 48%;
+    float: left;
+}
+.anigal_page_new .anigal_cont:before {
+    display: none;
+}
+.anigal_page_new .anigal_cont .card-body .card-title {
+    font-weight: 600;
+}
+.anigal_page_new .anigal_cont .card-body p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.home_negalchi.slick-initialized .slick-slide {
+    padding: 0 15px!important;
+}
+.home_negalchi.slick-initialized .slick-prev {
+    left: 15px;
+    bottom: -40px;
+    top: auto;
+    z-index: 9999;
+}
+.home_negalchi.slick-initialized .slick-next {
+    right: 15px;
+    bottom: -40px;
+    top: auto;
+    z-index: 9999;
+}
+.home_negalchi.slick-initialized .slick-prev:before {
+    color: #000;
+    font-size: 24px;
+    border: 0;
+}
+.home_negalchi.slick-initialized .slick-next:before {
+    color: #000;
+    font-size: 24px;
+    border: 0;
+}
+.home_negalchi2.slick-initialized .slick-slide {
+    padding: 0 15px!important;
+}
+.home_negalchi2.slick-initialized .slick-prev {
+    left: 15px;
+    bottom: -40px;
+    top: auto;
+    z-index: 9999;
+}
+.home_negalchi2.slick-initialized .slick-next {
+    right: 15px;
+    bottom: -40px;
+    top: auto;
+    z-index: 9999;
+}
+.home_negalchi2.slick-initialized .slick-prev:before {
+    color: #000;
+    font-size: 24px;
+    border: 0;
+}
+.home_negalchi2.slick-initialized .slick-next:before {
+    color: #000;
+    font-size: 24px;
+    border: 0;
+}
+.twitter-sec .owl_carousel_home1 .owl-item {
+    position: relative;
+}
+.twitter-sec .owl_carousel_home1 .owl-item .twitter_caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    height: 60px;
+}
+.twitter-sec .owl_carousel_home1 .owl-item .twitter_caption:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: '';
+    z-index: 0;
+    opacity: .8;
+}
+.twitter-sec .owl_carousel_home1 .owl-item .twitter_caption h4 {
+    color: #fff;
+    position: relative;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 24px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.sathanai_all .resp-vtabs .resp-tab-content {
+    height: 500px;
+}
+.stalin_icons {
+    float: right;
+    position: relative;
+    bottom: 60px;
+}
+.stalin_icons.social-list .yt {
+    border: 1px solid red;
+}
+.marquee_cont li {
+    display: inline-block;
+    margin: 6px 25px;
+    margin-bottom: 10px;
+}
+.marquee_cont li a {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    color: #e8de1d;
+}
+.marquee_cont {
+    margin-bottom: 0;
+}
+.marquee_cont li .fa-exclamation {
+    color: #e8de1d;
+}
+.event-tab-sec .tab-content>.tab-pane {
+    display: block!important;
+    opacity: 0!important;
+    height: 0;
+}
+.event-tab-sec .tab-content>.tab-pane.active.show {
+    display: block!important;
+    opacity: 1!important;
+    height: 100%;
+    margin-top: 30px;
+}
+.event-tab-sec .tab-content .list-event {
+    margin-top: 0;
+}
+#twitterslider .owl-next {
+    outline: 0;
+}
+#twitterslider .owl-prev {
+    outline: 0;
+}
+marquee {
+    display: inherit;
+    background: #262626;
+    width: 100%;
+    height: 35px;
+}
+.filter_sect h3 {
+    padding-left: 30px;
+    font-size: 16px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.filter_sect .form-check .form-check-label input {
+    bottom: auto;
+    position: relative;
+    right: 10px;
+}
+.filter_sect .form-check .form-check-label {
+    line-height: 30px;
+}
+.negalichi_new .eventdate-sec {
+    top: -40px;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+    line-height: normal;
+}
+.negalichi_new .eventdate-sec span {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+.negalichi_new .title-block a {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.negalichi_new .title-block {
+    padding: 20px 15px;
+}
+.negalichi_new .content_right {
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.negalichi_new .pagination .english_cont {
+    font-family: 'Open Sans', sans-serif;
+}
+.negalichi_new .pagination {
+    max-width: 50%;
+    margin: 0 auto;
+    display: inline-block;
+    background: #ddd;
+    padding: 0 30px;
+    border-radius: 30px;
+}
+.negalichi_new .pagination li {
+    background: #ddd;
+}
+.negalichi_new .pagination_div {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.negalichi_new .pagination_div .page-link {
+    background: #ddd!important;
+    padding: 15px;
+}
+.negalichi_new .pagination_div .page-link.active {
+    background: #ec3237!important;
+    padding: 15px;
+}
+.filter_sect .form-check .form-check-label {
+    font-size: 12px;
+}
+.negalichi_new .title-block {
+    text-align: left;
+}
+.negalichi_newInner img {
+    max-width: 100%}
+.negalichi_newInner_right h5 {
+    font-size: 18px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+}
+.negalichi_newInner_right p {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+}
+.negalichi_newInner_right .nag_date .nag_left .fa {
+    background: #ec3237;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 21px;
+    padding-top: 9px;
+    margin-right: 7px;
+}
+.negalichi_newInner_right .nag_date .nag_left {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.negalichi_new .title-block {
+    box-shadow: 0 0 11px #ccc;
+}
+.filter_sect #prod_from {
+    padding-left: 15px;
+}
+.filter_sect #prod_from select {
+    border: 1px solid #777;
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+.filter_sect h3 {
+    padding-left: 3px;
+    border: 0;
+    padding-bottom: 0;
+}
+.negalichi_new .single-event-block {
+    margin-bottom: 20px;
+}
+.negalichi_newInner {
+    padding-top: 20px;
+}
+.hv-item-children-english .name {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px!important;
+}
+.hv-item-children-english .posting {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px!important;
+}
+.hv-item-children2 {
+    position: relative;
+}
+.hv-item-children2:before {
+    position: absolute;
+    top: -11px;
+    left: 21%;
+    width: 2px;
+    height: 15px;
+    background: #999;
+    content: '';
+    z-index: 9;
+}
+.owl-carouselnn .item .test img {
+    max-width: 100%;
+    height: 108px;
+    width: 100%}
+.owl-carouselnn .item .photo_sec {
+    position: relative;
+}
+.owl-carouselnn .item .photo_sec:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9;
+    opacity: .5;
+}
+.owl-carouselnn .item .test .fa-play {
+    position: absolute;
+    top: 43%;
+    color: #ec3237;
+    border: 2px solid #ec3237;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 99;
+    text-align: center;
+}
+.owl-carouselnn .item .test .fa-arrows-alt {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    color: #fff;
+    font-size: 20px;
+    z-index: 9;
+}
+.flow_chart {
+    text-align: center;
+    display: block;
+}
+.flow_chart .person img {
+    max-width: 150px;
+    border: 7px solid #eee;
+    border-radius: 7px;
+}
+.flow_chart .person .name {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px!important;
+    padding-top: 7px;
+}
+.flow_chart .person .posting {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px!important;
+    font-weight: 700;
+}
+.flow_chart .Single {
+    position: relative;
+    margin-bottom: 40px;
+    list-style-type: none;
+}
+.flow_chart .Single:before {
+    position: absolute;
+    bottom: -46px;
+    left: 49%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.flow_chart .twice {
+    width: 100%;
+    float: left;
+}
+.flow_chart .twice li {
+    width: 45%;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+}
+.flow_chart li {
+    list-style-type: none;
+}
+.flow_chart li.flow .flow:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: #444;
+    display: block;
+}
+.flow_chart li.flow .flow:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: #444;
+    display: block;
+}
+.flow_chart li.flow {
+    width: 50%;
+    margin: 0 auto;
+    border-top: 1px solid #444;
+    padding: 10px 0;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+}
+.flow_chart li .third {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flow_chart li .third .flow {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+.flow_chart .twice li.Single_left .person {
+    position: relative;
+    right: 30px;
+}
+.flow_chart .Single_left:before {
+    left: -10px;
+}
+.flow_chart .twice li.Single_right .person {
+    position: relative;
+    left: 30px;
+    text-align: right;
+}
+.flow_chart .Single_right:before {
+    left: auto;
+    right: -50px;
+}
+.flow_chart ul {
+    padding: 0;
+}
+.flow_chart .Single.Single_full {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.flow_chart .Single_full {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.flow_chart .Single_left.Single_left_last:before {
+    display: none;
+}
+.flow_chart .Single_right.Single_left_last:before {
+    display: none;
+}
+.veliyedugal_two .media1 .media-body a {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #b51010;
+}
+.veliyedugal_two .media1 .teamimg {
+    max-width: 100%}
+.makkal_content.anigal_page .anigal_cont:before {
+    display: none;
+}
+.makkal_content.anigal_page .anigal_cont .card-img-top {
+    width: 100%;
+    float: none;
+    max-height: 150px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
+.makkal_content.anigal_page .anigal_cont .title_Name {
+    padding-top: 15px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    word-break: break-word;
+    line-height: normal;
+}
+.makkal_content.anigal_page .anigal_cont .card-title2 {
+    margin-bottom: 0;
+}
+.makkal_content.anigal_page .anigal_cont {
+    width: 23%;
+    padding: 0;
+}
+.makkal_content.anigal_page .anigal_cont .card-body {
+    padding-bottom: 0;
+}
+.makkal_content.anigal_page .anigal_cont .card-body .card_disp_table {
+    display: table;
+    width: 100%;
+    height: 160px;
+}
+.makkal_content.anigal_page .anigal_cont .card-body .card_disp_table_cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.makkal_content.anigal_page .anigal_cont .card-body .card-title {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    margin: 0 0 5px 0;
+}
+.makkal_content.anigal_page ul li.makkal_only {
+    display: flex;
+    flex-wrap: wrap;
+}
+.anigal_cont_new h3 {
+    font-size: 21px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #000;
+    margin: 20px 0;
+}
+.anigal_cont_new h5 {
+    font-size: 18px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #000;
+    margin: 20px 0;
+}
+.anigal_cont_new p {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #000;
+    margin: 20px 0;
+    text-align: justify;
+}
+.anigal_cont_new ul li {
+    font-size: 14px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    color: #000;
+    margin: 20px 0;
+    text-align: justify;
+}
+.mavatta_seyalar .card-title1 {
+    -webkit-text-fill-color: #000!important;
+}
+.mavatta_seyalar .anigal_cont .fa {
+    color: #000;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.mavatta_seyalar .anigal_cont .fa:before {
+    margin-right: 10px;
+    display: inline-block;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.teamtabcontent.makkal_content.anigal_page .mavatta_seyalar_tab1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont .card-img-top {
+    width: 50px!important;
+    float: left!important;
+    margin-right: 15px!important;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont {
+    width: 48%!important;
+    float: left!important;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page .tab-pane .media-body h2 {
+    font-size: 18px;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page .tab-pane .media-body h3 {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page .tab-pane .media-body h4 {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page .tab-pane .media-body p {
+    font-size: 12px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.history-content p {
+    font-size: 12px;
+}
+.sathanai_all #verticalTab .resp-tabs-list li:hover {
+    color: #e8de1d;
+}
+.history_page .tab-content.history-content .list-history-outer {
+    overflow-y: hidden;
+}
+.main-bg.history_page .history-content .mCustomScrollbar {
+    height: 450px;
+}
+.main-bg.history_page .history-content .mCustomScrollbar .mCSB_draggerContainer {
+    left: 10px;
+}
+.main-bg.history_page .history-content .tab-pane p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.contact-div .error-show {
+    font-size: 12px;
+}
+.sathanai_all #verticalTab {
+    position: relative;
+    height: 510px;
+}
+.sathanai_all #verticalTab .GGroupsN {
+    position: absolute;
+    left: 150px;
+    bottom: 15px;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    z-index: 99;
+}
+.flow_chart .Single_full {
+    position: relative;
+    left: 75px;
+}
+.flow_chart .twice li.Single_left .person {
+    right: 45px;
+}
+.flow_chart .twice li.Single_right .person {
+    left: 40px;
+}
+.flow_chart .twice li.tr_balu {
+    left: 45px;
+    position: relative;
+}
+.flow_chart .Single.mavata_cont {
+    margin-top: 50px;
+    display: inline-block;
+}
+.form-contact .form-group textarea {
+    border: 2px solid #ddd;
+}
+.flow_chart .twice li.urban>.person {
+    position: relative;
+    margin-bottom: 40px;
+}
+.flow_chart .twice li.urban>.person:before {
+    position: absolute;
+    bottom: -46px;
+    left: 49%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.top_right.top_right_nn span.english {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    top: 2px;
+    left: -1px;
+}
+.English_footer .list-footer li a {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.English_footer .footer-menutitle {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+}
+.English_footer .gp-text {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+.English_footer .listmenu-bottm li a {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+.flow_chart li.rural .third {
+    position: relative;
+    left: 75px;
+}
+.flow_chart li.rural .Single_full {
+    left: 0;
+}
+.flow_chart .twice li.urban .Single.Single_right:before {
+    display: none;
+}
+.carousel-header .carousel-item::after {
+    background: 0 0!important;
+}
+.carousel-header .carousel-item .carousel-preview-wrap {
+    background: linear-gradient(210deg, rgba(136, 196, 213, .2) 0, rgba(184, 216, 232, 1) 100%)!important;
+    -webkit-transform: skew(-29deg);
+    -moz-transform: skew(-29deg);
+    -ms-transform: skew(-29deg);
+    -o-transform: skew(-29deg);
+    transform: skew(-29deg);
+}
+.carousel-header .carousel-item::before {
+    filter: none!important;
+}
+.flow_chart .person .name {
+    margin-bottom: 0;
+}
+.flow_chart .person .posting {
+    color: #ec3237;
+}
+.flow_chart li.rural .Single_full .person .name {
+    color: #ec3237;
+    font-weight: 600;
+}
+.flow_chart .person img {
+    max-width: 110px;
+    border: 1px solid #999;
+    border-radius: 50%}
+.flow_chart li.flow {
+    border-top: 2px solid #444;
+}
+.flow_chart li.flow .flow:before {
+    background: #444;
+}
+.flow_chart li.flow .flow:after {
+    background: #444;
+}
+.paryt_div {
+    position: relative;
+    padding: 20px 20px;
+    border: 5px solid #ff1c1b;
+    margin-bottom: 0;
+}
+.paryt_div:nth-child(2) {
+    border: 5px solid #000;
+}
+.kalagakolgai_all1 .maniauthor-div h2 {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-bottom: 12px;
+}
+.kalagakolgai_all1 .section_white h1 {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-bottom: 12px;
+}
+.home_event .event-title {
+    font-size: 24px;
+}
+.home_event .eventtab .nav-link {
+    font-size: 14px!important;
+}
+.home_event .rightlink {
+    font-size: 14px!important;
+}
+.main-bg.history_page .parentTabs {
+    padding: 20px 20px;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    border: 1px solid #ddd;
+    margin: 20px;
+}
+.main-bg.history_page .parentTabs p {
+    text-align: justify;
+}
+footer .listmenu-bottm li a {
+    font-size: 12px;
+}
+.home_quotes {
+    position: relative;
+    margin-top: 20px;
+}
+.home_quotes:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to bottom, #000 0, #000 60%, #ff1c1b 50%, #ff1c1b 100%);
+    opacity: 1;
+    content: ''}
+.news_filter_sec {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.news_filter_sec .search_filter {
+    float: right;
+    width: 40%}
+.news_filter_sec .search_filter input {
+    outline: 0;
+    box-shadow: none;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.news_filter_sec .dropdown {
+    float: left;
+    outline: 0;
+    box-shadow: none;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    text-transform: capitalize;
+}
+.news_filter_sec .dropdown .btn {
+    background: #ec3237;
+    border: 1px solid #ec3237;
+    outline: 0;
+    box-shadow: none;
+}
+.Single.mavata_cont .person a {
+    color: #ec3237;
+    text-decoration: underline;
+}
+.maniauthor-div h2 {
+    font-size: 18px;
+}
+#twitter-widget-1, #twitter-widget-2 {
+    margin-top: 30px!important;
+}
+.border_top {
+    border-top: 1px solid #ddd;
+}
+#twitter-widget-0 .timeline-Footer .u-floatLeft {
+    display: none;
+}
+.flow_chart .Single_full_down {
+    margin-bottom: 40px;
+}
+.flow_chart .Single_full_down:before {
+    position: absolute;
+    bottom: -46px;
+    left: 49%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.pagination_div_page {
+    width: 100%;
+    float: left;
+}
+.pagination_div_page .nav-tabs {
+    width: 100px;
+    float: left;
+}
+.pagination_div_page .nav-tabs .nav-item {
+    width: 100px;
+    float: left;
+}
+.pagination_div_page .nav-tabs .nav-item {
+    width: 100px;
+    float: left;
+    background: #191919;
+    padding: 0;
+}
+.pagination_div_page .nav-tabs .nav-item .nav-link {
+    background: #191919;
+    border: 0;
+    color: #ddd;
+    padding: 10px 0;
+    font-weight: 600;
+}
+.pagination_div_page .tab-content {
+    width: 90%;
+    float: left;
+    text-align: left;
+    padding-left: 20px;
+}
+.pagination_div_page .tab-content ul .page-item {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.pagination_div_page .tab-content ul {
+    padding: 0;
+}
+.pagination_div_page .nav-link.active.show {
+    color: #e8de1d;
+}
+.pagination_div_page .tab-content ul .page-item .page-link {
+    background: #ddd!important;
+    font-size: 12px;
+    color: #000!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    border-radius: 0;
+}
+.twice_line {
+    position: relative;
+}
+.twice_line:before {
+    position: absolute;
+    display: none;
+    top: 25%;
+    left: 49%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/arrow.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.periyar_life .nav-tabs {
+    text-align: center;
+}
+.periyar_life .nav-tabs .nav-item {
+    display: inline-block;
+}
+.negalichi_newInner_right h2 {
+    font-size: 12px;
+    color: #000!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    margin-bottom: 20px;
+}
+.veliyedugal_two .negalichi_newInner .row img {
+    max-width: 100%;
+    width: auto!important;
+    float: none;
+    margin: 0 20px 20px 0;
+    object-fit: unset;
+    max-height: 350px;
+}
+.veliyedugal_two .negalichi_newInner .row .twitter-img {
+    max-width: 600px;
+}
+.veliyedugal_two .negalichi_newInner .negalichi_newInner_right a {
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.main-new5 {
+    position: relative;
+}
+.main-new5 .timeline {
+    text-align: center;
+    position: relative;
+}
+.main-new5 .timeline.stalin .timeline-content {
+    position: relative;
+    bottom: 80px;
+    left: -20%}
+.main-new5 .timeline.stalin .timeline-content {
+    position: relative;
+    bottom: 80px;
+    left: -20%}
+.main-new5 .timeline.anbalagan .timeline-content {
+    margin-bottom: 0;
+    position: relative;
+    bottom: 100px;
+    right: -200px;
+}
+.main-new5 .timeline.anbalagan .timeline-content .description {
+    margin-bottom: 0;
+}
+.main-new5 .timeline.turai {
+    width: 50%;
+    float: left;
+    margin-top: 65px;
+}
+.main-new5 .timeline.palu {
+    width: 50%;
+    float: left;
+    margin-top: 65px;
+}
+.main-new5 .timeline .flow_flow3 {
+    position: relative;
+    border-top: 5px solid #000;
+    width: 50%;
+    margin: 0 auto;
+}
+.main-new5 .timeline .flow_flow3:before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 5px;
+    display: block;
+    height: 70px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+.main-new5 .timeline .flow_flow3:after {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 5px;
+    display: block;
+    height: 70px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+.main-new5 .timeline .flow_flow4 {
+    position: relative;
+}
+.main-new5 .timeline .flow_flow4:before {
+    position: absolute;
+    top: -69px;
+    right: 49%;
+    width: 5px;
+    display: block;
+    height: 68px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+}
+.main-new5 .timeline .flow_flow1 {
+    position: absolute;
+    top: 117px;
+    left: 50%;
+    width: 5px;
+    height: 82px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+}
+.main-new5 .timeline .timeline-icon {
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid #000;
+    overflow: hidden;
+    padding: 5px;
+    background: red;
+    width: 120px;
+    height: 120px;
+}
+.main-new5 .timeline .timeline-icon img {
+    border-radius: 50%}
+.main-new5 .timeline .timeline-content .title {
+    color: #ec3237;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.main-new5 .timeline .timeline-content .description {
+    color: #000!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.main-timeline7 .year1 {
+    display: block;
+    padding: 0;
+    font-size: 24px;
+    color: #303a3b;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.pagination_div.pagination_div_page .nav-tabs .form-control {
+    width: 100%;
+    background: #111;
+    color: #e8de1d;
+    font-size: 11px;
+    opacity: 1;
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+}
+.pagination_div_page .tab-content ul .page-item .page-link:hover {
+    background: #111!important;
+    color: #e8de1d!important;
+}
+.down_flow1 {
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    width: 3px;
+    height: 44px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+}
+.down_flow2 {
+    position: relative;
+    border-top: 3px solid #000;
+    width: 50%;
+    margin: 0 auto;
+    top: 50px;
+}
+.down_flow2:before {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 3px;
+    display: block;
+    height: 50px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+.down_flow2:after {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 3px;
+    display: block;
+    height: 50px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
+.time_mavatta {
+    padding-bottom: 50px;
+}
+.main-new7 .timeline .timeline-icon {
+    display: none;
+}
+.down_flow4, .down_flow7 {
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    width: 3px;
+    height: 44px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+}
+.down_flow3, .down_flow6 {
+    position: relative;
+    border-top: 3px solid #000;
+    width: 42%;
+    margin: 0 auto;
+    top: 50px;
+}
+.main-new7 .title {
+    margin-bottom: 50px;
+}
+.main-new7 .third .Single_left:before {
+    position: absolute;
+    top: 34px;
+    left: 45%;
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/newline.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-new7 .third .Single_left {
+    float: left;
+    width: 50%;
+    margin-bottom: 60px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+.main-new7 .third .Single_right {
+    float: right;
+    width: 50%;
+    margin-bottom: 60px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+}
+.main-new7 .third .Single_left:before {
+    position: absolute;
+    top: 29px;
+    left: 45%;
+    width: 45px;
+    height: 60px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/newline.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-new7 .year:before {
+    position: absolute;
+    top: -10px;
+    left: 26%;
+    width: 45px;
+    height: 58px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/newline.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-new7 .year:after {
+    position: absolute;
+    top: -10px;
+    left: 68%;
+    width: 45px;
+    height: 58px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/newline.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.main-new7 .third .Single_right:before {
+    position: absolute;
+    top: 34px;
+    left: 45%;
+    width: 45px;
+    height: 56px;
+    font-size: 26px;
+    content: '';
+    background-image: url(../img/newline.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    font-family: fontawesome;
+    z-index: 9;
+}
+.timeline.timeline_right .down_flow6 {
+    width: 40%;
+    left: 0;
+}
+.sathanai_allbg #verticalTab .mCustomScrollbar>.scroll-element.scroll-x {
+    display: none!important;
+}
+.sathanai_allbg #verticalTab .scroll-wrapper>.scroll-content {
+    overflow: scroll!important;
+}
+.sathanai_all .resp-vtabs .resp-tab-content {
+    padding-right: 25px!important;
+}
+.mCustomScrollbar .scroll-element.scroll-x.scroll-scrollx_visible {
+    display: none;
+}
+.lang {
+    right: 19%}
+.navbar-inverse .navbar-brand img {
+    max-width: 125px;
+    position: relative;
+    top: -29px;
+}
+.navbar-light .navbar-brand {
+    position: absolute;
+    left: 10%}
+.main-bg.history_page .parentTabs .vara_img {
+    max-width: 600px!important;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 100%}
+.contact_page {
+    padding: 20px;
+    width: 40%;
+    display: block;
+    box-shadow: 1px 2px 9px #999;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    float: left;
+}
+.contact_page p {
+    color: #000!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+.contact_page h3 {
+    color: #000!important;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+.contact_page_right {
+    float: left;
+    width: 50%;
+    margin: 40px;
+}
+.contact_page_right iframe {
+    display: block!important;
+    max-width: 100%}
+.no_cont {
+    color: #ec3237;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 18px!important;
+    font-weight: 600!important;
+    text-align: center!important;
+    margin-bottom: 40px!important;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane .row>div {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px!important;
+    font-weight: 600!important;
+    line-height: 24px;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane .row ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane .row ul li p {
+    margin-bottom: 0;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane .row ul li {
+    list-style-type: none;
+    position: relative;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane .row ul li:before {
+    position: absolute;
+    left: -25px;
+    content: '';
+    height: 12px;
+    width: 12px;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    top: 4px;
+    border-radius: 50%}
+.pugapadam_all1 .partystructure {
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+.murosoli_page .row p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px!important;
+    font-weight: 600!important;
+    line-height: 24px;
+    text-align: justify;
+    padding: 30px 10px;
+    padding-bottom: 0;
+}
+.murosoli_page .row span {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 15px!important;
+    float: right;
+    font-weight: 600!important;
+    line-height: 24px;
+}
+.filter_sect #constituency, .filter_sect #partydistrict, .filter_sect .mavattam_first {
+    width: 30%;
+    float: left;
+    margin-right: 15px;
+}
+.filter_sect #prod_from .contact-btn {
+    max-width: 250px;
+}
+.filter_sect #prod_from .btn_flot {
+    text-align: left;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.thaniurimaikolkaikal {
+    padding: 50px;
+}
+.thaniurimaikolkaikal h2, .thaniurimaikolkaikal h3 {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 24px!important;
+    font-weight: 600!important;
+    line-height: 24px;
+    text-align: justify;
+    padding: 30px 10px;
+    padding-bottom: 0;
+}
+.thaniurimaikolkaikal p {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 12px!important;
+    font-weight: 600!important;
+    line-height: 24px;
+    text-align: justify;
+    padding: 30px 10px;
+    padding-bottom: 0;
+}
+.periyar_life table {
+    margin-bottom: 20px;
+}
+.periyar_life table th {
+    text-align: center;
+}
+.periyar_life .tab-content.eventtab-content p {
+    display: block;
+    float: left;
+    width: 100%!important;
+}
+.periyar_life .tab-content.eventtab-content .tab-pane#three .row ul {
+    float: left;
+}
+footer .copyright:nth-child(2) {
+    margin-top: 7px!important;
+}
+.top_social.list-inline {
+    float: right;
+    position: absolute;
+    right: -130px;
+    top: 95px;
+    z-index: 1024;
+}
+.negalichi_newInner #twitterslider .owl-prev {
+    bottom: 10px;
+}
+.negalichi_newInner #twitterslider .owl-next {
+    bottom: 10px;
+}
+.home_event .nav-tabs .nav-item:nth-child(1) {
+    display: none;
+}
+.home_event .event-tab-sec .tab-content>.tab-pane.active.show#home {
+    display: none!important;
+}
+.home_event .event-tab-sec .tab-content>.tab-pane#profile {
+    display: block!important;
+}
+.negalichi_newInner .nag_date {
+    margin-top: 10px;
+}
+.negalichi_newInner .negalichi_newInner_right>div {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.sathanai_allbg #verticalTab .mCustomScrollbar .row img {
+    max-width: 100%}
+footer .list-inline.listmenu-bottm {
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+}
+.thalaimai_page {
+    float: left;
+    position: relative;
+    right: 0;
+    top: 20px;
+    z-index: 9999;
+}
+.thalai_right {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+.thalai_right img {
+    max-width: 240px;
+    width: 240px!important;
+}
+.twitter_iframee {
+    position: relative!important;
+}
+.twitter_iframee span:before {
+    position: absolute!important;
+    bottom: 0!important;
+    left: 0!important;
+    width: 60px!important;
+    height: 45px!important;
+    background: #fff!important;
+    content: ''!important;
+    z-index: 9!important;
+}
+.dropdown.lang .kadamai {
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    font-size: 14px;
+    z-index: 9999;
+    width: 100%;
+    height: auto;
+    right: 0;
+    opacity: 1;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to bottom, #000 0, #000 50%, #ff1c1b 51%, #ff1c1b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Noto Sans Tamil UI', sans-serif;
+    font-weight: 600;
+    word-spacing: 15px;
+}
+.thaniurimaikolkaikal {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+}
+.thaniurimaikolkaikal div {
+    font-family: 'Noto Sans Tamil', sans-serif;
+}
+.thaniurimaikolkaikal div h4, .thaniurimaikolkaikal h4 {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    padding-top: 10px;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .who_addrss .card-img-top {
+    width: 90px!important;
+}
+#verticalTab .resp_tabs_list {
+    width: 100%!important;
+    background: #fff;
+    height: auto!important;
+}
+.sathanai_all #verticalTab .resp-tabs-list li {
+    color: #e8de1d!important;
+    display: inline-block;
+    margin: 0 8px!important;
+    padding: 8px 0!important;
+    background: #111;
+    font-weight: 400;
+}
+.sathanai_all #verticalTab .resp-tabs-list {
+    border: 0;
+    background: #111;
+    text-align: center;
+}
+.sathanai_all #verticalTab .resp-tabs-list li:hover {
+    background: #111!important;
+    color: #e8de1d!important;
+}
+.sathanai_all #verticalTab li.resp-tab-item.resp-tab-active {
+    background: #111!important;
+    color: #e8de1d!important;
+}
+.sathanai_allbg #verticalTab .scroll-wrapper>.scroll-content {
+    height: 100%!important;
+}
+.resp-vtabs .resp-tabs-container {
+    width: 100%!important;
+}
+.videoo_sect .popup_gallery1 .photo_sec_all .photo_cont {
+    padding: 10px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+.videoo_sect.pugapadam_all .grid_isop .element-item .photo_sec_all:nth-child(odd) .test img {
+    height: 250px;
+}
+.videoo_sect.pugapadam_all .grid_isop .element-item .photo_sec_all:nth-child(even) .test img {
+    height: 150px;
+}
+.sathanai_all #verticalTab li.resp-tab-item.resp-tab-active:before {
+    display: none;
+}
+.sathanai_all #verticalTab li.resp-tab-item.resp-tab-active:after {
+    position: absolute;
+    content: "";
+    border-bottom: 3px solid #ff1c1b;
+    width: 100%;
+    height: 3px;
+    bottom: 2px;
+    left: 0;
+}
+.sathanai_all #verticalTab .GGroupsN {
+    display: none!important;
+}
+.sathanai_allbg #verticalTab .scroll-wrapper>.scroll-content img {
+    max-width: 100%}
+.owl_arikkai .item {
+    display: table;
+    width: 100%;
+    height: 430px;
+}
+.owl_arikkai .item .twitter-img {
+    max-width: 600px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%}
+.fancybox-overlay-fixed {
+    z-index: 999999999!important;
+}
+.fancybox-overlay {
+    z-index: 999999999!important;
+}
+.lang {
+    right: 22%;
+    margin: 0 auto;
+}
+.sitetitle.sitetitle1 {
+    width: 100%}
+.block-mews-outer .owl-carouselnn.scroll-content {
+    overflow-y: auto!important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .navbar-inverse .navbar-brand img, : :i-block-chrome {
+    top: -85px;
+}
+.periyar_life .maniauthor-div h2, ::i-block-chrome {
+    display: block;
+    padding-top: 37px;
+}
+.row:after, .row:before, ::i-block-chrome {
+    width: 0;
+    height: 0;
+}
+.row:after, .row:before, ::i-block-chrome {
+    display: inline-block!important;
+    content: ''}
+.main-bg.periyar_life .eventtab-content .tab-pane .col-sm-5, ::i-block-chrome {
+    display: inline-block;
+    vertical-align: top;
+}
+.main-bg.periyar_life .eventtab-content .tab-pane .col-sm-7, ::i-block-chrome {
+    display: inline-block;
+    max-width: 57.333333%}
+.main-bg.periyar_life .eventtab-content .tab-pane .col-sm-12, ::i-block-chrome {
+    display: inline-block;
+    width: 100%;
+    float: left;
+}
+.veliyedugal_two .media1 img, ::i-block-chrome {
+    float: left;
+    width: 30%!important;
+    display: inline-block;
+    min-width: 320px;
+}
+.veliyedugal_two .media1 .media-body, ::i-block-chrome {
+    width: 61%!important;
+}
+::i-block-chrome, div.fancybox-opened {
+    transition: none;
+}
+}.row:after, .row:before {
+    display: inline-block!important;
+}
+@-moz-document url-prefix() {
+    .sathanai_allbg #verticalTab .scroll-wrapper>.scroll-content {
+    overflow-x: hidden!important;
+    height: 500px!important;
+    margin-right: -41px!important;
+    padding-right: 25px!important;
+}
+.sathanai_allbg #verticalTab.resp-vtabs .scroll-wrapper>.resp_tabs_list.scroll-content.scroll-scrollx_visible.scroll-scrolly_visible {
+    overflow: hidden!important;
+    height: 100%!important;
+}
+}@media only screen and (min-width :2101px) {
+    #navbarSupportedContent {
+    margin-left: 33%}
+}@media only screen and (min-width :1901px) and (max-width:2100px) {
+    #navbarSupportedContent {
+    margin-left: 30%}
+}@media only screen and (min-width :1701px) and (max-width:1900px) {
+    #navbarSupportedContent {
+    margin-left: 28%}
+}@media only screen and (min-width :1501px) and (max-width:1700px) {
+    #navbarSupportedContent {
+    margin-left: 26%}
+}@media only screen and (min-width :1301px) and (max-width:1500px) {
+    #navbarSupportedContent {
+    margin-left: 23%}
+}@media only screen and (min-width :1200px) and (max-width:1300px) {
+    .navbar-light .navbar-brand {
+    left: 7%}
+.lang {
+    right: 23%}
+#navbarSupportedContent {
+    margin-left: 20%}
+.header_right {
+    right: 19px;
+}
+.top_social.list-inline {
+    right: -17px;
+}
+}@media only screen and (min-width :1340px) and (max-width:1199px) {
+    .header_right {
+    left: -35px;
+}
+}@media only screen and (min-width :992px) and (max-width:1200px) {
+    .dropdown.lang .kadamai {
+    bottom: 10px;
+}
+.sitetitle.sitetitle1 {
+    font-size: 28px;
+    width: auto;
+}
+.header_right {
+    width: 230px;
+}
+.top_right {
+    float: right;
+    position: relative;
+    padding: 10px 10px;
+    top: 100px;
+    z-index: 9999;
+}
+.drop_lang.dropdown-toggle .globe {
+    position: absolute;
+    z-index: -9;
+    border-radius: 50%}
+.login-fields {
+    padding: 0 25px;
+}
+.login-content h1.title {
+    font-size: 18px;
+}
+.main_bg_team .list-team li {
+    width: 46%}
+.login-content button {
+    padding: 8px 15px;
+    font-size: 10px;
+}
+.login-content a.btn {
+    font-size: 10px;
+    padding: 5px 12px 3px 12px;
+}
+.murosoli_page .murosoli_right .media1 .media-body {
+    padding-left: 0;
+    width: 63%!important;
+}
+.popup_gallery1 .photo_sec_all {
+    width: 25%;
+    float: left;
+    position: relative;
+}
+.sathanai_all #verticalTab .resp_tabs_list {
+    width: 30%}
+.anigal_page_new .anigal_cont {
+    width: 47%}
+.negalichi_newInner_right .nag_date .nag_left {
+    margin-bottom: 10px;
+}
+.makkal_content.anigal_page .anigal_cont {
+    width: 22%}
+.makkal_content.anigal_page .anigal_cont .title_Name {
+    font-size: 14px;
+    font-weight: 600;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont {
+    width: 47%!important;
+}
+.flow_chart .Single_full {
+    position: relative;
+    left: 55px;
+}
+.flow_chart .twice li.Single_left .person {
+    right: 35px;
+}
+.flow_chart li.rural .third {
+    position: relative;
+    left: 60px;
+}
+.pagination_div_page .tab-content {
+    width: 80%}
+.main-new5 .timeline .flow_flow4:before {
+    height: 68px;
+}
+.main-new5 .timeline .flow_flow3:before {
+    height: 68px;
+}
+.lang {
+    right: 27%}
+.top_right {
+    top: 15px;
+}
+.header_right {
+    width: 60px;
+    right: 46px;
+    top: 0;
+}
+#navbarSupportedContent {
+    margin-left: 21%}
+.navbar-inverse .navbar-brand img {
+    right: 0;
+}
+.navbar_nav .nav-item .nav-link {
+    padding: 16px 9px!important;
+    font-size: 14px!important;
+}
+.top_social.list-inline {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 58px;
+}
+.dropdown.lang .kadamai {
+    bottom: 0;
+}
+}@media only screen and (max-width:991px) and (min-width:768px) {
+    .owl_carousel1 .owl-nav {
+    display: block!important;
+}
+.sitetitle.sitetitle1 {
+    font-size: 24px;
+    bottom: 15px;
+    width: auto;
+}
+.thali_head .thali_head_left {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.thali_head_right .cd-timeline__read-more {
+    float: left;
+}
+.navbar-inverse .navbar-toggler {
+    border: 1px solid #000;
+    outline: 0;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+.login-fields {
+    padding: 0 25px;
+}
+.login-content h1.title {
+    font-size: 17px;
+}
+.login-content h2 {
+    font-size: 21px;
+}
+.main_bg_team .list-team li {
+    width: 46%}
+.login-content button {
+    padding: 8px 15px;
+    font-size: 10px;
+}
+.login-content a.btn {
+    font-size: 10px;
+    padding: 5px 12px 3px 12px;
+}
+.veliyedugal_two .media1 .media-body {
+    width: 67%!important;
+    float: left;
+    padding-left: 10px;
+}
+.murosoli_page .media1 .media-body {
+    width: 51%!important;
+}
+.murosoli_page .murosoli_right .list-team>li {
+    padding-bottom: 15px;
+}
+.popup_gallery1 .photo_sec_all {
+    width: 33%;
+    float: left;
+    position: relative;
+}
+.sathanai_all #verticalTab .resp_tabs_list {
+    width: 30%;
+    height: 510px;
+    padding-left: 10px;
+}
+.sathanai_all #verticalTab .resp-tabs-container .satha_img {
+    float: none;
+}
+.anigal_page .anigal_cont {
+    width: 30%}
+.anigal_page_new .anigal_cont {
+    width: 46%}
+.anigal_page .anigal_cont .card-body .card-title1 {
+    font-size: 16px;
+}
+.negalichi_newInner_right .nag_date .nag_left {
+    margin-bottom: 10px;
+}
+.negalichi_newInner_right {
+    padding-top: 20px;
+}
+.makkal_content.anigal_page .anigal_cont {
+    width: 30%}
+.makkal_content.anigal_page .anigal_cont .title_Name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont {
+    width: 46%!important;
+}
+#verticalTab .resp_tabs_list .mCSB_inside>.mCSB_container {
+    margin-right: 10px;
+}
+.sathanai_all #verticalTab .GGroupsN {
+    display: none;
+}
+.comm_sm_margin {
+    margin-top: 15px;
+}
+.flow_chart .twice li.Single_left .person {
+    right: 25px;
+}
+.flow_chart .Single_full {
+    position: relative;
+    left: 40px;
+}
+.flow_chart li.rural .third {
+    left: 40px;
+}
+.pagination_div_page .tab-content {
+    width: 80%}
+.main-new5 .timeline .flow_flow4:before {
+    height: 68px;
+}
+.main-new5 .timeline .flow_flow3:before {
+    height: 68px;
+}
+.main-new5 .timeline .timeline-content .title {
+    font-size: 18px;
+}
+.main-new5 .timeline.stalin .timeline-content {
+    position: relative;
+    bottom: 80px;
+    left: -28%}
+.lang {
+    right: 21%;
+    width: auto;
+}
+.header_right {
+    right: 104px;
+    top: 41px;
+    left: auto;
+    width: 54px;
+}
+#navbarSupportedContent {
+    margin-left: 0;
+    background: #f4f4f4!important;
+}
+.navbar-inverse .navbar-nav {
+    margin-top: 0;
+}
+.contact_page_right {
+    width: 43%}
+.mob_btn {
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+.mob_btn button {
+    position: relative;
+    z-index: 999;
+}
+.top_social.list-inline {
+    float: right;
+    position: absolute;
+    right: 54px;
+    top: 95px;
+}
+.dropdown.lang .kadamai {
+    bottom: 0;
+}
+@-moz-document url-prefix() {
+    #verticalTab .resp-tabs-container {
+    float: left;
+}
+}}@media only screen and (max-width:991px) and (min-width:868px) {
+    .top_social.list-inline {
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 70px;
+}
+.header_right {
+    right: 64px;
+    top: 3px;
+    left: auto;
+    width: 63px;
+}
+}@media (max-width:767px) {
+    .dropdown.lang .kadamai {
+    font-size: 13px;
+}
+@-moz-document url-prefix() {
+    #verticalTab .resp-tabs-container {
+    float: left;
+}
+}.thalai_right {
+    position: relative;
+    top: 15px;
+    right: 0;
+}
+.thalaimai_page .list-inline-item {
+    margin-bottom: 7px;
+}
+.top_social.list-inline {
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    z-index: 9999;
+}
+.drop_lang.dropdown-toggle {
+    position: relative;
+    bottom: 30px;
+}
+.periyar_life table {
+    width: 100%!important;
+}
+.thaniurimaikolkaikal {
+    padding: 15px;
+}
+.tab-content.eventtab-content {
+    padding: 15px;
+}
+.filter_sect #constituency, .filter_sect #partydistrict, .filter_sect .mavattam_first {
+    width: 100%;
+    float: left;
+    margin-right: 15px;
+}
+header:before {
+    background-position: 52% 59%!important;
+}
+.popup_gallery .test {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.navbar_nav .nav-item {
+    padding: 0;
+}
+.veli_right {
+    border-left: 0;
+}
+.top_right {
+    float: right;
+    position: absolute;
+    padding: 21px 10px;
+    z-index: 9999;
+    right: 70px;
+    padding-bottom: 0;
+    width: 50px;
+}
+.sitetitle.sitetitle1 {
+    left: 0;
+    bottom: 0;
+    top: auto;
+    padding: 8px;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.navbar-inverse {
+    display: block;
+    float: right;
+    width: 100%}
+.navbar-inverse .navbar-toggler {
+    float: right;
+    margin-top: 15px;
+}
+.navbar-inverse .navbar-brand {
+    bottom: 23px;
+    position: relative;
+    left: 0;
+}
+.thali_head .thali_head_left {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.thali_head_right .cd-timeline__read-more {
+    float: left;
+}
+.thali_head_right h4 {
+    text-align: center;
+}
+.thali_head_right p {
+    text-align: justify;
+}
+.thali_head_right .cd-timeline__read-more {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    width: 110px;
+    margin-top: 15px;
+}
+.history_page .slick-prev {
+    left: 0;
+    padding-left: 0;
+}
+.history_page .slick-next {
+    right: 10px;
+    padding-right: 0;
+}
+.history_page .slick-prev:before, .slick-next:before {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #777;
+    color: #777;
+    padding: 5px;
+}
+.periyar_life .eventtab-content h2 {
+    font-size: 18px;
+}
+.tab-content.eventtab-content {
+    padding: 20px;
+}
+.history_page .nav-tabs.list-history li {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+.history_page .list-history .nav-link.active {
+    border-right: 0;
+    border-bottom: 4px solid #e8de1d;
+    border-radius: 0;
+}
+.history_page .list-history .nav-link.active:before {
+    right: 45%;
+    bottom: -11px;
+    top: auto;
+    content: '\f0d8'}
+.history_page .historylink .list-history-outer {
+    height: auto;
+    overflow-y: auto;
+}
+.history_page .historylink .mCSB_container {
+    margin-right: 0;
+}
+.news-sec .news-info {
+    background-color: #fff;
+    padding: 15px 15px;
+}
+.events_all .list-event .single_event_block_img {
+    width: 100%}
+.events_all .title-block h3 {
+    line-height: normal;
+    text-align: left;
+}
+.events_all .title-block p {
+    line-height: normal;
+    text-align: left;
+}
+.sathanai_all #verticalTab .resp-tabs-container h2.resp-tab-active {
+    background: #191919!important;
+    color: #e8de1d;
+    border-top: 1px solid #191919!important;
+}
+.sathanai_all #verticalTab .resp-tabs-container h2.resp-tab-active span.resp-arrow {
+    border-bottom: 8px solid #e8de1d;
+}
+.drop_lang.dropdown-toggle .globe {
+    position: absolute;
+    z-index: -9;
+    border-radius: 50%}
+.navbar-inverse .navbar-toggler {
+    border: 1px solid #000;
+    outline: 0;
+    padding: 1px 5px;
+}
+.logo {
+    width: 100px;
+}
+.login-container {
+    width: 100%}
+.login-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.login-content:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .7;
+    background: #000;
+}
+.login-content .logo {
+    width: 100%;
+    text-decoration: none!important;
+}
+.login-content h1.title {
+    font-size: 24px;
+    margin-top: 80px;
+}
+.login-content h2 {
+    font-size: 18px;
+    color: #fff;
+}
+.login-content button {
+    padding: 10px 20px;
+    font-size: 15px;
+    background: #ff1c1b!important;
+    border-bottom: 0!important;
+}
+.login-content input, select, textarea {
+    height: 40px;
+    opacity: .5;
+}
+.login-content input:focus, select:focus, textarea:focus {
+    opacity: .8;
+}
+.login-content .login-fields {
+    padding: 0 20px;
+}
+.login-container {
+    background-size: 100%}
+.login-content label {
+    color: #fff;
+}
+.login-content h1.title {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 40px;
+}
+.login-content1 .login-fields {
+    width: 90%}
+.main_bg_team .list-team li {
+    width: 100%;
+    margin: 0;
+}
+.main_bg_team .list-inline {
+    display: block;
+}
+.main_bg_team .list-team li .list-team-social li {
+    float: none;
+}
+.main_bg_team .list-team-social a {
+    margin-right: 10px;
+}
+.login-content button {
+    padding: 8px 15px;
+    font-size: 10px;
+}
+.login-content a.btn {
+    font-size: 10px;
+    padding: 5px 12px 3px 12px;
+}
+.login-content .rememberme {
+    font-size: 11px;
+}
+.veliyedugal_two .media1 img {
+    float: left;
+    width: 100%!important;
+}
+.veliyedugal_two .media1 .media-body {
+    width: 100%!important;
+    float: left;
+    padding-left: 0;
+    padding-top: 5px;
+}
+.veliyedugal_two .breadcrumb {
+    font-size: 14px;
+}
+.veliyedugal_two .list-team h2 {
+    font-size: 15px;
+}
+.veliyedugal_two .teamtabcontent {
+    padding: 20px;
+}
+.owl-carouselnn {
+    padding: 10px;
+}
+.event-tab-sec .rightlink {
+    display: none;
+}
+.event-sec .event-tab-sec .eventtab {
+    display: block;
+    width: 100%;
+    margin: 0!important;
+}
+.comm_xs_padd {
+    padding: 0!important;
+}
+.popup_gallery1 .photo_sec_all {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+.sathanai_all #verticalTab .resp_tabs_list {
+    padding-left: 0;
+    height: 100%}
+.sathanai_all #verticalTab .resp-tabs-container .satha_img {
+    float: none;
+}
+.sathanai_all .resp-vtabs .resp-tab-content {
+    padding: 15px!important;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child a.link {
+    font-size: 6px;
+}
+.anigal_page .anigal_cont {
+    width: 45%}
+.anigal_page .anigal_cont .card-body .card-title {
+    font-size: 14px;
+}
+.anigal_page .anigal_cont .card-img-top {
+    width: 50px;
+    float: none;
+    margin-right: 15px;
+    margin: 0 auto;
+    display: block;
+}
+.anigal_page .anigal_cont .card-body .card-title1 {
+    text-align: center;
+}
+.anigal_page_new .anigal_cont {
+    width: 100%}
+.anigal_page_new .anigal_cont .card-body .card-title1 {
+    font-size: 16px;
+    -webkit-text-fill-color: #000;
+    text-align: left;
+}
+.sathanai_all .resp-vtabs .resp-tab-content {
+    height: 100%}
+#verticalTab .mCustomScrollBox .mCSB_draggerContainer {
+    display: none;
+}
+#verticalTab .mCSB_container {
+    margin-right: 0!important;
+}
+.stalin_icons {
+    float: none;
+    position: relative;
+    bottom: 0;
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+.negalichi_new .pagination {
+    max-width: 100%}
+.row.content_right {
+    margin: 0!important;
+}
+.negalichi_newInner_right {
+    padding-top: 20px;
+}
+.negalichi_newInner_right .nag_date .nag_left {
+    margin-bottom: 10px;
+}
+.filter_sect #prod_from {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.flow_chart {
+    padding: 0;
+}
+.flow_chart .twice li {
+    width: 100%}
+.flow_chart .twice li.Single_left {
+    width: 50%}
+.flow_chart .twice li.Single_right {
+    width: 50%}
+.flow_chart .twice ul li {
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+.flow_chart .flow.flow1 {
+    display: none;
+}
+.makkal_content.anigal_page .anigal_cont {
+    width: 45%}
+.makkal_content.anigal_page .anigal_cont .title_Name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.anigal_cont_new h3 {
+    font-size: 15px;
+    line-height: normal;
+}
+.anigal_cont_new h5 {
+    font-size: 15px;
+}
+.anigal_cont_new p {
+    font-size: 12px;
+}
+.anigal_cont_new ul li {
+    font-size: 12px;
+}
+.makkal_content.anigal_page .anigal_cont .card-body .card-title {
+    font-size: 12px;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont {
+    width: 100%!important;
+}
+.sathanai_all #verticalTab .GGroupsN {
+    display: none;
+}
+.comm_sm_margin {
+    margin-top: 15px;
+}
+footer .listmenu-bottm {
+    margin-top: 25px;
+}
+footer .copyright {
+    margin: 10px 0 0 0;
+}
+.sathanai_all .resp-vtabs .resp-tabs-container {
+    float: left;
+    font-family: 'Noto Sans Tamil UI', sans-serif!important;
+    font-size: 12px;
+}
+.flow_chart .Single_full {
+    position: relative;
+    left: 0;
+}
+.flow_chart .twice li.Single_left .person {
+    right: 45px;
+}
+.flow_chart .twice li.Single_right .person {
+    left: 25px;
+}
+.flow_chart .twice li.tr_balu {
+    left: 0;
+    position: relative;
+}
+.flow_chart .Single.mavata_cont {
+    margin-top: 20px;
+    display: inline-block;
+}
+.flow_chart .Single_right:before {
+    right: 0;
+}
+.flow_chart li.flow.mavata_cont_after {
+    display: none;
+}
+.flow_chart li.rural .third {
+    left: 0;
+}
+.history_page .maniauthor-div h4 {
+    font-size: 18px;
+    line-height: 30px;
+}
+.resp_tabs_list {
+    display: none!important;
+}
+.news_filter_sec .search_filter {
+    float: right;
+    width: 100%;
+    margin-top: 20px;
+}
+.flow_chart .Single:before {
+    bottom: -44px;
+    left: 47%;
+    background-size: 26px;
+}
+.navbar-inverse .navbar-brand img {
+    top: 0!important;
+}
+.owl-carouselnn .item .test img {
+    height: 100px;
+}
+.news_listImg .new_spanimg img {
+    height: 100px;
+}
+.news-sec .list-news li .media-body a {
+    text-align: left;
+    margin-top: 0;
+}
+.urban .third .Single:before {
+    left: 0;
+}
+.rural .third .Single.Single_left:before {
+    left: 0;
+}
+.rural .third .Single.Single_right:before {
+    left: 90%}
+.flow_chart .Single_full_down:before {
+    left: 45%}
+.pagination_div_page .tab-content {
+    width: 90%;
+    float: left;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 20px;
+}
+.twice_line:before {
+    top: 41%;
+    left: 47%}
+.veliyedugal_two .media1 .media-body {
+    width: 100%!important;
+}
+.scroll-wrapper>.scroll-content {
+    height: 100%!important;
+    max-height: 100%!important;
+}
+.main-new5 .timeline {
+    margin-bottom: 50px;
+}
+.main-new5 .timeline.stalin .timeline-content {
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+.main-new5 .timeline.anbalagan .timeline-content {
+    margin-bottom: 70px;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+.main-new5 .timeline .flow_flow1 {
+    position: absolute;
+    bottom: -54px;
+    left: 50%;
+    width: 5px;
+    height: 50px;
+    font-size: 26px;
+    content: '';
+    background: #000;
+    z-index: 9;
+    top: auto;
+}
+.main-new5 .timeline .timeline-content .title {
+    font-size: 18px;
+}
+.veliyedugal_two .negalichi_newInner .row img {
+    max-width: 100%}
+#navbarSupportedContent {
+    margin-left: 0;
+}
+.contact_page {
+    width: 90%}
+.contact_page_right {
+    width: 85%;
+    margin: 20px;
+}
+.mob_btn {
+    position: relative;
+    float: right;
+    top: -30px;
+}
+footer .list-inline.listmenu-bottm {
+    margin-top: 50px;
+    display: block;
+    text-align: left;
+}
+footer .list-inline.listmenu-bottm .list-inline-item {
+    line-height: 24px;
+}
+.dropdown.lang .kadamai {
+    bottom: -6px;
+}
+}@media (max-width:600px) {
+    .sec3_veli .veli_left .media-body.align-self-center {
+    width: 100%;
+    display: block;
+    padding-top: 15px;
+}
+.sec3_veli .veli_left {
+    display: block;
+}
+.event_bottom .kalagtitle {
+    font-size: 18px;
+}
+.veliyedugal_two .breadcrumb {
+    font-size: 12px;
+}
+.negalichi_newInner_right h5 {
+    font-size: 15px;
+}
+.negalichi_newInner_right .nag_date .nag_left {
+    display: block;
+}
+.tab-content.teamtabcontent.makkal_content.anigal_page {
+    padding: 10px;
+}
+.veliyedugal_two .media1 .media-body a {
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    float: left;
+}
+.down_flow4, .down_flow7 {
+    height: 40px;
+}
+}@media (max-width:480px) {
+    .dropdown.lang .kadamai {
+    font-size: 11px;
+}
+.navbar-inverse .navbar-brand img {
+    max-width: 86px;
+    position: relative;
+    top: 13px!important;
+}
+.flag_img img {
+    max-width: 50px;
+}
+.maniauthor-div h2 {
+    font-size: 21px;
+}
+.sec2_sathanai .maniauthor-div {
+    margin: 10px 0;
+}
+.section_white {
+    padding: 15px;
+}
+.tha_left .title_h2 {
+    font-size: 13px;
+    line-height: 40px;
+}
+.periyar_life .nav-tabs li a {
+    font-size: 10px;
+}
+.anigal_all .card .card-img-top {
+    height: 100%!important;
+}
+.yarivar_yar .yarivar_yarcont img {
+    width: 100%;
+    margin: 0 auto!important;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    border: 4px solid #ddd;
+    margin-bottom: 20px!important;
+    height: 250px;
+}
+.events_all .title-block h3 {
+    font-size: 16px;
+}
+.login-content label {
+    font-size: 13px;
+    //margin-top: 30px;
+    //margin-bottom: 15px;
+    display: inline-block;
+}
+.login-content .rememberme {
+    font-size: 10px;
+}
+.owl-carouselnn {
+    padding: 10px;
+}
+.news-sec .list-news li .media-body a {
+    text-align: left;
+}
+.murosoli_page .murosoli_right .media1 img {
+    width: 33%!important;
+}
+.murosoli_page .murosoli_right .media1 .media-body {
+    padding-left: 0;
+    width: 60%!important;
+}
+.murosoli_page .teamtabcontent {
+    padding: 0;
+}
+.popup_gallery1 .photo_sec_all {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.grid_isop .element-item img {
+    height: 100%}
+.sathanai_all #verticalTab .resp-tabs-container h2 {
+    font-size: 11px;
+}
+.sathanai_all #verticalTab .resp-tabs-container .satha_img {
+    max-width: 100%}
+.anigal_page .anigal_cont {
+    width: 100%}
+.makkal_content.anigal_page .anigal_cont {
+    width: 95%}
+.makkal_content.anigal_page .anigal_cont .title_Name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+}
+.flow_chart .twice li.Single_left .person {
+    right: 25px;
+}
+.veliyedugal_two .media1 img {
+    min-width: 100%!important;
+}
+.main-new5 .timeline.turai .timeline-content .title {
+    font-size: 16px;
+}
+.main-new5 .timeline.turai .timeline-content .description {
+    font-size: 14px;
+}
+.main-new5 .timeline.palu .timeline-content .description {
+    font-size: 14px;
+}
+.main-new5 .timeline.palu .timeline-content .title {
+    font-size: 16px;
+}
+.main-new5 .timeline.turai {
+    margin-top: 15px;
+}
+.main-new5 .timeline.palu {
+    margin-top: 15px;
+}
+.down_flow3, .down_flow6 {
+    width: 42%;
+    margin: 0 auto;
+    top: 50px;
+    left: 8px;
+}
+.down_flow4, .down_flow7 {
+    height: 38px;
+}
+.main-new7 .third .Single_left:before {
+    top: 35px;
+}
+.timeline.timeline_right .down_flow6 {
+    width: 40%;
+    left: 9px;
+}
+.contact_page {
+    width: 90%}
+.contact_page h3 {
+    font-size: 18px;
+}
+.contact_page p {
+    font-size: 13px;
+}
+.sitetitle.sitetitle1 {
+    font-size: 19px;
+}
+.maniauthor-div {
+    margin: 30px 0;
+    padding: 0 20px;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont .card-img-top {
+    height: 50px;
+}
+.makkal_content.anigal_page .anigal_cont .card-body .card-title {
+    font-size: 14px;
+}
+.dropdown.lang .kadamai {
+    bottom: -6px;
+    word-spacing: 5px;
+}
+.makkal_content.anigal_page .anigal_page_new.mavatta_seyalar .anigal_cont .card-img-top {
+    height: 50px;
+    display: block;
+    height: auto;
+    float: none!important;
+    margin: 0 auto!important;
+    text-align: center;
+}
+.who_addrss_left {
+    width: 100%;
+    display: block;
+    float: left;
+}
+.videoo_sect.pugapadam_all .grid_isop .element-item .test img {
+    height: 150px!important;
+}
+.veliyedugal_two .negalichi_newInner .row img {
+    max-height: 220px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.owl_arikkai .item {
+    height: 100%}
+.owl_arikkai .item .twitter-img {
+    margin-bottom: 15px;
+    display: block;
+}
+.sathanai_all #verticalTab .resp-tabs-list li {
+    margin: 0 4px!important;
+    padding: 5px 0!important;
+    font-size: 11px;
+}
+}@media (max-width:380px) {
+    .sitetitle.sitetitle1 {
+    font-size: 15px;
+}
+}.contact-btn {
+    color: #e8de1d;
+    background: #000;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+    transition: all .6s;
+}
+.contact-btn:hover {
+    background: #ff1c1b;
+}
+#user_mainimage_inner, .btn-browse {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%}
+.btn-browse, .btn-browse:focus, .btn-browse:hover {
+    background-color: #ff1c1b;
+    border: none;
+    color: #e8de1d;
+}
+.form-contact .form-control {
+    font-family: 'Open Sans', sans-serif;
+}
+#user_mainimage_inner .browse-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+}
+.error-show {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ff1c1b;
+    display: block;
+    margin: 5px 0 0 0;
+}
+label.formtitle {
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 16px;
+}
+.form-contact .form-control, .form-contact .form-control:focus {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 14px;
+    height: 40px;
+    border: 2px solid #e8e8e8;
+    box-shadow: none;
+}
+.form-contact .form-group {
+    margin-bottom: 1rem;
+}
+.textarea-formcontrol {
+    height: 150px!important;
+}
+.customcss {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: none;
+    margin: 0 20px 0 0;
+}
+.customcss input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    border-radius: 50%}
+.customcss:hover input~.checkmark {
+    background-color: #000;
+}
+.customcss input:checked~.checkmark {
+    background-color: #000;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.customcss input:checked~.checkmark:after {
+    display: block;
+}
+.customcss .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff1c1b;
+}
+.maniauthor-div h2.title-sub {
+    color: #ff1c1b;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+.contact-sidebar h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+.contact-sidebar p {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contactmedia-outer {
+    margin: 20px 0 20px 0;
+}
+.contact_adddress_media {
+    margin: 0 0 10px 0;
+}
+.contact_adddress_media .media-body {
+    padding-left: 20px;
+}
+.contact_adddress_media i.fa {
+    font-size: 24px;
+    color: #ff1c1b;
+}
+.map-sec {
+    width: 100%;
+    height: 300px;
+}
+.map-sec iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+.btn-contact-mar {
+    margin-top: 20px;
+}
+.datepicker {
+    font-family: 'Open Sans', sans-serif;
+}
+.event-content {
+    padding: 0 20px;
+}
+.img-event-contentmain {
+    margin-bottom: 20px;
+}
+iframe {
+    display: none;
+}
+.map-sec iframe {
+    display: block;
+}
+.fb-wall iframe {
+    display: block;
+}
+.mCustomScrollbar iframe {
+    display: block;
+}
+@media (max-width:768px) {
+    .management-hierarchy .person>img {
+    height: 50px;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child {
+    padding: 0 5px;
+    position: relative;
+}
+.management-hierarchy .person {
+    text-align: center;
+    width: 100px;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child .link {
+    font-size: 10px;
+}
+.management-hierarchy .person>p.name {
+    font-size: 13px;
+}
+}@media (max-width:767px) {
+    .management-hierarchy .person>p.posting {
+    display: none;
+}
+.management-hierarchy .person>p.name {
+    font-size: 7px;
+}
+.management-hierarchy .person>img {
+    height: 35px;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child {
+    padding: 0 5px;
+    position: relative;
+}
+.management-hierarchy .person {
+    text-align: center;
+    width: 40px;
+}
+.hv-wrapper .hv-item .hv-item-children .hv-item-child .link {
+    font-size: 10px;
+}
+
+}

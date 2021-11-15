@@ -1,0 +1,71 @@
+﻿@model IEnumerable<issDMKSite.Models.Panchayat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.blockName.blockName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.panchayatName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.panchayatSecretaryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.panchayatSecretaryAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockName.blockName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.panchayatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.panchayatSecretaryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.panchayatSecretaryAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

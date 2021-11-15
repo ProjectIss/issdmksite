@@ -1,0 +1,77 @@
+﻿@model IEnumerable<issDMKSite.Models.Village>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.blockName.blockName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.panchayatName.panchayatName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.villageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.villageSecretaryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.villageSecretaryAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.blockName.blockName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.panchayatName.panchayatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.villageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.villageSecretaryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.villageSecretaryAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
