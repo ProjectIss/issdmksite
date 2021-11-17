@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<issDMKSite.Models.Application>
 @{
     ViewBag.Title = "Department";
 }
@@ -20,25 +20,57 @@
 @using (Html.BeginForm(null, null, FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    <div class="row">
-        <div class="col s1">
-        </div>
-        <div class="col s2">
-            <label>   Complain Status :</label>
-            <select id="ddlStatus" name="status">
-                <option value="New">New</option>
-                <option value="Pending">Pending</option>
-                <option value="InProgress">InProgress</option>
-                <option value="Completed">Completed</option>
-            </select>
-        </div>
-        <div class="col s2">
-            <button class="btn waves-effect waves-light " id="btnsearch" style="float:inherit;margin-top:10%">
-                Search
-                <i class="material-icons right"></i>
-            </button>
-        </div>
+<div class="row">
+    <div class="col s1">
     </div>
+    <div class="col s2">
+        <label>  Select Department :</label>
+        <select name="dpartment" id="dpartment" class="form-control col-xl-12">
+            <option value="">-Select Department-</option>
+            @foreach (var item in ViewBag.Department)
+            {
+                <option value="@item.Value">@item.Text </option>
+            }
+        </select>
+    </div>
+    <div class="col s2">
+        <label>  Select Block :</label>
+        <select name="block" id="Block" class="form-control col-xl-12">
+            <option value="">-Select Block-</option>
+            @foreach (var item in ViewBag.Area)
+            {
+                <option value="@item.Value">@item.Text </option>
+            }
+        </select>
+    </div>
+    <div class="col s2">
+        <label>  Select Village :</label>
+        <select name="village" id="Village" class="form-control col-xl-12">
+            <option value="">-Select Village-</option>
+            @foreach (var item in ViewBag.Village)
+            {
+                <option value="@item.Value">@item.Text </option>
+            }
+        </select>
+    </div>
+
+    <div class="col s2">
+        <label>  From Date :</label>
+        <input type="date" name="fromDate" class="form-control daterange-single" id="fromdate">
+    </div>
+
+
+    <div class="col s2">
+        <label>  To Date :</label>
+        <input type="date" class="form-control" name="toDate" format="dd-MM-yyyy" id="todate" />
+    </div>
+    <div class="col s2">
+        <button class="btn waves-effect waves-light " id="btnsearch" style="float:inherit;margin-top:10%">
+            Search
+            <i class="material-icons right"></i>
+        </button>
+    </div>
+</div>
 }
 <div class="col s10" style="margin:1%">
     <div class="card">
@@ -58,7 +90,7 @@
                     </tr>
                 </thead>
                 <tbody id="tblComplainStatus">
-                    @*@foreach (var item in Model)
+                    @foreach (var item in Model)
                     {
                         <tr>
                             <td>@Html.DisplayFor(modelItem => item.Id)</td>
@@ -81,7 +113,7 @@
 
 
                         </tr>
-                    }*@
+                    }
                 </tbody>
                 <tfoot>
 
@@ -106,15 +138,25 @@
 
 
 <script>
-    var staus = "";
     $(function () {
-
-
-        $('#btnsearch').click(function () {
-            staus = $('#ddlStatus').val();
-            Advance(staus);
+        $(document).ready(function () {
+            $("#Department").change(function () {
+                var name = $(this).find('option:selected').val();
+                Block(name);
+            })
+        
+            $("#Block").select2();
+        $("#btnSearch").click(function () {
+            var formatDate = $('#fromdate').val().split('/');
+            var fromDate = formatDate[2] + "-" + formatDate[1] + "-" + formatDate[0];
+            var formatToDate = $('#todate').val().split('/');
+            var toDate = formatToDate[2] + "-" + formatToDate[1] + "-" + formatToDate[0];
+            var c = document.getElementById("Block");
+            var block = c.options[c.selectedIndex].value;
+           
+            Connsolidate(fromDate, toDate, block, dpartment);
+            });
         });
-
     });
     $(document).ready(function () {
         $('#ComplainStatus').DataTable({
@@ -126,7 +168,7 @@
                     orientation: 'landscape',
                     autoPrint: true,
                     footer: true,
-                    title: 'Application Report'
+                    title: 'Department Report'
 
                 },
                 {
@@ -135,7 +177,7 @@
                     orientation: 'landscape',
                     autoPrint: true,
                     footer: true,
-                    title: 'Application Report'
+                    title: 'Department Report'
                 },
 
                 'csv', 'excel',
@@ -143,17 +185,39 @@
 
         });
     });
-    @*function Advance(staus) {
+    function Block(name) {
+        debugger
+              $.ajax({
+            type: 'POST',
+            url: '@Url.Content("~/Reports/Block")',
+            dataType: 'json',
+            data: { NAME: name },
+            success: function (result) {
+    
+                var data = result;
+               
+                $("#Block").empty();
+                for (var i = 0; i < data.length; i++) {
+                    $("#Block").append("<option value='" + data[i].id + "'>" + data[i].Block
+                        + "</option>");
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    };
+    function Advance(fromDate, toDate, block, dpartment) {
         $("#tblComplainStatus").empty();
         $.ajax({
             type: 'POST',
-            url: '@Url.Content("~/Reports/TblComplainStatus")',
+            url: '@Url.Content("~/Reports/Department")',
             dataType: 'json',
-            data: { staus: staus, },
+            data: { fromDate: fromDate, toDate: toDate, block: block, dpartment: dpartment  },
 
 
         });
-    }*@
+    }
 
 
 </script>

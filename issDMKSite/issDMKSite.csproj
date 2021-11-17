@@ -147,6 +147,7 @@
     <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BlocksController.cs" />
+    <Compile Include="Controllers\DailyUpdatesController.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PanchayatsController.cs" />
@@ -187,10 +188,23 @@
     <Compile Include="Migrations\202111111036353_m7.designer.cs">
       <DependentUpon>202111111036353_m7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111151308541_m8.cs" />
+    <Compile Include="Migrations\202111151308541_m8.designer.cs">
+      <DependentUpon>202111151308541_m8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111151555237_m9.cs" />
+    <Compile Include="Migrations\202111151555237_m9.designer.cs">
+      <DependentUpon>202111151555237_m9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111160702288_m10.cs" />
+    <Compile Include="Migrations\202111160702288_m10.designer.cs">
+      <DependentUpon>202111160702288_m10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Application .cs" />
     <Compile Include="Models\Block.cs" />
+    <Compile Include="Models\DailyUpdate.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\issModel.cs" />
     <Compile Include="Models\LoginView.cs" />
@@ -437,6 +451,30 @@
     <Content Include="assets\img\TFiles\0053.jpg" />
     <Content Include="assets\img\Together-Banner.png" />
     <Content Include="assets\img\usericon.png" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 10.20.36 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 10.20.38 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.15 AM %281%29.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.15 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.16 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.19 AM %281%29.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.19 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 11.16.20 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 12.24.55 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 12.24.57 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.20 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.21 PM %281%29.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.21 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.22 PM %281%29.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.22 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.23 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.24 PM %281%29.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 2.12.24 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-12 at 7.43.53 PM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-13 at 10.01.04 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-15 at 9.36.58 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-15 at 9.37.00 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-15 at 9.40.26 AM.jpeg" />
+    <Content Include="assets\MLA\WhatsApp Image 2021-11-15 at 9.40.27 AM.jpeg" />
     <Content Include="assets\source\blank.gif" />
     <Content Include="assets\source\fancybox_loading%402x.gif" />
     <Content Include="assets\source\fancybox_loading.gif" />
@@ -946,6 +984,11 @@
     <Content Include="Views\Departments\Edit.cshtml" />
     <Content Include="Views\Departments\Index.cshtml" />
     <Content Include="Views\Reports\Department.cshtml" />
+    <Content Include="Views\DailyUpdates\Create.cshtml" />
+    <Content Include="Views\DailyUpdates\Delete.cshtml" />
+    <Content Include="Views\DailyUpdates\Details.cshtml" />
+    <Content Include="Views\DailyUpdates\Edit.cshtml" />
+    <Content Include="Views\DailyUpdates\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -985,6 +1028,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111111036353_m7.resx">
       <DependentUpon>202111111036353_m7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111151308541_m8.resx">
+      <DependentUpon>202111151308541_m8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111151555237_m9.resx">
+      <DependentUpon>202111151555237_m9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111160702288_m10.resx">
+      <DependentUpon>202111160702288_m10.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

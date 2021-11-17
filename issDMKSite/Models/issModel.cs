@@ -22,6 +22,8 @@ namespace issDMKSite.Models
         public System.Data.Entity.DbSet<issDMKSite.Models.Panchayat> Panchayats { get; set; }
 
         public System.Data.Entity.DbSet<issDMKSite.Models.Village> Villages { get; set; }
+
         public System.Data.Entity.DbSet<issDMKSite.Models.Department> Departments { get; set; }
+        public System.Data.Entity.DbSet<issDMKSite.Models.DailyUpdate> DailyUpdates { get; set; }
     }
 }

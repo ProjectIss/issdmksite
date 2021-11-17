@@ -79,7 +79,7 @@ namespace issDMKSite.Controllers
                     //response = new { New, Pending, InProcess, Completed };
                     leftOuterJoin = (from e in db.Applications
                                      join b in db.Villages on e.blockId equals b.Id
-                                    // join p in db.Panchayats on b.Id equals p.blockId
+                                     // join p in db.Panchayats on b.Id equals p.blockId
                                      where e.blockId == Custom.Display.blockId
                                      select new
                                      {
@@ -126,6 +126,8 @@ namespace issDMKSite.Controllers
                         //companyId = enUser.companyId,
                     };
                     Session["BlockId"] = enUser.blockId;
+                    Session["VillageId"] = enUser.villageId;
+
                     string userData = JsonConvert.SerializeObject(userModel);
                     FormsAuthenticationTicket authTicket =
                         new FormsAuthenticationTicket(1, enUser.Name, DateTime.Now, DateTime.Now.AddMinutes(30), false, userData);
@@ -227,7 +229,7 @@ namespace issDMKSite.Controllers
             List<SelectListItem> Area = new List<SelectListItem>();
             foreach (var item in db.Applications.GroupBy(x => x.blockId).Select(g => g.FirstOrDefault()).ToList())
             {
-                Area.Add(new SelectListItem { Text = item.blockId.ToString(), Value = item.Id.ToString() });
+                Area.Add(new SelectListItem { Text = item.Block.blockName, Value = item.Block.Id.ToString() });
 
             }
             ViewBag.Area = Area;
@@ -238,10 +240,9 @@ namespace issDMKSite.Controllers
         {
 
             List<SelectListItem> Area = new List<SelectListItem>();
-
             foreach (var item in db.Applications.GroupBy(x => x.blockId).Select(g => g.FirstOrDefault()).ToList())
             {
-                Area.Add(new SelectListItem { Text = item.blockId.ToString(), Value = item.Id.ToString() });
+                Area.Add(new SelectListItem { Text = item.Block.blockName, Value = item.Block.Id.ToString() });
 
             }
             ViewBag.Area = Area;
@@ -259,9 +260,120 @@ namespace issDMKSite.Controllers
         }
         public ActionResult Department()
         {
-            return View();
-        }
+            List<SelectListItem> Department = new List<SelectListItem>();
+           
+            foreach (var item in db.Applications.GroupBy(x => x.Department.departmentName).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Department.Add(new SelectListItem { Text = item.Department.departmentName, Value = item.Department.id.ToString() });
 
+            }
+            ViewBag.Department = Department;
+
+            List<SelectListItem> Area = new List<SelectListItem>();
+            foreach (var item in db.Applications.GroupBy(x => x.Block.blockName).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Area.Add(new SelectListItem { Text = item.Block.blockName.ToString(), Value = item.Block.Id.ToString() });
+
+            }
+            ViewBag.Area = Area;
+            List<SelectListItem> Village = new List<SelectListItem>();
+            foreach (var item in db.Applications.GroupBy(x => x.Village.villageName).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Village.Add(new SelectListItem { Text = item.Village.villageName, Value = item.Village.Id.ToString() });
+
+            }
+            ViewBag.Village = Village;
+            return View(db.Applications.Where(x => x.Id == 0).ToList());
+
+
+        }
+        [HttpPost]
+        public ActionResult Department(string fromDate, string toDate, string block, string dpartment, string village)
+        {
+            List<SelectListItem> Department = new List<SelectListItem>();
+            
+            foreach (var item in db.Applications.GroupBy(x => x.Department.departmentName).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Department.Add(new SelectListItem { Text = item.Department.departmentName, Value = item.Department.id.ToString() });
+
+            }
+            ViewBag.Department = Department;
+
+            List<SelectListItem> Area = new List<SelectListItem>();
+            foreach (var item in db.Applications.GroupBy(x => x.blockId).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Area.Add(new SelectListItem { Text = item.Block.blockName, Value = item.Block.Id.ToString() });
+
+            }
+            ViewBag.Area = Area;
+
+            List<SelectListItem> Village = new List<SelectListItem>();
+            foreach (var item in db.Applications.GroupBy(x => x.Village.villageName).Select(g => g.FirstOrDefault()).ToList())
+            {
+                Village.Add(new SelectListItem { Text = item.Village.villageName, Value = item.Village.Id.ToString() });
+
+            }
+            ViewBag.Village = Village;
+            if (!string.IsNullOrEmpty(fromDate) && !string.IsNullOrEmpty(toDate))
+            {
+                DateTime fDate = Convert.ToDateTime(fromDate);
+                DateTime tDate = Convert.ToDateTime(toDate);
+                var data = db.Applications.Where(x => x.Dateofapplied >= fDate && x.Dateofapplied <= tDate).ToList();
+
+                if (!string.IsNullOrEmpty(dpartment) && !string.IsNullOrEmpty(block) && !string.IsNullOrEmpty(village))
+                {
+                    data =data.Where(x => x.blockId == Convert.ToInt32(block) && x.departmentId == Convert.ToInt32(dpartment) && x.villageId == Convert.ToInt32(village)).ToList();
+                }
+                else if (!string.IsNullOrEmpty(dpartment) && string.IsNullOrEmpty(block))
+                {
+                    data = data.Where(x =>  x.departmentId == Convert.ToInt32(dpartment)).ToList();
+
+                }
+                else if (!string.IsNullOrEmpty(dpartment) && string.IsNullOrEmpty(village))
+                {
+                    data = data.Where(x => x.departmentId == Convert.ToInt32(dpartment)).ToList();
+
+                }
+                else if (!string.IsNullOrEmpty(block) && string.IsNullOrEmpty(dpartment))
+                {
+                    data = data.Where(x => x.blockId == Convert.ToInt32(block)).ToList();
+
+                }
+                else if (!string.IsNullOrEmpty(block) && string.IsNullOrEmpty(village))
+                {
+                    data = data.Where(x => x.blockId == Convert.ToInt32(block)).ToList();
+
+                }
+                else if (!string.IsNullOrEmpty(village) && string.IsNullOrEmpty(block))
+                {
+                    data = data.Where(x => x.villageId == Convert.ToInt32(village)).ToList();
+
+                }
+                else if (!string.IsNullOrEmpty(village) && string.IsNullOrEmpty(dpartment))
+                {
+                    data = data.Where(x => x.villageId == Convert.ToInt32(village)).ToList();
+
+                }
+
+
+                return View(data);
+
+            }
+
+            else return View(new Application());
+
+
+        }
+        [HttpPost]
+        public JsonResult Block(int NAME)
+        {
+            if (NAME > 0)
+            {
+                var resp = db.Applications.Where(x => x.departmentId == NAME).ToList();
+                return Json(resp, JsonRequestBehavior.AllowGet);
+            }
+            else return Json("NoData", JsonRequestBehavior.AllowGet);
+        }
 
 
     }
