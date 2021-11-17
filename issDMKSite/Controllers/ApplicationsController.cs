@@ -6,8 +6,12 @@ using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
+using System.Web.Mail;
 using System.Web.Mvc;
+using System.Net.Mime;
+using MailMessage = System.Net.Mail.MailMessage;
 
 namespace issDMKSite.Controllers
 {
@@ -87,7 +91,7 @@ namespace issDMKSite.Controllers
             if (DetailProof != null)
             {
                 string ext = Path.GetExtension(DetailProof.FileName);
-                string fileName = Guid.NewGuid().ToString()+ext;
+                string fileName = Guid.NewGuid().ToString() + ext;
                 string path = Path.Combine(Server.MapPath("~/attachments/"), Path.GetFileName(fileName));
                 DetailProof.SaveAs(path);
                 application.DetailProof = "~/attachments/" + Path.GetFileName(fileName);
@@ -187,10 +191,37 @@ namespace issDMKSite.Controllers
                     DetailProof.SaveAs(path);
                     application.DetailProof = "/Content/Images/" + Path.GetFileName(DetailProof.FileName);
                 }
-                db.Entry(application).State = EntityState.Modified;
-                db.SaveChanges();
-               
-                return RedirectToAction("Index");
+
+
+              
+                string subject = "Hello";
+                string body = "Greetings! <br/>";
+                body = "Hi Sir/Madam, <br/>";
+                body += $"Date Of Applied:{application.Dateofapplied},BLOCK:{application.blockId} <br/>";
+                body += $"{application.Detailofcomplain} <br/>";
+
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = new MailAddress("issolutionv1@gmail.com");
+                    string email = db.Departments.Where(x => x.id == application.departmentId).FirstOrDefault().email;
+                    mail.To.Add(email);
+                    mail.Subject = subject;
+                    mail.Body = body;
+                    mail.IsBodyHtml = true;
+                    //mail.Attachments.Add(new Attachment("D:\\TestFile.txt"));//--Uncomment this to send any attachment  
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.Credentials = new NetworkCredential("issolutionv1@gmail.com", "J@04460446");
+                        smtp.EnableSsl = true;
+                        smtp.Send(mail);
+                    }
+                    db.Entry(application).State = EntityState.Modified;
+                    db.SaveChanges();
+
+                    return RedirectToAction("Index");
+
+
+                }
             }
             ViewBag.departmentId = new SelectList(db.Departments, "id", "departmentName", application.departmentId);
             return View(application);
