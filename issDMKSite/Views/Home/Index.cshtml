@@ -114,92 +114,107 @@
 <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-596XHGQ" height=0 width=0 style=display:none;visibility:hidden></iframe>
 </noscript>
+<section>
+    <marquee behavior="scroll" direction="left" scrollamount="11" style="background: content-box;font-size: initial"> @ViewBag.dailyupdate</marquee>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</section>
 <section class="news-sec">
+  
 
     <div class="row">
         <div class="col-sm-6" style="margin-left:10px;">
 
             <img class="name" src="~/assets/static.dmk.in/WebBanner/IMG_20210831_154812.jpg" />
         </div>
-
-        <div class="col-sm-5" >
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/7.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/4.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/5.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/6.jpg" style="width:100%">
-            </div>
+       
+        <div class="col-sm-5">
 
 
+            @foreach (var item in ViewBag.Images)
+            {<div class="mySlides" id="slideImg">
+                    <img src="~/assets/MLA/@item" style="width:100%">
+                </div>
+            }
 
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image1.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image11.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image12.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image2.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image3.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image4.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image5.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image6.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Image7.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/Imge8.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.17 AM.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.18 AM.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.19 AM (1).jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.46.57 PM.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM.jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM (1).jpeg" style="width:100%">
-            </div>
-            <div class="mySlides">
-                <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.43 PM.jpeg" style="width:100%">
-            </div>
+            @*<div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/7.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/6.jpg" style="width:100%">
+                </div>
+
+
+
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image1.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image11.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image12.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image2.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image3.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image4.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image5.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image6.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Image7.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/Imge8.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.17 AM.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.18 AM.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-08-16 at 6.53.19 AM (1).jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.46.57 PM.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM.jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.41 PM (1).jpeg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="~/assets/static.dmk.in/WebBanner/WhatsApp Image 2021-09-01 at 7.49.43 PM.jpeg" style="width:100%">
+                </div>*@
 
 
 
@@ -411,6 +426,20 @@
 
 
 <script>
+
+    $(function () {
+        @*//slideImg
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Content("~/Home/getPhotos")',
+            dataType: 'json',
+            data: { NAME: '0' },
+            success: function (result) {
+                console.log(result)
+
+            }
+        })*@
+    });
     (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;

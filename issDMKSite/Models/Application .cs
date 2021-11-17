@@ -21,8 +21,11 @@ namespace issDMKSite.Models
         public DateTime? DateandTimeofReact { get; set; }
         public string MobilenNo { get; set; }
         public int blockId { get; set; }
+        public virtual Block Block { get; set; }
         public int departmentId { get; set; }
         public virtual Department Department { get; set; }
+        public int villageId { get; set; }
+        public virtual Village Village { get; set; }
 
 
 
