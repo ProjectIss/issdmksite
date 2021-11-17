@@ -36,7 +36,7 @@ namespace issDMKSite.Controllers
             {
                 return View(db.Applications.Where(x => x.blockId == Display.blockId).OrderByDescending(x => x.Dateofapplied).ToList());
             }
-            return View();
+            return View( db.Applications.OrderByDescending(x => x.Id).ToListAsync());
         }
 
         // GET: Applications/Details/5
@@ -71,6 +71,7 @@ namespace issDMKSite.Controllers
             string complainNo = "RISH" + id;
             ViewBag.ComplainNo = complainNo;
             ViewBag.departmentId = new SelectList(db.Departments, "id", "departmentName");
+           
             return View();
         }
 
@@ -79,7 +80,7 @@ namespace issDMKSite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,departmentId,ComplainNo,Dateofapplied,Detailofcomplain,DetailProof,Status,Feedback,ReviewComments,AdminName,DateandTimeofReact,MobilenNo,blockId")] Application application, HttpPostedFileBase DetailProof)
+        public ActionResult Create([Bind(Include = "Id,departmentId,villageId,ComplainNo,Dateofapplied,Detailofcomplain,DetailProof,Status,Feedback,ReviewComments,AdminName,DateandTimeofReact,MobilenNo,blockId")] Application application, HttpPostedFileBase DetailProof)
         {
             //application.DateandTimeofReact = DateTime.UtcNow;
             //application.Id = 1;
@@ -96,10 +97,13 @@ namespace issDMKSite.Controllers
             application.AdminName = Display.Name;
             string mNo = String.Empty;
             int bId = 0;
+            int vId = 0;
             if (Session["MobileNo"] != null) { mNo = Session["MobileNo"].ToString(); }
             if (Session["BlockId"] != null) { bId = Convert.ToInt32(Session["BlockId"].ToString()); }
+            if (Session["VillageId"] != null) { vId = Convert.ToInt32(Session["VillageId"].ToString()); }
             application.MobilenNo = mNo;
             application.blockId = bId;
+            application.villageId = vId;
 
             application.Dateofapplied = DateTime.Today;
             //application.Dateofapplied = DateTime.UtcNow;
@@ -170,7 +174,7 @@ namespace issDMKSite.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,departmentId,ComplainNo,Dateofapplied,Detailofcomplain,DetailProof,Status,Feedback,ReviewComments,AdminName,DateandTimeofReact,,MobilenNo,blockId")] HttpPostedFileBase DetailProof, Application application)
+        public ActionResult Edit([Bind(Include = "Id,departmentId,villageId,ComplainNo,Dateofapplied,Detailofcomplain,DetailProof,Status,Feedback,ReviewComments,AdminName,DateandTimeofReact,,MobilenNo,blockId")] HttpPostedFileBase DetailProof, Application application)
         {
 
 

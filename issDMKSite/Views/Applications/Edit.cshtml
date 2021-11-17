@@ -31,10 +31,15 @@
                                 @Html.EditorFor(model => model.MobilenNo, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.MobilenNo, "", new { @class = "text-danger" })
                             </div>
-                            <div class="form-group col-md-4" style="display:none;" >
+                            <div class="form-group col-md-4" style="display:none;">
                                 <label>பின்னூட்டம்</label>
                                 @Html.EditorFor(model => model.blockId, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.blockId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group col-md-4" style="display:none;">
+                                <label>பின்னூட்டம்</label>
+                                @Html.EditorFor(model => model.villageId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.villageId, "", new { @class = "text-danger" })
                             </div>
                             <div class="form-group col-md-4" style="display:none;">
                                 <label>பின்னூட்டம்</label>
