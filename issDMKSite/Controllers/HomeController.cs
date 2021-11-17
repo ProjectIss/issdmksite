@@ -20,8 +20,16 @@ namespace issDMKSite.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.dailyupdate = db.DailyUpdates.FirstOrDefault().dailyDetail;
-            getPhotos();
+            try
+            {
+                ViewBag.dailyupdate = db.DailyUpdates.FirstOrDefault()?.dailyDetail;
+                getPhotos();
+            }
+            catch (NullReferenceException ex)
+            {
+
+            }
+       
             return View();
         }
 
